@@ -112,8 +112,10 @@
 				top: 40%;
 				right: -80%;
 				left: auto;
+				align-items: flex-end;
 				.main__slide__desc__title {
 					text-align: right;
+
 				}
 			}			
 		}
@@ -172,7 +174,6 @@
 	.swiper-slide-active {
 		z-index: 10;
 		.main__slide__desc  {
-			align-items: flex-start;
 			animation: rise 1s ease 0s 1 normal forwards;
 			.main__slide__desc__title {
 				font-size: 72px;
@@ -253,6 +254,9 @@
     width: 1920px;
     padding-left: 80px;
     padding-right: 80px;
+		@include max(xl) {
+      padding-left: 0;
+    }
   }
 	&__wrap {
 		position: relative;

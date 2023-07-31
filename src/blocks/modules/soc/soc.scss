@@ -1,12 +1,19 @@
 .soc {
-  margin: auto;
-  position: absolute;
-  top: 0; left: auto; bottom: 0; right: 27px;
-  text-align: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
+	position: fixed;
+	left: 15px;
+	top: 313px;
+	display: flex;
+	justify-content: flex-end;
+	flex-flow: column nowrap;
+	width: 100%;  
+  // margin: auto;
+  // position: absolute;
+  // top: 0; left: auto; bottom: 0; right: 27px;
+  // text-align: right;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-flow: column nowrap;
   &__item {
     position: relative;
     display: flex;
@@ -78,5 +85,21 @@
     }
 
   }
-
+  .container {
+    position: relative;
+    width: 1920px;
+    padding-left: 0px;
+    padding-right: 27px;
+    display: flex;
+    justify-content: flex-end;
+  }
+	&__wrap {
+		position: relative;
+		display: flex;
+		width: 48px;
+		justify-content: flex-start;
+		flex-flow: column nowrap;
+		height: auto;
+    align-self: flex-start;
+	}
 }
