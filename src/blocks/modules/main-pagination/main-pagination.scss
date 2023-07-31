@@ -1,0 +1,51 @@
+.main__pagination  {
+	position: fixed;
+	left: 15px;
+	top: 145px;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: column nowrap;
+	width: 100%;
+  .container {
+    position: relative;
+    width: 1920px;
+    padding-left: 80px;
+    padding-right: 80px;
+		@include max(xl) {
+      padding-left: 0;
+    }
+  }
+	&__wrap {
+		position: relative;
+		display: flex;
+		width: 30px;
+		justify-content: flex-start;
+		flex-flow: column nowrap;
+		height: auto;
+	}
+
+	&__item {
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		margin-bottom: 20px;
+		font-size: 12px;
+		color: #000;
+		opacity: 1;
+		background: transparent;
+		color: #7F8589;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: 550;
+		line-height: 135%; /* 17.55px */
+		letter-spacing: 1.3px;
+		text-transform: uppercase;
+		transform: rotate(-90deg);
+		text-decoration: none;
+		&.active {
+			color: $red;
+		}		
+	}
+
+}

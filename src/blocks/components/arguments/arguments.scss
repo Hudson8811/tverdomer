@@ -1,0 +1,103 @@
+.arguments {
+	position: relative;
+	display: flex;
+	width: 100%;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	&__wrap {
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
+		margin-bottom: 30px;	
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 58px;
+	}
+	&__col {
+		width: 50%;
+		&:nth-child(2) {
+			margin-left: 15px;
+		}
+		&:nth-child(1) {
+			margin-right: 15px;
+		}
+	}
+
+	&__item {
+		padding: 70px 47px;
+		margin-bottom: 0;
+		height: 100%;
+		&--brend {
+			justify-content: space-between;
+			align-items: center;
+		}
+		&--awards {
+			.arguments__item__text {
+				margin-bottom: 80px;
+				max-width: 454px;
+			}
+		}
+		&__list {
+			position: relative;
+			display: flex;
+			width: calc(100% + 0px);
+			align-items: stretch;
+			flex-flow: row wrap;
+			margin-left: -0px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+		&__brend {
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 0 0 33.333%;
+			max-width: calc(33.3333% - 0px);
+			height: auto;
+			height: 35px;
+			margin-top: 10px;
+			margin-bottom: 48px;
+			border-right: 1px solid #3F3F3F;
+			&:nth-child(3n) {
+				border-right: none;
+			}
+		}
+		&__title {
+			margin-bottom: 58px;
+		}
+		&__year {
+			margin-bottom: 64px;
+			max-height: 134px;
+		}
+		&__buttons {
+			position: relative;
+			display: flex;
+			width: 100%;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-flow: row wrap;
+			&__row {
+				position: relative;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				width: 100%;
+				max-width: 464px;
+				margin-bottom: 16px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__button {
+			max-width: 100%;
+		}
+	}
+
+}

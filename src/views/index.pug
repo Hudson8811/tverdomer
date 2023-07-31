@@ -18,180 +18,22 @@ block content
 					img.button__circle-outside(src="img/svg/label-circle.svg" alt="")
 					img.button__circle-inside(src="img/svg/play.svg" alt="logo")
 	include ../blocks/modules/soc/soc
-	.main__pagination
-		.container
-			.main__pagination__wrap
-				a(href="#").main__pagination__item.active
-					!="01"
-				a(href="#").main__pagination__item
-					!="02"
-				a(href="#").main__pagination__item
-					!="03"
-				a(href="#").main__pagination__item
-					!="04"
-				a(href="#").main__pagination__item
-					!="05"
-		
+	include ../blocks/modules/main-pagination/main-pagination
+
 	.section.section__black
 		.container
-			.hardness.block__overlay
-				.hardness__title.title__40 Достоверное измерение твердости по всем шкалам
-				.hardness__table
-					.hardness__table__col
-						.hardness__table__col__title.text__16 Основные
-						.hardness__table__row
-							.hardness__table__property.text__16 Роквелла
-							.hardness__table__value.text__16 HRC
-						.hardness__table__row
-							.hardness__table__property.text__16 Бринелля
-							.hardness__table__value.text__16 HB
-						.hardness__table__row
-							.hardness__table__property.text__16 Виккерса
-							.hardness__table__value.text__16 HV
-						.hardness__table__row
-							.hardness__table__property.text__16 Бринелля
-							.hardness__table__value.text__16 HSD
-
-
-					.hardness__table__col
-						.hardness__table__col__title.text__16 Дополнительные
-						.hardness__table__row
-							.hardness__table__property.text__16 Роквелла
-							.hardness__table__value.text__16 HRC
-						.hardness__table__row
-							.hardness__table__property.text__16 Супер-Роквелла
-							.hardness__table__value.text__16 HRN / HRT
-						.hardness__table__row
-							.hardness__table__property.text__16 Лейба
-							.hardness__table__value.text__16 HL
-						.hardness__table__row
-							.hardness__table__property.text__16 и другие...
-							.hardness__table__value.text__16 
-				.hardness__bg 
-					img(src="img/index/hardness__bg.png", alt="")
-
-			.ultrasonic.block__overlay
-				.ultrasonic__title.title__40 Ультразвуковой и динамический датчики
-				.ultrasonic__row 
-					.ultrasonic__col
-						.ultrasonic__col__title.title__24 Включен в Госреестр СИ 
-						.ultrasonic__item.text__16 ―  Действие поверки 1 год
-						.ultrasonic__item.text__16 ―  Поставляется поверенным
-					.ultrasonic__col
-						.ultrasonic__col__title.title__24 Быстрая калибровка по мерам 1 разряда  
-						a(href="#").ultrasonic__btn Подробнее
-				.ultrasonic__bg 
-					img(src="img/index/ultrasonic__bg.png", alt="")
-			
-
-			.measure.block__overlay
-				.measure__col
-					.measure__desc
-						.measure__title.title__40 Измерение твёрдости по основным шкалам
-						.measure__text.text__16
-							!="Достигается за счет калибровки только с помощью эталонных <a href='#'>мер твердости</a> без использования переводных таблиц, которые «зашиты» в программы других твердомеров, увеличивающих погрешность измерения."
-					.measure__btn.btn выбрать товары
-				.measure__bg 
-					img(src="img/index/measure__bg.png", alt="")
-
-			.warranty
-				.warranty__col
-					.security.block__overlay
-						.security__title.title__40 Высокая степень защиты корпуса
-						.security__subtitle.text__16 Влагозащищенность: IP65 Температура: от -20°C до + 60°C Ударопрочность: IK06
-						.security__bg 
-							img(src="img/index/security__bg.png", alt="")
-				.warranty__col
-					.warranty__item.warranty__item--one.block__overlay
-						.warranty__bg
-							img(src="img/index/warranty__bg--1.png", alt="")
-						.warranty__text.text__20
-							!="Удобная передача и обработка данных на компьютере через высокоскоростной USB порт и специальное программное обеспечение."
-					.warranty__item.warranty__item--two.block__overlay
-						.warranty__bg
-							img(src="img/index/warranty__bg--2.png", alt="")
-						.warranty__btn.btn подробнее
-
+			include ../blocks/components/hardness/hardness
+			include ../blocks/components/ultrasonic/ultrasonic
+			include ../blocks/components/measure/measure
+			include ../blocks/components/warranty/warranty
 	.section.section__white
 		include ../blocks/modules/products/products
 
 	.section.section__black
 		.container
-			.arguments
-				.arguments__title.title__40 Твердые аргументы
-				.arguments__wrap
-					.arguments__col
-						.arguments__item.arguments__item--awards.block__overlay
-							.arguments__item__year
-								img(src="img/index/arguments__item__year.png", alt="")
-							.arguments__item__text.text__15
-								!="Центр «МЕТ» - разработчик высокоточных портативных твердомеров и мер твердости. Портативные твердомеры МЕТ позволяют осуществлять достоверный контроль твердости изделий из металла. Меры твердости МЕТ – средства измерения, позволяющие осуществлять поверку и калибровку твердомеров."	
-							.arguments__item__buttons 
-								.arguments__item__buttons__row
-									.btn.btn--border
-										img(src="img/svg/star.svg", alt="")
-										!="Сертификаты"		
-									.btn.btn--border 
-										img(src="img/svg/award.svg", alt="")
-										!="Награды"
-								.arguments__item__buttons__row
-									.arguments__item__button.btn.btn--border 
-										img(src="img/svg/comment.svg", alt="")
-										!="Отзывы"
-					.arguments__col
-						.arguments__item.arguments__item--brend.block__overlay
-							.arguments__item__title.title__32 Нам доверяют
-							.arguments__item__list
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--1.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--2.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--3.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--4.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--5.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--6.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--7.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--8.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--9.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--10.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--11.svg", alt="")
-								.arguments__item__brend
-									img(src="img/svg/arguments__item__brend--12.svg", alt="")
-							.arguments__item__button.btn Все клиенты
+			include ../blocks/components/arguments/arguments	
+			include ../blocks/modules/soc-big/soc-big
 
-			.soc-big
-				a(href="#").soc-big__item.soc-big__item--tg.block__overlay
-					.soc-big__item__title telegram
-					.soc-big__item__subtitle tverdomery_met
-					.soc-big__item__picture
-						<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.35797 5.52888C5.4923 3.72762 8.24916 2.54013 9.62856 1.96639C13.567 0.32824 14.3854 0.0436763 14.9188 0.0342799C15.0361 0.0322132 15.2985 0.0612881 15.4684 0.199164C15.6119 0.315583 15.6513 0.472849 15.6702 0.583228C15.6891 0.693606 15.7126 0.945051 15.6939 1.14152C15.4805 3.38402 14.557 8.82597 14.0872 11.3376C13.8884 12.4004 13.4969 12.7567 13.118 12.7916C12.2944 12.8674 11.669 12.2473 10.8714 11.7244C9.62316 10.9062 8.91801 10.3969 7.70642 9.59846C6.30622 8.67575 7.21391 8.16862 8.01189 7.33981C8.22072 7.12291 11.8494 3.82235 11.9196 3.52294C11.9284 3.48549 11.9366 3.34591 11.8536 3.27221C11.7707 3.1985 11.6483 3.22371 11.56 3.24375C11.4348 3.27216 9.44081 4.59013 5.57798 7.19764C5.01199 7.5863 4.49933 7.77566 4.04001 7.76574C3.53364 7.7548 2.55959 7.47943 1.83548 7.24405C0.947339 6.95535 0.241459 6.80271 0.302926 6.31241C0.334941 6.05703 0.686623 5.79585 1.35797 5.52888Z" fill="#fff"/>
-						</svg>	
-				a(href="#").soc-big__item.soc-big__item--mail.block__overlay
-					.soc-big__item__title email
-					.soc-big__item__subtitle mng@tverdomer.ru
-					.soc-big__item__picture
-						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M13.1667 0.916504H4.83335C2.33335 0.916504 0.666687 2.1665 0.666687 5.08317V10.9165C0.666687 13.8332 2.33335 15.0832 4.83335 15.0832H13.1667C15.6667 15.0832 17.3334 13.8332 17.3334 10.9165V5.08317C17.3334 2.1665 15.6667 0.916504 13.1667 0.916504ZM13.5584 5.9915L10.95 8.07484C10.4 8.5165 9.70002 8.73317 9.00002 8.73317C8.30002 8.73317 7.59169 8.5165 7.05002 8.07484L4.44169 5.9915C4.17502 5.77484 4.13335 5.37484 4.34169 5.10817C4.55835 4.8415 4.95002 4.7915 5.21669 5.00817L7.82502 7.0915C8.45835 7.59984 9.53335 7.59984 10.1667 7.0915L12.775 5.00817C13.0417 4.7915 13.4417 4.83317 13.65 5.10817C13.8667 5.37484 13.825 5.77484 13.5584 5.9915Z" fill="white"/>
-						</svg>	
-				a(href="#").soc-big__item.soc-big__item--wt.block__overlay
-					.soc-big__item__title whatsapp
-					.soc-big__item__subtitle 8 (800) 222-75-26
-					.soc-big__item__picture
-						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 18L1.27221 13.3802C0.485673 12.0242 0.0730658 10.4886 0.0773638 8.91873C0.0773638 3.99953 4.10028 0 9.03868 0C11.437 0 13.6891 0.928232 15.3782 2.61359C17.0716 4.29895 18.0043 6.5404 18 8.92301C18 13.8422 13.9771 17.8417 9.03438 17.8417H9.03008C7.53008 17.8417 6.05587 17.4653 4.74498 16.7552L0 18ZM4.97278 15.1426L5.24355 15.3051C6.38681 15.981 7.6977 16.336 9.03438 16.3403H9.03868C13.1433 16.3403 16.4871 13.0166 16.4871 8.92728C16.4871 6.94677 15.7135 5.08603 14.308 3.68299C12.9026 2.27994 11.0286 1.50998 9.03868 1.50998C4.93409 1.5057 1.59026 4.82937 1.59026 8.91873C1.59026 10.3175 1.98137 11.682 2.72922 12.8626L2.90544 13.145L2.15329 15.8783L4.97278 15.1426Z" fill="white"/>
-						<path d="M0 18L1.27221 13.3802C0.485673 12.0242 0.0730658 10.4886 0.0773638 8.91873C0.0773638 3.99953 4.10028 0 9.03868 0C11.437 0 13.6891 0.928232 15.3782 2.61359C17.0716 4.29895 18.0043 6.5404 18 8.92301C18 13.8422 13.9771 17.8417 9.03438 17.8417H9.03008C7.53008 17.8417 6.05587 17.4653 4.74498 16.7552L0 18ZM4.97278 15.1426L5.24355 15.3051C6.38681 15.981 7.6977 16.336 9.03438 16.3403H9.03868C13.1433 16.3403 16.4871 13.0166 16.4871 8.92728C16.4871 6.94677 15.7135 5.08603 14.308 3.68299C12.9026 2.27994 11.0286 1.50998 9.03868 1.50998C4.93409 1.5057 1.59026 4.82937 1.59026 8.91873C1.59026 10.3175 1.98137 11.682 2.72922 12.8626L2.90544 13.145L2.15329 15.8783L4.97278 15.1426Z" fill="white"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.79935 5.18858C6.63173 4.81643 6.45551 4.80787 6.29648 4.80359C6.16754 4.79932 6.01711 4.79932 5.86669 4.79932C5.71626 4.79932 5.47557 4.85492 5.26926 5.07736C5.06296 5.29979 4.48703 5.83877 4.48703 6.9381C4.48703 8.03316 5.29075 9.09399 5.4025 9.24371C5.51425 9.39342 6.95408 11.7161 9.22771 12.6102C11.1188 13.3545 11.5056 13.2047 11.914 13.1662C12.3223 13.1277 13.2377 12.6273 13.4269 12.1054C13.6117 11.5835 13.6117 11.1387 13.5558 11.0446C13.4999 10.9505 13.3495 10.8949 13.126 10.7836C12.9025 10.6724 11.8022 10.1334 11.5959 10.0564C11.3896 9.98373 11.2392 9.94523 11.093 10.1677C10.9426 10.3901 10.5128 10.8906 10.3839 11.0403C10.2549 11.19 10.1217 11.2071 9.8982 11.0959C9.67471 10.9847 8.95264 10.7494 8.09734 9.98801C7.43115 9.3977 6.97986 8.66624 6.85092 8.4438C6.72198 8.22137 6.83803 8.1016 6.94978 7.99038C7.04863 7.892 7.17327 7.72945 7.28502 7.60112C7.39677 7.4728 7.43545 7.37869 7.50852 7.22897C7.58158 7.07926 7.5472 6.95093 7.49133 6.83972C7.43545 6.73278 6.99706 5.62916 6.79935 5.18858Z" fill="white"/>
-						</svg>
 			include ../blocks/components/fabrication/fabrication
 
 	.section.section__white

@@ -5,7 +5,9 @@
 	display: flex;
 	justify-content: flex-end;
 	flex-flow: column nowrap;
-	width: 100%;  
+	width: 100%; 
+  pointer-events: none; 
+  z-index: 100;
   // margin: auto;
   // position: absolute;
   // top: 0; left: auto; bottom: 0; right: 27px;
@@ -20,17 +22,18 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 16px;
+    pointer-events: auto;
     width: auto;
     height: auto;
     width: 48px;
     height: 48px;
-    padding-left: 25px;
     font-size: 16px;
     font-style: normal;
     font-weight: 550;
     line-height: 260%; 
     color: $white;
-    text-decoration: none;    
+    text-decoration: none; 
+    cursor: pointer;   
     &:hover {
       .soc__item__picture  {
         transition: all .5s;
@@ -92,6 +95,9 @@
     padding-right: 27px;
     display: flex;
     justify-content: flex-end;
+    @include max(xl) {
+      padding-right: 0;
+    }
   }
 	&__wrap {
 		position: relative;

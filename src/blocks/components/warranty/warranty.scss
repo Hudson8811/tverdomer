@@ -1,0 +1,59 @@
+.warranty {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	width: 100%;
+	&__col {
+		&:nth-child(1) {
+			width: 40.33%;
+		}
+		&:nth-child(2) {
+			width: 57.38%;
+		}
+	}
+	&__item {
+		min-height: 376px;
+		overflow: hidden;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&--one {
+			padding-left: 72px;
+			justify-content: center;
+			.warranty__text {
+				max-width: 364px;
+			}
+			.warranty__bg {
+				position: absolute;
+				right: 0;
+				bottom: -10px;
+				img {
+					position: relative;
+					width: 100%;
+					object-fit: cover;
+					object-position: right bottom;
+				}
+			}			
+		}
+		&--two {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.warranty__btn {
+				position: absolute;
+				right: 56px;
+				top: 48px;
+			}
+			.warranty__bg {
+				margin-top: -50px;
+				img {
+					position: relative;
+					width: 100%;
+					object-fit: cover;
+					object-position: right bottom;
+				}
+			}		
+		}
+	}
+}

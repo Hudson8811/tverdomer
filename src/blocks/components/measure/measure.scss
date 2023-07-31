@@ -1,0 +1,59 @@
+.measure {
+	padding: 92px 72px;
+	min-height: 600px;
+	align-items: flex-end;
+
+	&__title {
+		width: 100%;
+		max-width: 565px;
+		z-index: 2;
+	}
+	&__col {
+		position: relative;
+		display: flex;
+		width: 100%;
+		min-height: calc(600px - 92*2px);
+		max-width: 477px;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		padding-bottom: 60px;
+		z-index: 5;
+
+	}
+	&__desc {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+	}
+	&__text {
+		position: relative;
+		display: inline-block;
+		a {
+			color: $white;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: left top;
+		}
+	}
+}

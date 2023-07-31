@@ -1,0 +1,58 @@
+.hardness {
+	padding: 92px 72px;
+	&__title {
+		width: 100%;
+		max-width: 565px;
+		z-index: 2;
+	}
+	&__table {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		max-width: 565px;
+		z-index: 2;
+		&__col {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: calc(50% - 36px);
+			&__title {
+				text-transform: uppercase;
+				color: $greyBlack;
+				margin-bottom: 22px;
+			}
+			.hardness__table__row {
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+		&__row {
+			position: relative;
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			border-bottom: 1px solid #303638;
+		}
+	}
+	&__bg {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right top;
+		}
+	}
+}
