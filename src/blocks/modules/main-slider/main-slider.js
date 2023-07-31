@@ -7,15 +7,17 @@ $('.js-main__slider').each(function(){
 		spaceBetween: 16,
     centeredSlides: true,
 		slidesPerView: 2.8,
+		autoHeight: true,
+		slideToClickedSlide: true,
     loop: false,
     speed: 800,
 		navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]
 		},
-		mousewheel: {
-			sensitivity: 1,
-		},
+		// mousewheel: {
+		// 	sensitivity: 1,
+		// },
 		// thumbs: {
 		// 		swiper: galleryThumbs
 		// },
