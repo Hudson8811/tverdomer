@@ -1,0 +1,316 @@
+.footer {
+	position: relative;
+	width: 100%;
+	background: $fonBlack;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 88px;
+	padding-bottom: 88px;
+	color: #fff;
+
+	@include max(xs) {
+		padding-top: 56px;
+	}
+
+
+	&__lists {
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+
+		&--row {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+			width: 100%;
+			&__bottom {
+
+			}
+			@include max(md) {
+				flex-flow: row wrap;
+			}
+
+			@media (max-width: 740px) {
+				justify-content: center;
+			}
+
+			@include max(xs) {
+				justify-content: space-between;
+			}
+		}
+		&__bottom {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			border-top: 1px solid $greyBlack;
+			background: $mainDark;
+			padding-top: 32px;
+			padding-bottom: 32px;
+		}
+		&--column {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			min-width: 268px;
+			&:first-child {
+				max-width: 171px;
+				min-width: 171px;
+			}
+			&--last {
+				min-width: 352px;
+				justify-content: space-between;
+				ul {
+					width: 100%;
+					position: relative;
+				}
+			}
+			@include max(lg) {
+				min-width: auto;
+			}
+
+			@include max(md) {
+				min-width: 205px;
+				margin-right: 20px !important;
+			}
+
+
+		}
+
+		&--string {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			color: $greyBlack;
+			font-family: HelveticaNeueCyr;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%;
+			&:nth-child(2) {
+				text-align: right;
+				justify-content: flex-end;
+			}
+
+		}
+		a.footer__lists--string {
+			color: $greyBlack;
+			font-family: HelveticaNeueCyr;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%;
+			text-decoration: none;
+			transition: all .3s;
+			&:hover {
+				color: $white;
+			}				
+		}
+		&--item {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-bottom: 16px;
+			color: $white;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 125%;
+			&__title {
+				margin-bottom: 32px;
+			}
+			&--send {
+				@include max(md) {
+					position: absolute;
+					top: 30px;
+					right: -290px;
+				}
+
+				@media (max-width: 740px) {
+					right: auto;
+					top: auto;
+					left: 0;
+					bottom: -84px;
+				}
+			}
+			&--border {
+				border-bottom: 1px solid $greyBlack;
+				padding-bottom: 8px;
+				align-items: center;
+				color: $white;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 125%;
+				transition: all .3s;
+				&:hover {
+					transition: all .3s;
+					svg {
+						path {
+							transition: all .3s;
+							fill: $greyBlack;
+						}
+					}
+					a {
+						transition: all .3s;
+						color: $greyBlack;
+					}
+				} 	
+				svg {
+					margin-right: 16px;
+				}
+				a {
+					color: $white;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 125%;
+					text-decoration: none;
+					transition: all .3s;				
+				}
+			}
+			&--logo {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-end;
+				margin-bottom: 32px;
+				width: 40px;
+
+				@include max(xs) {
+					img {
+						width: 30px;
+					}
+				}
+			}
+
+			&--link {
+				color:  $greyBlack;
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 125%; 
+				transition: all .3s;
+				text-decoration: none;
+
+				&:hover {
+					a {
+						color: $white;
+						transition: all .3s;
+					}
+
+				}
+				a {
+					color:  $greyBlack;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 125%; 
+					transition: all .3s;
+					text-decoration: none;
+
+				}
+				&--white {
+					margin-bottom: 25px;
+					a {
+						color: $white;
+						font-size: 15px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 125%;
+						text-decoration: none;
+					}
+					&:hover {
+						a {
+							color: $white;
+							transition: all .3s;
+						}
+	
+					}		
+				}
+			}
+
+			&--adress {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-flow: column nowrap;
+				width: 100%;
+				max-width: 272px;
+				&--title {
+					color: $white;
+					margin-bottom:16px;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 125%;					
+				}
+				&--text {
+					color: $greyBlack;
+					margin-bottom:16px;
+					font-size: 15px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: 125%;					
+				}
+			}
+
+			&--mail {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+				color: #FFFFFF;
+				margin-bottom: 8px;
+
+				a {
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 20px;
+					color: #FFFFFF;
+					transition: all .3s;
+
+					&:hover {
+						opacity: 0.5;
+						transition: all .3s;
+					}
+
+				}
+			}
+
+			&--tel {
+				color: $white;
+				font-size: 32px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 125%;
+				margin-bottom: 24px;
+				a {
+					color: $white;
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 550;
+					line-height: 125%;
+					text-decoration: none;
+					transition: all .3s;
+
+					&:hover {
+						color: $greyBlack;
+						transition: all .3s;
+					}
+				}
+			}
+
+		}
+
+	}
+}

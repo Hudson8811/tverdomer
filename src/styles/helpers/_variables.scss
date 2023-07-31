@@ -6,11 +6,16 @@ $media-list: (
 		'md': 1079,
 		'lg': 1279,
 		'xl': 1599,
-		'xxl': 1900
+		'xxl': 1920
 );
 
 /* шрифты */
-$mainFont: 'Roboto', sans-serif;
+$mainFont: 'HelveticaNeueCyr', sans-serif;
 
 /* цвета */
-$textMainColor: #52525A;
+$fonBlack: #1B1F22;
+$white: #fff;
+$red: #FF3E41;
+$grey: #CBCECF;
+$greyBlack: #7F8589;
+$mainDark: #1B1F22;
