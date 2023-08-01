@@ -8,14 +8,8 @@
 	width: 100%; 
   pointer-events: none; 
   z-index: 100;
-  // margin: auto;
-  // position: absolute;
-  // top: 0; left: auto; bottom: 0; right: 27px;
-  // text-align: right;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-flow: column nowrap;
+  animation-name: fadeInRight;
+	animation-delay: 1.7s; 
   &__item {
     position: relative;
     display: flex;
@@ -97,6 +91,7 @@
     justify-content: flex-end;
     @include max(xl) {
       padding-right: 0;
+      max-width: calc(100% - 30px * 2);
     }
   }
 	&__wrap {

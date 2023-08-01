@@ -29,6 +29,7 @@ body {
 	flex: 1 0 auto;
     padding-top: 145px;
     background: $mainDark;
+    overflow: hidden;
 }
 .site-footer{
 	flex: 0 0 auto;
@@ -41,7 +42,6 @@ body {
 	max-width: calc(100% - 0px);
 	margin: 0 auto;
     position: relative;
-    overflow: hidden;
 	@include max(xl) {
 		//1024
 		width: 1168px;

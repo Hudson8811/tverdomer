@@ -34,35 +34,45 @@ Skroll=function(t){this.settings=t||{},this.settings.mobile=void 0!==this.settin
  
 
 //my files
-jQuery(function () { 
+jQuery(function () {
 
-  new Skroll()
-    .add(".hardness__bg",{
-            animation:"fadeInRight",
-            delay: 600,
-            duration:750
-    })
-    .add(".warranty__bg",{
-            animation:"fadeInRight",
-            delay: 900,
-            duration:750
-    })
-    .add(".ultrasonic__bg",{
-            animation:"fadeInUp",
-            delay: 900,
-            duration:750
-    })
-    .add(".security__bg",{
-            animation:"fadeInUp",
-            delay: 900,
-            duration:750
-    })
-    .add(".measure__bg",{
-            animation:"fadeInLeft",
-            delay: 900,
-            duration:750
-    })
-    .init();
+        new Skroll()
+                .add(".hardness__bg", {
+                        animation: "fadeInRight",
+                        delay: 600,
+                        duration: 750
+                })
+                .add(".warranty__bg", {
+                        animation: "fadeInRight",
+                        delay: 900,
+                        duration: 750
+                })
+                .add(".ultrasonic__bg", {
+                        animation: "fadeInUp",
+                        delay: 900,
+                        duration: 750
+                })
+                .add(".security__bg", {
+                        animation: "fadeInUp",
+                        delay: 900,
+                        duration: 750
+                })
+                .add(".measure__bg", {
+                        animation: "fadeInLeft",
+                        delay: 900,
+                        duration: 750
+                })
+                .init();
+
+        function bodyNoScroll() {
+                let bodyBodymotionless = document.querySelector('body')
+                bodyBodymotionless.classList.add("Bodymotionless")
+
+        }
+        function bodyYesScroll() {
+                let bodyBodymotionless = document.querySelector('body')
+                bodyBodymotionless.classList.remove("Bodymotionless")
+        }
 });
 var hardnessTesters;
 $('.js-infocenter').each(function(){
@@ -95,6 +105,53 @@ $('.js-fabrication').each(function(){
 
 
 
+var hardnessTesters;
+$('.js-hardness-testers').each(function(){
+	var slider=$(this)
+	var hardnessTesters = new Swiper(slider[0], {
+		spaceBetween: 30,
+		slidesPerView: "auto",
+    loop: false,
+    speed: 800,
+    allowTouchMove: false,
+		navigation: {
+				nextEl: ".hardness-tester-next",
+				prevEl: ".hardness-tester-prev"
+		},
+	});
+})
+
+
+var hardnessGallery;
+$('.js-hardness-gallery').each(function(){
+	var slider=$(this)
+	var hardnessGallery = new Swiper(slider[0], {
+		spaceBetween: 0,
+    centeredSlides: true,
+		slidesPerView: 1,
+    loop: false,
+    speed: 800,
+		navigation: {
+				nextEl: slider.find('.swiper-button-next')[0],
+				prevEl: slider.find('.swiper-button-prev')[0]
+		},
+		// thumbs: {
+		// 		swiper: galleryThumbs
+		// },
+		pagination: {
+				el: slider.find('.swiper-pagination')[0],
+        clickable: true,
+
+		}
+		// breakpoints: {
+		//     // when window width is >= 480px
+		//     992: {
+		//         slidesPerView: 2.2,
+		//         spaceBetween: 30
+		//     },
+		// }
+	});
+})
 
 
 var mainSlider;
@@ -107,7 +164,8 @@ $('.js-main__slider').each(function(){
 		autoHeight: true,
 		slideToClickedSlide: true,
     loop: false,
-    speed: 800,
+    speed: 1500,
+		allowTouchMove: false,
 		navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]
@@ -167,49 +225,15 @@ $('.js-main__slider').each(function(){
 	}
 	///tabs
 
-var hardnessTesters;
-$('.js-hardness-testers').each(function(){
-	var slider=$(this)
-	var hardnessTesters = new Swiper(slider[0], {
-		spaceBetween: 30,
-		slidesPerView: "auto",
-    loop: false,
-    speed: 800,
-		navigation: {
-				nextEl: ".hardness-tester-next",
-				prevEl: ".hardness-tester-prev"
-		},
-	});
-})
 
 
-var hardnessGallery;
-$('.js-hardness-gallery').each(function(){
-	var slider=$(this)
-	var hardnessGallery = new Swiper(slider[0], {
-		spaceBetween: 0,
-    centeredSlides: true,
-		slidesPerView: 1,
-    loop: false,
-    speed: 800,
-		navigation: {
-				nextEl: slider.find('.swiper-button-next')[0],
-				prevEl: slider.find('.swiper-button-prev')[0]
-		},
-		// thumbs: {
-		// 		swiper: galleryThumbs
-		// },
-		pagination: {
-				el: slider.find('.swiper-pagination')[0],
-        clickable: true,
-
-		}
-		// breakpoints: {
-		//     // when window width is >= 480px
-		//     992: {
-		//         slidesPerView: 2.2,
-		//         spaceBetween: 30
-		//     },
-		// }
-	});
-})
+$( ".header__menu__item" ).mouseenter(function () {
+  let headerMenuItem = $(this);
+  let headerMenuList = headerMenuItem.children( '.header__menu__list' )
+  headerMenuList.addClass('active')
+});
+$( ".header__menu__item" ).mouseleave(function () {
+  let headerMenuItem = $(this);
+  let headerMenuList = headerMenuItem.children( '.header__menu__list' )
+  headerMenuList.removeClass('active')
+});

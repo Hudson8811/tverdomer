@@ -8,7 +8,7 @@
 	width: 100%;
 	padding: 0;
 	background: $fonBlack;
-	z-index: 50;
+	z-index: 999;
 	height: 73px;
 	box-sizing: border-box;
 	border-bottom: 1px solid #292B32;
@@ -22,6 +22,11 @@
 		padding-left: 80px;
 		padding-right: 80px;
 		max-width: 1920px;
+		overflow: visible;
+		@include max(xl) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 	}
 }
 
@@ -32,7 +37,10 @@
 		justify-content: flex-start;
 		align-items: center;
 		text-decoration: none;
-		width: 64px;	
+		width: 64px;
+		@include max(lg) {
+			margin-right: 30px;
+		}
 		&__img {
 			position: relative;
 			display: block;
@@ -74,8 +82,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 960px;
+		width: 54.4%;
 		height: 100%;
+		@include max(lg) {
+			width: 65%;
+		}
+		@include max(md) {
+			width: 89%;
+		}
 		&__item {
 			position: relative;
 			display: flex;
@@ -92,12 +106,75 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			height: 100%;
-			transition: all 0.3;
+			transition: all 0.3s;
+			border-bottom: 1px solid transparent;
 			&:hover {
 				border-bottom: 1px solid $red;
 				color: $white;
-				transition: all 0.3;
+				transition: all 0.3s;
 			}		
+		}
+		&__list {
+			position: absolute;
+			top: calc(100% + 20px);
+			left: -40px;
+			display: flex;
+			visibility: hidden;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding: 30px;
+			padding-top: 43px;
+			background: #2e3236;
+			border-radius: 28px;
+			min-width: 203px;
+			flex-flow: column nowrap;
+			opacity: 0;
+			transition: all .3s;
+			&.active {
+				display: flex;
+				opacity: 1;
+				transition: all .3s;
+				visibility: inherit;
+			}
+			&::before {
+				position: absolute;
+				left: 13px;
+				top: -13px;
+				content: url(../img/row.png);
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-end;
+			}
+			&__item {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+				color: $white;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				margin-bottom: 20px;
+				text-transform: none;
+				a{
+					position: relative;
+					display: flex;
+					justify-content: flex-start;
+					align-items: flex-start;
+					color: $white;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					text-decoration: none;
+					transition: all .3s;
+					&:hover {
+						transition: all .3s;
+						color: $greyBlack;
+					}
+				}
+			}
 		}
 	}
 	&__other {
@@ -106,6 +183,11 @@
 		justify-content: flex-end;
 		align-items: center;
 		flex-flow: row nowrap;
+		width: 29.54%;
+		@include max(md) {
+			width: 20%;
+			margin-left: 40px;
+		}
 		&__fone {
 			position: relative;
 			display: flex;
@@ -115,8 +197,25 @@
 			font-weight: 700;
 			line-height: 14px;
 			letter-spacing: 0.05em;
-			color: $white;
+			color: $grey;
 			margin-right: 72px;
+			&--desc {
+				@media (max-width: 1350px) {
+					display: none;
+				}
+			}
+			&--mob {
+				display: none;
+				@media (max-width: 1350px) {
+					display: flex;
+				}
+			}
+			@media (max-width: 1700px) {
+				margin-right: 40px;
+			}
+			@media (max-width: 1350px) {
+				margin-right: 25px
+			}
 			a {
 				position: relative;
 				display: inline-block;
@@ -125,7 +224,18 @@
 				font-weight: 700;
 				line-height: 14px;
 				letter-spacing: 0.05em;
-				color: $white;				
+				color: $grey;
+				transition: all .3s;
+				&:hover {
+					color: $white;
+					transition: all .3s;
+					svg {
+						path {
+							fill: $white;
+							transition: all .3s;
+						}
+					}
+				}		
 			}		
 		}
 		&__lang {
@@ -141,7 +251,28 @@
 			text-transform: uppercase;
 			color: $grey;
 			margin-right: 79px;
-			img {
+			transition: all .3s;
+			@media (max-width: 1700px) {
+				margin-right: 40px;
+			}
+			@media (max-width: 1350px) {
+				margin-right: 25px
+			}
+			@include max(md) {
+				display: none;
+			}
+			&:hover {
+				color: $white;
+				transition: all .3s;
+				svg {
+					path {
+						fill: $white;
+						transition: all .3s;
+					}
+				}
+			}
+			img, svg {
+				transition: all .3s;
 				margin-right: 14px;
 			}
 		}
@@ -157,6 +288,18 @@
 				justify-content: flex-start;
 				align-items: center;
 				z-index: 3;
+				transition: all .3s;
+				&:hover {
+					color: $white;
+					transition: all .3s;
+					svg {
+						transition: all .3s;
+						path {
+							fill: $white;
+
+						}
+					}
+				}
 			}
 			&__input {
 				position: absolute;
@@ -180,13 +323,34 @@
 			justify-content: flex-start;
 			align-items: center;
 			margin-right: 21px;
+			transition: all .3s;
+			&:hover {
+				color: $white;
+				transition: all .3s;
+				svg {
+					path {
+						fill: $white;
+						transition: all .3s;
+					}
+				}
+			}
 		}
 		&__user {
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-
+			transition: all .3s;
+			&:hover {
+				color: $white;
+				transition: all .3s;
+				svg {
+					path {
+						fill: $white;
+						transition: all .3s;
+					}
+				}
+			}
 		}
 	}
 }

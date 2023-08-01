@@ -10,7 +10,8 @@ $('.js-main__slider').each(function(){
 		autoHeight: true,
 		slideToClickedSlide: true,
     loop: false,
-    speed: 800,
+    speed: 1500,
+		allowTouchMove: false,
 		navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]

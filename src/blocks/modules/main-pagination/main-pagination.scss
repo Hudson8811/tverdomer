@@ -6,6 +6,8 @@
 	justify-content: flex-start;
 	flex-flow: column nowrap;
 	width: 100%;
+	animation-name: fadeInLeft;
+	animation-delay: 1.3s; 
   .container {
     position: relative;
     width: 1920px;

@@ -7,7 +7,7 @@
 	height: 728px;
 	.main__slide {
 		position: relative;
-		height: 728px;
+		height: 400px;
 		transition: all 1.5s;
 		z-index: 5;
 		@include max(sm) {
@@ -16,7 +16,8 @@
 		&__picture {
 			img {
 				position: absolute;
-				filter: blur(0px);
+				animation: TranslateXOut  1s ease   normal forwards;
+				filter: blur(5px);
 				top: 0;
 				left: 0;
 				height: 100%;
@@ -53,13 +54,13 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			flex-flow: column nowrap;
-			animation: decrease 0.5s ease 0s 1 normal forwards;	
+			animation: decrease  1s ease   normal forwards;
 			&__title{
 				color: $white;
-				font-size: 32px;
+				font-size: 72px;
 				font-style: normal;
 				font-weight: 700;
-				line-height: 125%;
+				line-height: 125%;		
 			}
 			&__text {
 				position: relative;
@@ -103,7 +104,7 @@
 				justify-content: center;
 				align-items: flex-start;
 				flex-flow: column nowrap;
-				animation: slideActive 0.5s ease 0s 1 normal forwards;	
+				animation: slideActive 0.5s ease 0s normal forwards;	
 
 			}
 		}
@@ -120,16 +121,7 @@
 			}			
 		}
 	}
-	.swiper-slide-next {
-		height: 400px;
-		transition: all 1s;
-		.main__slide__picture {
-			img {
-				filter: blur(5px);
-				object-position: left center;
-			}
-
-		}
+	.main__slide--right {
 		.main__slide__desc  {
 			align-items: flex-end;
 				
@@ -146,12 +138,12 @@
 		}
 		
 	}  
-	.swiper-slide-prev {
+	.main__slide--left {
 		height: 400px;
-		transition: all 1s;
+		transition: all 1.5s;
 		.main__slide__picture {
 			img {
-				filter: blur(5px);
+				animation: TranslateXOut  1s ease   normal forwards;
 				object-position: right center	
 			}
 
@@ -166,15 +158,16 @@
 			}
 		}
 		.main__slide__button--wrap {
-			left: -20%;
+			left: -25%;
 			align-items: flex-start;
-			animation: slideNoActive 1s ease 0s 1 normal forwards;	
+			animation: slideNoActive 1s ease  normal forwards;	
 		}					
 	} 
 	.swiper-slide-active {
 		z-index: 10;
+		height: 728px;
 		.main__slide__desc  {
-			animation: rise 1s ease 0s 1 normal forwards;
+			animation: rise 1s ease  normal forwards;
 			.main__slide__desc__title {
 				font-size: 72px;
 				font-style: normal;
@@ -184,12 +177,12 @@
 			
 		}
 		.main__slide__button--wrap {
-			animation: slideActive 0.5s ease 0s 1 normal forwards;
+			animation: slideActive 1s ease  normal forwards;
 
 		}
 		.main__slide__picture {
 			img {
-				left: -20%;
+				animation: TranslateXIn 1s ease   normal forwards;
 				object-position: right center	
 			}
 
@@ -197,20 +190,24 @@
 	} 
 	@keyframes rise {
 		0% {
-			transform: scale(0);
+			opacity: 0;
+			visibility: hidden;
 		}
 	
 		100% {
-			transform: scale(1);
+			opacity: 1;	
+			visibility: visible;
 		}
 	}
 	@keyframes decrease {
 		0% {
-			transform: scale(1);
+			opacity: 1;
+			visibility: visible;
 		}
 	
 		100% {
-			transform: scale(0);
+			opacity: 0;
+			visibility: hidden;
 		}
 	}
 	@keyframes slideNoActive {
@@ -235,35 +232,31 @@
 			opacity: 0;
 		}
 	}
+	@keyframes TranslateXIn {
+		0% {
+			transform: translateX(0%);
+			filter: blur(5px);
+		}
+	
+		100% {
+			transform: translateX(-20%);
+			filter: blur(0px);
+		}
+	}
+	@keyframes TranslateXOut {
+		0% {
+			transform: translateX(-20%);
+			filter: blur(0px);
+		}
+	
+		100% {
+			transform: translateX(0%);
+			filter: blur(5px);
+		}
+	}
 
 	.swiper-wrapper {
 		align-items: center;
-	}
-}
-
-
-
-
-
-
-
-
-
-.security {
-	padding: 77px 72px;
-	margin-bottom: 0;
-	overflow: hidden;
-	min-height: 100%;
-	&__bg {
-		position: absolute;
-		left: 0;
-		bottom: -10px;
-		img {
-			position: relative;
-			width: 100%;
-			object-fit: cover;
-			object-position: left bottom;
-		}
 	}
 }
 
