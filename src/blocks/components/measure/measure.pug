@@ -6,4 +6,6 @@
         !="Достигается за счет калибровки только с помощью эталонных <a href='#'>мер твердости</a> без использования переводных таблиц, которые «зашиты» в программы других твердомеров, увеличивающих погрешность измерения."
     .measure__btn.btn выбрать товары
   .measure__bg 
-    img(src="img/index/measure__bg.png", alt="")
+    picture 
+      source(media="(max-width: 992px)", srcset="img/index/measure__bg--mob.png")
+      img(src="img/index/measure__bg.png", srcset="img/index/measure__bg--2x.png 2x" alt="")

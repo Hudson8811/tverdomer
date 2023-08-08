@@ -9,7 +9,12 @@
   pointer-events: none; 
   z-index: 100;
   animation-name: fadeInRight;
-	animation-delay: 1.7s; 
+	animation-delay: 1.7s;
+  &--desc {
+    @include max(lg) {
+      display: none;
+    }
+  }
   &__item {
     position: relative;
     display: flex;

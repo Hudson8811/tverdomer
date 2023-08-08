@@ -5,13 +5,21 @@
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+	@media (max-width: 1150px) {
+		align-items: center;
+	}
 	&__wrap {
 		position: relative;
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
 		align-items: stretch;
-		margin-bottom: 30px;	
+		margin-bottom: 30px;
+		@media (max-width: 1150px) {
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
 	}
 	&__title {
 		text-align: center;
@@ -21,9 +29,19 @@
 		width: 50%;
 		&:nth-child(2) {
 			margin-left: 15px;
+			@media (max-width: 1150px) {
+				margin-left: 0;
+				width: 100%;
+				max-width: 512px;
+			}
 		}
 		&:nth-child(1) {
 			margin-right: 15px;
+			@media (max-width: 1150px) {
+				margin-right: 0;
+				width: 100%;
+				max-width: 512px;
+			}
 		}
 	}
 
@@ -34,12 +52,27 @@
 		&--brend {
 			justify-content: space-between;
 			align-items: center;
+			@include max(md) {
+				padding: 32px 24px;
+				margin-bottom: 0 !important;
+			}
 		}
 		&--awards {
+			@include max(lg) {
+				padding: 32px 24px;
+			}
+			@media (max-width: 1150px) {
+				margin-bottom: 24px;
+			}
 			.arguments__item__text {
 				margin-bottom: 80px;
 				max-width: 454px;
+				@include max(md) {
+					margin-bottom: 20px;
+				}
 			}
+
+
 		}
 		&__list {
 			position: relative;
@@ -64,17 +97,42 @@
 			margin-top: 10px;
 			margin-bottom: 48px;
 			border-right: 1px solid #3F3F3F;
+			@include max(lg) {
+				padding: 32px 24px;
+			}
+			@include max(xs) {
+				flex: 0 0 50%;
+				max-width: calc(50% - 0px);
+				margin-bottom: 20px;
+			}
 			&:nth-child(3n) {
 				border-right: none;
+				@include max(xs) {
+					border-right: 1px solid #3F3F3F;
+				}
+			}
+			&:nth-child(2n) {
+				@include max(xs) {
+					border-right: none;
+				}
+
 			}
 		}
 		&__title {
 			margin-bottom: 58px;
+			@include max(md) {
+				margin-bottom: 22px;
+
+			}
 		}
 		&__year {
 			margin-bottom: 64px;
 			max-height: 134px;
+			@include max(md) {
+				margin-bottom: 20px;
+			}
 		}
+
 		&__buttons {
 			position: relative;
 			display: flex;
@@ -82,14 +140,16 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			flex-flow: row wrap;
+
 			&__row {
 				position: relative;
 				display: flex;
-				flex-flow: row wrap;
+				flex-flow: row nowrap;
 				justify-content: space-between;
 				width: 100%;
 				max-width: 464px;
 				margin-bottom: 16px;
+				
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -97,6 +157,14 @@
 		}
 		&__button {
 			max-width: 100%;
+			&--double {
+				&:first-child {
+					margin-right: 5px;
+				}
+				&:last-child {
+					margin-left: 5px;
+				}
+			}
 		}
 	}
 

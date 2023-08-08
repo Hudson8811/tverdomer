@@ -6,7 +6,17 @@
 	margin-left: -30px;
 	flex-flow: row nowrap;
 	margin-bottom: 98px;
-
+	@media (max-width: 1150px) {
+		width: 100%;
+		max-width: 512px;
+		margin-left: 0;
+		flex-flow: column nowrap;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include max(md) {
+		margin-bottom: 47px;
+	}
 	&__item {
 		position: relative;
 		display: flex;
@@ -19,6 +29,18 @@
 		min-height: 120px;
 		transition: all .87s;
 		text-decoration: none;
+		@media (max-width: 1150px) {
+			flex: 1 0 100%;
+			max-width: calc(100% - 0px);
+			width: 100%;
+			margin-left: 0px;
+		}
+		&:last-child {
+			@media (max-width: 1150px) {
+				margin-bottom: 0;
+			}
+
+		}
 		&:hover {
 			transition: all .87s;
 			.soc-big__item__title {

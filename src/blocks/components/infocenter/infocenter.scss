@@ -14,11 +14,24 @@
     justify-content: center;
     height: 100%;
     margin-bottom: 48px;
+    @media (max-width: 1450px) {
+      margin-bottom: 0;
+    }
   }
 
   &__btn {
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 1450px) {
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+    }
+    @include max(md) {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+    }
   }
   &__title {
     text-align: center;
@@ -31,7 +44,7 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     border-radius: 35px;
     background: #F5F5F5;
@@ -39,6 +52,20 @@
     padding: 0px;
     height: auto;
     text-decoration: none;
+    @include max(md) {
+      width: 315px;
+    }
+    &__desc {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-flow: column nowrap;
+      padding-left: 30px;
+      width: 100%;
+      max-width: 330px;
+      padding-bottom: 60px;
+    }
     &__title {
       color: $red;
       font-size: 14px;
@@ -50,7 +77,7 @@
     }
     &__text {
       margin-bottom: 40px;
-      max-width: 330px;
+
     }
     &__gallery {
       position: relative;
@@ -79,7 +106,9 @@
       }
     }
     &__bottom {
-      position: relative;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
       width: 100%;
       display: flex;
       flex-flow: column nowrap;

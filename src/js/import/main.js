@@ -38,3 +38,12 @@ jQuery(function () {
                 bodyBodymotionless.classList.remove("Bodymotionless")
         }
 });
+function bodyNoScroll() {
+        let bodyBodymotionless = document.querySelector('body')
+        bodyBodymotionless.classList.add("Bodymotionless")
+
+}
+function bodyYesScroll() {
+        let bodyBodymotionless = document.querySelector('body')
+        bodyBodymotionless.classList.remove("Bodymotionless")
+}

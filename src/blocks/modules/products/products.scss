@@ -18,6 +18,21 @@
       position: absolute;
       right: 0;
       top:0;
+      &--desc {
+        @include max(md) {
+          display: none;
+        }
+
+      }
+      &--mob {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include max(md) {
+          display: flex;
+        }
+      }
     }
   }
   &__tabs {
@@ -26,6 +41,9 @@
     width: 100%;
     justify-content: center;
     align-items: flex-start;
+    @include max(md) {
+      justify-content: flex-start;
+    }
   }
   &__tab {
     position: relative;

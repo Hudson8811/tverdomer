@@ -4,16 +4,29 @@
 	justify-content: space-between;
 	align-items: stretch;
 	width: 100%;
+	@include max(lg) {
+		flex-flow: column nowrap;
+	}
 	&__col {
 		&:nth-child(1) {
 			width: 40.33%;
+			@include max(lg) {
+				width: 100%;
+				margin-bottom: 30px;
+			}
 		}
 		&:nth-child(2) {
 			width: 57.38%;
+			@include max(lg) {
+				width: 100%;
+			}
 		}
 	}
 	&__item {
 		min-height: 376px;
+		@include max(sm) {
+			min-height: 200px;
+		}
 		overflow: hidden;
 		&:last-child {
 			margin-bottom: 0;
@@ -21,18 +34,37 @@
 		&--one {
 			padding-left: 72px;
 			justify-content: center;
+			@include max(sm) {
+				padding-left: 0;
+				padding-bottom: 40px;	
+				align-items: center;			
+			}
 			.warranty__text {
 				max-width: 364px;
+				@include max(sm) {
+					padding-left: 24px;
+					padding-right: 24px;
+				}
 			}
 			.warranty__bg {
 				position: absolute;
 				right: 0;
 				bottom: -10px;
-				img {
+				@include max(sm) {
+					position: relative;
+					left: -40px;
+					right: auto;
+
+				}
+				img, picture {
 					position: relative;
 					width: 100%;
 					object-fit: cover;
 					object-position: right bottom;
+					@include max(sm) {
+						object-position: center bottom;
+	
+					}
 				}
 			}			
 		}
@@ -40,13 +72,26 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			@include max(md) {
+				justify-content: flex-end;
+				align-items: flex-start;
+				padding-left: 40px;
+				padding-bottom: 40px;
+			}
 			.warranty__btn {
 				position: absolute;
 				right: 56px;
 				top: 48px;
+				@include max(md) {
+					right: 21px;
+					top: 20px;
+				}
 			}
 			.warranty__bg {
 				margin-top: -50px;
+				@include max(md) {
+					margin-top: 0px;
+				}
 				img {
 					position: relative;
 					width: 100%;
@@ -62,10 +107,44 @@
 	margin-bottom: 0;
 	overflow: hidden;
 	min-height: 100%;
+	@include max(lg) {
+		padding-bottom: 0;
+	}
+
+	@include max(md) {
+		padding: 32px 24px;
+		padding-bottom: 0;
+	}
+	&__title {
+		@include max(md) {
+			width: 100%;
+			max-width: 600px;
+			margin-bottom: 24px;
+		}
+		@include max(sm) {
+			width: 100%;
+			max-width: 310px;
+			margin-bottom: 24px;
+		}
+	}
+	&__subtitle {
+		@include max(md) {
+			width: 100%;
+			max-width: 300px;
+			margin-bottom: 12px;
+		}
+		@include max(sm) {
+			width: 100%;
+			max-width: 200px;
+		}
+	}
 	&__bg {
 		position: absolute;
 		left: 0;
 		bottom: -10px;
+		@include max(lg) {
+			position: relative;
+		}
 		img {
 			position: relative;
 			width: 100%;

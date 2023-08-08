@@ -2,7 +2,7 @@ var hardnessTesters;
 $('.js-hardness-testers').each(function(){
 	var slider=$(this)
 	var hardnessTesters = new Swiper(slider[0], {
-		spaceBetween: 30,
+		spaceBetween: 12,
 		slidesPerView: "auto",
     loop: false,
     speed: 800,
@@ -11,6 +11,12 @@ $('.js-hardness-testers').each(function(){
 				nextEl: ".hardness-tester-next",
 				prevEl: ".hardness-tester-prev"
 		},
+		breakpoints: {
+		// when window width is >= 480px
+		992: {
+			spaceBetween: 30,
+		},
+		}
 	});
 })
 

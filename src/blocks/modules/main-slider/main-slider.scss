@@ -122,6 +122,9 @@
 		}
 	}
 	.main__slide--right {
+		&:not(.swiper-slide-active)  {
+			cursor: pointer;
+		}
 		.main__slide__desc  {
 			align-items: flex-end;
 				
@@ -141,6 +144,9 @@
 	.main__slide--left {
 		height: 400px;
 		transition: all 1.5s;
+		&:not(.swiper-slide-active)  {
+			cursor: pointer;
+		}
 		.main__slide__picture {
 			img {
 				animation: TranslateXOut  1s ease   normal forwards;

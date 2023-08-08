@@ -43,31 +43,11 @@
   &__button {
     position: absolute;
     bottom: 0;
-    display: flex;
-    justify-content: flex-start;
-    text-decoration: underline;
-    width: auto;
     left: 0px;
-    color: $grey;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 550;
-    line-height: 135%; /* 21.6px */
-    letter-spacing: 0.48px;
-    transition: all .5s;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 10px;
-    text-decoration-skip: none;
-    text-decoration-skip-ink: none;
-    // @include max(xxl) {
-    //   left: vw(251, 1920);
-    // }
+    text-decoration: none;
     animation-name: fadeInLeft;
     animation-delay: 1s; 
-    &:hover {
-      transition: all .5s;
-      text-decoration: none;
-    } 
+    z-index: 50;
   }
 }
 
