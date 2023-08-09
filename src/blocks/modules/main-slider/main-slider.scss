@@ -5,15 +5,41 @@
 	align-items: center;
 	justify-content: center;
 	height: 728px;
+	@include max(xxl) {
+		height: vw(728);
+	}
+	@media (max-width: 1450px) {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include max(sm) {
+		height: auto;
+		width: 100%;
+		padding-top: vw2(100);
+		padding-bottom: vw2(73);
+	}
 	.main__slide {
 		position: relative;
 		height: 400px;
+		@include max(xxl) {
+			height: vw(400);
+		}
+		@include max(sm) {
+			height: auto;
+		}
 		transition: all 1.5s;
 		z-index: 5;
-		@include max(sm) {
-			min-height: 468px;
-		}
 		&__picture {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			@include max(sm) {
+				min-height: vw2(381);
+			}
 			img {
 				position: absolute;
 				animation: TranslateXOut  1s ease   normal forwards;
@@ -23,6 +49,11 @@
 				height: 100%;
 				object-fit: contain;
 				object-position: center center;
+				@include max(sm) {
+					width: 100%;
+					animation: none;
+					filter: blur(0px);
+				}
 			}
 
 			@include max(sm) {
@@ -55,12 +86,18 @@
 			align-items: flex-start;
 			flex-flow: column nowrap;
 			animation: decrease  1s ease   normal forwards;
+			@include max(sm) {
+				display: none;
+			}
 			&__title{
 				color: $white;
 				font-size: 72px;
 				font-style: normal;
 				font-weight: 700;
-				line-height: 125%;		
+				line-height: 125%;
+				@include max(xxl) {
+					font-size: vw(72);
+				}	
 			}
 			&__text {
 				position: relative;
@@ -73,6 +110,11 @@
 				line-height: 135%; 
 				letter-spacing: 0.48px;
 				text-transform: uppercase;
+				cursor: pointer;
+				text-decoration: none;
+				@include max(xxl) {
+					font-size: vw(16);
+				}	
 				&::before {
 					content: "";
 					position: relative;
@@ -80,6 +122,10 @@
 					width: 88px;
 					margin-right: 24px;
 					border-bottom: 2px solid $grey;
+					@include max(xxl) {
+						width: vw(88);
+						margin-right: vw(24);
+					}	
 				}							
 			}
 		}
@@ -93,6 +139,22 @@
 			font-style: normal;
 			font-weight: 700;
 			line-height: 125%;
+			@include max(xxl) {
+				font-size: vw(32);
+			}
+			img {
+				position: relative;
+				display: block;
+				width: 72px;
+				height: 72px;
+				object-fit: contain;
+				object-position: center center;
+				@include max(xxl) {
+					font-size: vw(32);
+					width: vw(72);
+					height: vw(72);
+				}
+			}
 			&--wrap {
 				position: absolute;
 				top: 0px;
@@ -108,6 +170,33 @@
 
 			}
 		}
+		&__choice {
+			position: absolute;
+			display: none;
+			align-items: center;
+			color:  $grey;
+			font-size: vw2(12);
+			font-style: normal;
+			font-weight: 500;
+			line-height: 135%; /* 16.2px */
+			letter-spacing: 0.36px;
+			text-transform: uppercase;
+			bottom: vw2(-73);
+			left: 0;
+			cursor: pointer;
+			text-decoration: none;
+			@include max(sm) {
+				display: flex;
+			}
+			&::before {
+				content: "";
+				position: relative;
+				display: block;
+				width: vw2(30);
+				margin-right: vw2(12);
+				border-bottom: 2px solid $grey;
+			}				
+		}
 		&--right {
 			.main__slide__desc {
 				top: 40%;
@@ -119,6 +208,36 @@
 
 				}
 			}			
+		}
+		&__specif {
+			display: none;
+			@include max(sm) {
+				display: flex;
+				position: relative;
+				justify-content: center;
+				align-items: center;
+				flex-flow: column nowrap;
+				width: 100%;
+				margin-top: vw2(10);
+			}
+			&__title {
+				color: $white;
+				text-align: center;
+				font-size: vw2(28);
+				font-style: normal;
+				font-weight: 700;
+				line-height: 125%;
+				margin-bottom: vw2(8);			
+			}
+			&__text {
+				color: $grey;
+				text-align: center;
+				font-family: HelveticaNeueCyr;
+				font-size: vw2(18);
+				font-style: normal;
+				font-weight: 700;
+				line-height: 125%; 
+			}
 		}
 	}
 	.main__slide--right {
@@ -133,13 +252,23 @@
 			flex-flow: row nowrap;
 			img {
 				margin-right: 40px;
+				@include max(xxl) {
+					margin-right: vw(40);
+				}
 			}
 		}
 		.main__slide__button--wrap {
 			left: 30%;
 			animation: slideNoActive 1s ease 0s 1 normal forwards;	
 		}
-		
+		.main__slide__picture {
+			img {
+				@include max(sm) {
+					object-position: center center;				
+				}	
+			}
+
+		}
 	}  
 	.main__slide--left {
 		height: 400px;
@@ -150,7 +279,12 @@
 		.main__slide__picture {
 			img {
 				animation: TranslateXOut  1s ease   normal forwards;
-				object-position: right center	
+				object-position: right center;
+				@include max(sm) {
+					animation: none;
+					filter: blur(0);
+					object-position: center center;
+				}
 			}
 
 		}
@@ -161,6 +295,9 @@
 		.main__slide__button {
 			img {
 				margin-left: 40px;
+				@include max(xxl) {
+					margin-right: vw(40);
+				}
 			}
 		}
 		.main__slide__button--wrap {
@@ -172,13 +309,20 @@
 	.swiper-slide-active {
 		z-index: 10;
 		height: 728px;
+		@include max(xxl) {
+			height: vw(728);
+		}
+
 		.main__slide__desc  {
 			animation: rise 1s ease  normal forwards;
 			.main__slide__desc__title {
 				font-size: 72px;
 				font-style: normal;
 				font-weight: 700;
-				line-height: 125%;		
+				line-height: 125%;
+				@include max(xxl) {
+					font-size: vw(72);
+				}		
 			}
 			
 		}
@@ -189,7 +333,10 @@
 		.main__slide__picture {
 			img {
 				animation: TranslateXIn 1s ease   normal forwards;
-				object-position: right center	
+				object-position: right center;	
+				@include max(sm) {
+					animation: none;
+				}
 			}
 
 		}

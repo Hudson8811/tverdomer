@@ -182,17 +182,32 @@
     }
   }
   .fabrication-prev,.fabrication-next {
-    &::after {
-      color: $greyBlack;
-    }
+    // &::after {
+    //   color: $greyBlack;
+    // }
   }
+
   .fabrication-prev{
     left: -72px;
+    top: 28px;
     right: auto;
+    &::after {
+      content: url(../img/svg/button-prev--black.svg);
+      @media (max-width: 1450px)  {
+          content: url(../img/svg/button-prev--mob.svg);   
+      }
+  }
   }
   .fabrication-next {
     right: -72px;
+    top: 28px;
     left:auto;
+    &::after {
+      content: url(../img/svg/button-next--black.svg);
+      @media (max-width: 1450px) {
+          content: url(../img/svg/button-next--mob.svg);   
+      }
+  }
   }
 }
 

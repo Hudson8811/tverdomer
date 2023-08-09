@@ -2,7 +2,18 @@
   position: relative;
   width: 100%;
   background: $fonBlack;
-  min-height: 791px;
+  height: 728px;
+  margin-top: 100px;
+  @include max(xxl) {
+    height: vw(728);
+  }
+  @media (max-width: 1450px) {
+    margin-top: vw(80);
+	}
+	@include max(sm) {
+    margin-top: vw2(15);
+		height: auto;
+	}
   .container {
     padding-left: 0;
     padding-right: 0;
@@ -14,18 +25,36 @@
   }
   &__registry {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     right: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     animation-name: fadeInRight;
-    animation-delay: 1s;  
+    animation-delay: 1s;
+    width: 115px; 
+    height: 108px;
+    @include max(xxl) {
+      width: vw(115);
+      height: vw(108);
+    }
+    @include max(sm) {
+      width: vw2(60);
+      height: vw2(55);
+      bottom: auto;
+      top: vw2(96);
+    }
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
   }
   &__title {
     position: absolute;
     left: 0px;
-    top: 0;
+    top: 20px;
     color:  #CBCECF;
     font-size: 32px;
     font-style: normal;
@@ -35,19 +64,31 @@
     max-width: 331px;
     animation-name: fadeInLeft;
     animation-delay: 1s; 
-    // @include max(xxl) {
-    //   left: vw(251, 1920);
-    // }
+    @include max(xxl) {
+      font-size: vw(32);
+      max-width: vw(331);
+    }
+    @include max(sm) {
+      font-size: vw2(18);
+      max-width: vw2(179);
+    }
 
   }
   &__button {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0px;
     text-decoration: none;
     animation-name: fadeInLeft;
     animation-delay: 1s; 
     z-index: 50;
+    @include max(sm) {
+      left: auto;
+      right: 0;
+      bottom: 0;
+      font-size: vw2(12);
+      padding-bottom: vw2(5);
+    }
   }
 }
 

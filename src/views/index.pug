@@ -9,7 +9,7 @@ block content
 		.container
 			.main__header__title.animate__animated 
 				!="Точность без компромисcов"
-			//- include ../blocks/modules/main-slider/main-slider
+			include ../blocks/modules/main-slider/main-slider
 			.main__header__registry.animate__animated
 				img(src="img/svg/reestr.svg" alt="")
 			a(href="#").btn.main__header__button.animate__animated купить
@@ -26,7 +26,7 @@ block content
 			include ../blocks/components/ultrasonic/ultrasonic
 			include ../blocks/components/measure/measure
 			include ../blocks/components/warranty/warranty
-	.section.section__white
+	.section.section__white.products__section
 		include ../blocks/modules/products/products
 
 	.section.section__black
@@ -36,6 +36,6 @@ block content
 
 			include ../blocks/components/fabrication/fabrication
 
-	.section.section__white
+	.section.section__white.infocenter__section
 		.container
 			include ../blocks/components/infocenter/infocenter

@@ -29,6 +29,10 @@
 		min-height: 120px;
 		transition: all .87s;
 		text-decoration: none;
+		@include max(sm) {
+			min-height: 100px;
+			margin-bottom: 16px;
+		}
 		@media (max-width: 1150px) {
 			flex: 1 0 100%;
 			max-width: calc(100% - 0px);
@@ -111,7 +115,13 @@
 			font-size: 22px;
 			font-style: normal;
 			font-weight: 500;
-			line-height: 150%;			
+			line-height: 150%;
+			@include max(sm) {
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 150%;				
+			}		
 		}
 		&__picture {
 			position: absolute;

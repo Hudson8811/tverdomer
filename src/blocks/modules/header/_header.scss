@@ -137,8 +137,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 54.4%;
+		width: 50%;
 		height: 100%;
+
 		@include max(lg) {
 			width: 65%;
 		}
@@ -240,6 +241,9 @@
 		align-items: center;
 		flex-flow: row nowrap;
 		width: 29.54%;
+		@media (max-width: 1450px) {
+			width: 32%;
+		}
 		@include max(mdHeader) {
 			width: 20%;
 			margin-left: 40px;
@@ -254,7 +258,10 @@
 			line-height: 14px;
 			letter-spacing: 0.05em;
 			color: $grey;
-			margin-right: 72px;
+			margin-right: 80px;
+			@media (max-width: 1800px) {
+				margin-right: 50px;
+			}
 			&--desc {
 				@media (max-width: 1350px) {
 					display: none;
@@ -308,6 +315,9 @@
 			color: $grey;
 			margin-right: 79px;
 			transition: all .3s;
+			@media (max-width: 1800px) {
+				margin-right: 50px;
+			}
 			@media (max-width: 1700px) {
 				margin-right: 40px;
 			}
@@ -342,7 +352,7 @@
 			align-items: center;
 			width: 35px;
 			height: 35px;
-			margin-right: 5px;
+			margin-right: 28px;
 			@include max(mdHeader) {
 				position: relative;
 				width: 100%;
@@ -461,7 +471,7 @@
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
-			margin-right: 21px;
+			margin-right: 35px;
 			transition: all .3s;
 			&:hover {
 				color: $white;

@@ -4,12 +4,16 @@
 	&__title {
 		width: 100%;
 		max-width: 565px;
+		margin-bottom: 58px;
 		z-index: 2;
 		@include max(md) {
 			padding-left: 24px;
 			padding-right: 24px;
 			margin-bottom: 32px;
 			max-width: 100%;
+		}
+		@include max(sm) {
+			margin-bottom: 32px;
 		}
 	}
 	@include max(md) {
@@ -25,7 +29,7 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		width: 100%;
-		max-width: 565px;
+		max-width: 620px;
 		z-index: 2;
 		@include max(md) {
 			padding-left: 24px;

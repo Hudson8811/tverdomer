@@ -32,7 +32,7 @@ body {
 }
 .site-main {
 	flex: 1 0 auto;
-    padding-top: 145px;
+    padding-top: 54px;
     background: $mainDark;
     overflow: hidden;
 }
@@ -72,8 +72,8 @@ body {
 		width: 130px;
 		height: 130px;
 		position: absolute;
-		right: 0px;
-		top: 0;
+		right: -18px;
+		top: 5px;
 		opacity: 1;
 		pointer-events: none;
 		will-change: transform, opacity;
@@ -81,6 +81,12 @@ body {
         @include max(xxl) {
             width: vw(130);
             height: vw(130);
+        }
+        @include max(sm) {
+            width: vw2(72);
+            height: vw2(68);
+            right: vw2(-10);
+            top: vw2(12)
         }
         &-inner {
 			width: 100%;
@@ -99,6 +105,11 @@ body {
 			animation: rotateCircle 15s infinite linear;
             @include max(xxl) {
                 height: vw(130);
+                width: vw(130);
+            }
+            @include max(sm) {
+                width: vw2(72);
+                height: vw2(68);
             }
 		}
 
@@ -113,6 +124,11 @@ body {
                 top: vw(65);
                 width: vw(18);
             }
+            @include max(sm) {
+                width: vw2(11);
+                left: vw2(35.5);
+                top: vw2(35.5);
+            }
 		}
     }
 }
@@ -121,7 +137,7 @@ body {
     display: flex;
     height: 100px;
     width: 100%;
-    top: calc(50% - 44px);
+    top: calc(50% - 28px);
     overflow: visible;
     @media (max-width: 1450px) {
       position: relative;
@@ -145,6 +161,12 @@ body {
       margin-top: 45px;
     }
     .swiper-button-prev,.swiper-button-next {
+        width: 28px;
+        height: 56px;
+        top: 0;
+        &::after {
+            font-size: 38px;
+        }
       @media (max-width: 1450px) {
         width: 49px;
         height: 49px;
@@ -172,6 +194,28 @@ body {
   
       }
   
+  
+    }
+    .swiper-button-prev {
+        width: 28px;
+        height: 56px;
+        &::after {
+            content: url(../img/svg/button-prev.svg);
+            @media (max-width: 1450px)  {
+                content: url(../img/svg/button-prev--mob.svg);   
+            }
+        }
+  
+    }
+    .swiper-button-next {
+        width: 28px;
+        height: 56px;
+        &::after {
+            content: url(../img/svg/button-next.svg);
+            @media (max-width: 1450px) {
+                content: url(../img/svg/button-next--mob.svg);   
+            }
+        }
   
     }
 }
@@ -276,7 +320,7 @@ body {
     }
     &--red {
         padding-bottom: 0;
-        text-transform: none;
+        text-transform: none !important;
         color: $red;
         &::after {
             background: $red;

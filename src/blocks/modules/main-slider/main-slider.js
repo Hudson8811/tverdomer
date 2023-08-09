@@ -4,14 +4,14 @@ var mainSlider;
 $('.js-main__slider').each(function(){
 	var slider=$(this)
 	var mainSlider = new Swiper(slider[0], {
-		spaceBetween: 16,
+		spaceBetween: 30,
     centeredSlides: true,
-		slidesPerView: 2.8,
+		slidesPerView: 1,
 		autoHeight: true,
-		slideToClickedSlide: true,
+		slideToClickedSlide: false,
     loop: false,
     speed: 1500,
-		allowTouchMove: false,
+		allowTouchMove: true,
 		navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]
@@ -31,13 +31,14 @@ $('.js-main__slider').each(function(){
 					}
           return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
+		},
+		breakpoints: {
+		    767: {
+		        slidesPerView: 2.8,
+		        spaceBetween: 16,
+						slideToClickedSlide: true,
+						allowTouchMove: false,
+		    },
 		}
-		// breakpoints: {
-		//     // when window width is >= 480px
-		//     992: {
-		//         slidesPerView: 2.2,
-		//         spaceBetween: 30
-		//     },
-		// }
 	});
 })

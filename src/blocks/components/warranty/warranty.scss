@@ -128,6 +128,7 @@
 		}
 	}
 	&__subtitle {
+		max-width: 300px;
 		@include max(md) {
 			width: 100%;
 			max-width: 300px;

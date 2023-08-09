@@ -47,7 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-top: 24px;
+      margin-top: 3px;
     }
     &__cost  {
       position: relative;
@@ -130,7 +130,7 @@
       height: 40px;
       border-radius: 10px;
       background: $mainDark;
-      margin-right: 16px;
+      margin-right: 0px;
       @include max(md) {
         width: 35px;
         height: 35px;
@@ -165,7 +165,7 @@
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 90px;
 
   .swiper-pagination-bullet {
     background: $grey;
