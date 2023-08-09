@@ -1,0 +1,83 @@
+.general-links {
+  position: relative;
+	display: flex;
+	width: calc(100% + 30px);
+	align-items: stretch;
+	flex-flow: row wrap;
+	margin-left: -30px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	@include max(lg) {
+		margin-bottom: 60px;
+		width: calc(100% + 24px);
+		margin-left: -24px;
+	}
+	@include max(md) {
+    margin-bottom: 0;
+	}
+	@include max(sm) {
+		width: calc(100% + 0px);
+		margin-left:  0px;
+	}
+  .general-link {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background: #F5F5F5;
+    padding: 46px 40px;
+    padding-right: 20px;
+		flex: 0 0 33.333%;
+		max-width: calc(33.3333% - 30px);
+		margin-left: 30px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    &__icon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      img,svg {
+        width: 32px;
+        position: relative;
+        display: block;
+        object-fit: contain;
+        object-position: center center;
+      }
+      @include max(sm) {
+        margin-right: 15px;
+        svg {
+          width: 25px;
+
+        }
+      }
+    }
+    &__text {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &:last-child {
+      @include max(md) {
+        margin-bottom: 0;
+      }      
+    }
+		@include max(lg) {
+      flex: 0 0 50%;
+			max-width: calc(50% - 24px);
+			margin-left: 24px;
+			padding: 32px;
+		}
+		@include max(sm) {
+      flex: 0 0 100%;
+			max-width: calc(100% - 0px);
+			margin-left: 0px;
+			margin-bottom: 16px;
+		}
+
+  }
+}

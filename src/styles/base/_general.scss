@@ -41,6 +41,7 @@ body {
 }
 
 .container {
+    position: relative;
 	box-sizing: border-box;
 	width: 1314px;
 	max-width: 95%;
@@ -336,6 +337,109 @@ body {
                 width: 10%;
             }
         }        
+    }
+    &--filter {
+        position: absolute;
+        bottom: 14px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px;
+        background: $mainDark;
+        color: $white;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 135%;
+        min-height: 45px;
+        padding-left: 42px;
+        padding-right: 42px;
+        text-transform: uppercase;
+        margin-right: 0px;
+        transition: all .3s;
+        @include max(sm) {
+            color: $red;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: 135%; /* 14.85px */
+            text-transform: uppercase;
+            background: transparent;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        svg,img {
+            margin-right: 10px;
+            path {
+                @include max(sm) {
+                    fill: $red;
+                }
+            }
+
+        }
+        &:hover {
+          transition: all .3s;
+          background: $greyBlack;
+          @include max(sm) {
+            background: $greyLight;
+            }
+        }
+    }
+    &--description  {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px;
+        color: $greyBlack;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        transition: all .3s;
+        @include max(sm) {
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.7px;
+        }        
+        svg,img {
+            transition: all .3s;
+            margin-right: 18px;
+
+            @include max(md) {
+                width: 40px;
+                height: 40px;
+            }
+            @include max(sm) {
+                margin-right: 13px;
+            }
+        }
+
+        &:hover {
+            transition: all .3s;
+            background: $grey;
+            padding-right: 10px;
+            color: $white;
+            svg {
+                path {
+                    fill: $white; 
+                }
+                .rect-border {
+                    fill: $white;                    
+                }
+            }
+        }
     }
 
 }
