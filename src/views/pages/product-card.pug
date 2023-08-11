@@ -1,0 +1,36 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.section.section__white.section--breadcrumbs
+		include ../../blocks/modules/breadcrumbs/breadcrumbs
+		.container
+			.product-card__section
+				.product-card
+						.product-card__col
+							.product-card__content
+								.swiper-container.gallery-main
+									.swiper-wrapper
+										.swiper-slide
+											<img src="img/index/hardness-gallery__slide--1.png" alt="">
+										.swiper-slide
+											<img src="img/index/hardness-gallery__slide--2.png" alt="">
+										.swiper-slide
+											<img src="img/index/hardness-gallery__slide--3.png" alt="">
+								.swiper-container.gallery-thumbs
+									.swiper-wrapper
+										.swiper-slide
+											<img src="img/index/hardness-gallery__slide--1.png" alt="">
+										.swiper-slide
+											<img src="img/index/hardness-gallery__slide--2.png" alt="">
+										.swiper-slide
+											<img src="img/index/hardness-gallery__slide--3.png" alt="">
+	
+						.product-card__col
+							include ../../blocks/modules/menu-sidebar/menu-sidebar
+		.container
+			.title__40 Другие модели
+			include ../../blocks/components/hardness-tester/hardness-tester
+
