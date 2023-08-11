@@ -1,10 +1,11 @@
 extends ../layouts/default
 
 block variables
-	- const title = "Catalog";
+	- const title = "Catalog describe";
 
 block content
-	.section.section__white.products__section.products__section--cards
+	.section.section__white.section--breadcrumbs.products__section.products__section--cards
+		include ../../blocks/modules/breadcrumbs/breadcrumbs
 		.products
 			.container.container__section--cards
 				.products__title.title__40 Портативные твердомеры 
@@ -33,7 +34,7 @@ block content
 						include ../../blocks/components/cards/cards
 					.products-pane.tab-pane(data-tab-content="4") 
 						include ../../blocks/components/cards/cards
-		.products
+		.products.products--two
 			.container.container__section--cards
 				.products__title.title__40 Эталонные меры твердости
 				.btn--description 
@@ -63,11 +64,11 @@ block content
 				.products__tab-content 
 					.products-pane.tab-pane(data-tab-content="5").active 
 						include ../../blocks/components/cards/cards
-						include ../../blocks/components/general-links/general-links
 					.products-pane.tab-pane(data-tab-content="6") 
 						include ../../blocks/components/cards/cards
 					.products-pane.tab-pane(data-tab-content="7") 
 						include ../../blocks/components/cards/cards
-						include ../../blocks/components/general-links/general-links
+		.container
+			include ../../blocks/components/general-links/general-links
 
 

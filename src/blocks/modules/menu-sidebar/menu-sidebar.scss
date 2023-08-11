@@ -1,0 +1,174 @@
+.accordions.menu-sidebar {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	background: $greyLight;
+	border-radius: 35px;
+	padding: 39px;
+	@include max(lg) {
+		display: none;
+	}
+	.accordion {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 0px;
+		display: block;
+		&__intro {
+			position: relative;
+			display: flex;
+			width: 100%;
+			height: 46px;
+			cursor: pointer;
+			color: $mainFont;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: normal;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			border-bottom: 1px solid #E3E3E3;
+			margin-bottom: 27px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:hover {
+				transition: all 0.1s;
+			}
+			p {
+				position: relative;
+				display: block;
+				color: $mainFont;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;				
+			}
+			&__img {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				animation-name: rotationCloseMenuSidebar;
+				animation-duration: .2s;
+				animation-iteration-count: 1;
+				animation-timing-function: linear;
+				animation-fill-mode: forwards;
+				&:hover {
+					background: transparent;
+				}
+			}
+			a {
+				padding-left: 20px;
+				position: relative;
+				cursor: pointer;
+				color: $mainFont;
+				font-style: normal;
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 600;
+				padding: 8px 20px;
+				padding-right: 0;
+				background: transparent;
+				flex-flow: row nowrap;
+				width: 100%;
+				transition: all 0.1s;
+				&:hover {
+					transition: all 0.1s;
+					font-weight: 800;
+					text-shadow: none;
+					background: $white;
+				}
+			}
+		} 
+	
+		&__content {
+			max-height: 0;
+			overflow: hidden;
+			will-change: max-height;
+			transition: all 0.25s ease-out;
+			opacity: 0;
+			position: relative;
+			background: transparent;
+			max-width: 100%;
+			transition: all 0.1s;
+			cursor: pointer;
+			display: flex;;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-flow: column;
+			color: $greyBlack;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			a {
+				color: $greyBlack;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				width: 100%;
+				transition: all 0.1s;
+				margin-bottom: 22px;
+				text-decoration: none;
+				&:hover {
+					color: $grey;
+				}
+			}
+		} 
+	
+		&__active {
+			.accordion__intro {
+				border-bottom: none;
+				margin-bottom: 0;
+				.accordion__intro__img {
+					animation-name: rotationOpenMenuSidebar;
+					animation-duration: .2s;
+					animation-iteration-count: 1;
+					animation-timing-function: linear;
+					animation-fill-mode: forwards;
+				}
+	
+			}
+			.accordion__content{
+				border-bottom: 1px solid #E3E3E3;
+				margin-bottom: 27px;
+				opacity: 1;
+				width: 100%;
+				transition: all 0.1s;
+	
+			}
+	
+	
+		}
+	
+	
+	}
+	@keyframes rotationOpenMenuSidebar  {
+		0% {
+			transform-origin: 50% 35%;
+			transform: rotate(0deg);
+		}
+	
+		100% {
+			transform-origin: 50% 35%;
+			transform: rotate(90deg);
+		}
+	
+	}
+	@keyframes rotationCloseMenuSidebar {
+		0% {
+			transform-origin: 50% 35%;
+			transform: rotate(90deg);
+		}
+		100% {
+			transform-origin: 50% 35%;
+			transform: rotate(0deg);
+		}
+	
+	}
+}

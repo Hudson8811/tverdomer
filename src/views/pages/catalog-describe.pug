@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Catalog";
+
+block content
+	.section.section__white.section--breadcrumbs.catalog__describe__section
+		include ../../blocks/modules/breadcrumbs/breadcrumbs
+		.container
+			include ../../blocks/modules/selection/selection
+			.catalog__describe__title.title__40 Портативные твердомеры
+			.catalog__describe
+				.catalog__describe__col
+					include ../../blocks/modules/text-block/text-block
+					include ../../blocks/components/cards-double/cards-double
+				.catalog__describe__col
+					include ../../blocks/modules/menu-sidebar/menu-sidebar
+
+		.container
+			include ../../blocks/components/general-links/general-links
+
+

@@ -1,0 +1,40 @@
+.cards.cards-double {
+  width: calc(100% + 30px);
+  align-items: stretch;
+  flex-flow: row wrap;
+  margin-left: -30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  @include max(lg) {
+    margin-bottom: 60px;
+    width: calc(100% + 24px);
+    margin-left: -24px;
+  }
+  @include max(md) {
+    margin-bottom: 0;
+  }
+  @include max(sm) {
+    width: calc(100% + 0px);
+    margin-left:  0px;
+  }
+  .card {
+    flex: 0 0 50%;
+    max-width: calc( 50% - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    @include max(lg) {
+      flex: 0 0 50%;
+      max-width: calc(50% - 24px);
+      margin-left: 24px;
+      padding: 32px;
+    }
+    @include max(sm) {
+      flex: 0 0 100%;
+      max-width: calc(100% - 0px);
+      margin-left: 0px;
+      margin-bottom: 32px;
+    }
+
+  }
+}
+
