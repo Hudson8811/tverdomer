@@ -86,51 +86,8 @@ function bodyYesScroll() {
         bodyBodymotionless.classList.remove("Bodymotionless")
 }
 
-var galleryThumbs = new Swiper(".gallery-thumbs", {
-        centeredSlides: true,
-        centeredSlidesBounds: true,
-        slidesPerView: 3,
-        watchOverflow: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        direction: 'vertical',
-        spaceBetween: 14,
-});
-var galleryMain;
-$('.gallery-main').each(function(){
-        var slider=$(this);
-        var galleryMain = new Swiper(slider[0], {
-                // watchOverflow: true,
-                // watchSlidesVisibility: true,
-                // watchSlidesProgress: true,
-                // preventInteractionOnTransition: true,
-                slidesPerView: 1,
-                navigation: {
-                        nextEl: slider.find('.swiper-button-next')[0],
-                        prevEl: slider.find('.swiper-button-prev')[0]
-                },
-                thumbs: {
-                        swiper: galleryThumbs
-                },
-                pagination: {
-                        el: slider.find('.swiper-pagination')[0],
-                        type: 'bullets',
-                        clickable: true
-                }
-                // breakpoints: {
-                // 	// when window width is >= 480px
-                // 	992: {
-                // 		slidesPerView: 2.2,
-                // 		spaceBetween: 30
-                // 	},
-                // }
-        });
-        galleryMain.controller.control =  galleryThumbs;
-});
 
 
-galleryThumbs.controller.control =  galleryMain;
-// galleryMain.controller.control =  galleryThumbs;
 var hardnessTesters;
 $('.js-infocenter').each(function(){
 	var slider=$(this)
@@ -408,6 +365,43 @@ accordions.forEach((accordion) => {
 
 
 
+var galleryThumbs = new Swiper(".gallery-thumbs", {
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  slidesPerView: 3,
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+  spaceBetween: 14,
+  navigation: {
+          nextEl: ".gallery-thumbs-next",
+          prevEl: ".gallery-thumbs-prev"
+  },
+  
+});
+
+var galleryMain = new Swiper(".gallery-main",  {
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  preventInteractionOnTransition: true,
+  slidesPerView: 1,
+
+  thumbs: {
+          swiper: galleryThumbs
+  },
+  // breakpoints: {
+  // 	// when window width is >= 480px
+  // 	992: {
+  // 		slidesPerView: 2.2,
+  // 		spaceBetween: 30
+  // 	},
+  // }
+});
+
+// galleryThumbs.controller.control =  galleryMain;
+galleryMain.controller.control =  galleryThumbs;
 
 
 

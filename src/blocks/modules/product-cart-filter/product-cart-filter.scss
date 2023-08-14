@@ -1,0 +1,445 @@
+
+.product-cart {
+	&__filter {
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		background: $greyLight;
+		border-radius: 35px;
+		padding: 40px 35px;
+		margin-bottom: 40px;
+		&__top {
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			border-bottom: 1px solid #CBCECF;
+			padding-bottom: 25px;
+			margin-bottom: 33px;
+			&--two {
+				.product-cart__filter__garantia {
+					text-align: right;
+					width: 100%;
+					margin-bottom: 17px;
+				}
+				.product-cart__filter__cost {
+					margin-bottom: 5px;
+				}
+				.product-cart__filter__cost--sale {
+					color: $greyBlack;
+					font-size: 30px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+					letter-spacing: 1.5px;
+					text-decoration-line: line-through;					
+				}
+			}
+		}
+		&__btn {
+			padding-left: 20px;
+			padding-right: 20px;
+			white-space: nowrap;
+			font-size: 11px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%; /* 14.85px */
+			text-transform: uppercase;
+		}
+		&__bottom {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			&__row {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				margin-bottom: 12px;
+				&.border {
+					border-bottom: 1px solid #CBCECF;
+					padding-bottom: 33px;
+					margin-bottom: 33px;
+
+				}
+				&__title {
+					color: $greyBlack;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 550;
+					line-height: normal;
+					text-transform: uppercase;
+					margin-right: 20px;	
+					position: relative;
+					min-width: 112px;				
+				}
+
+			}
+		}
+		&__total {
+			position: relative;
+			display: flex;
+			width: 100%;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+
+		}
+		&__stock {
+			color: $red;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			margin-bottom: 17px ;
+			@include max(sm) {
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 0.7px;
+				margin-bottom: 12px; 			
+			}
+		}
+		&__cost {
+			margin-bottom: 0;
+			line-height: 1;
+
+		}
+		&__garantia {
+			color: $mainDark;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 115%; /* 16.1px */
+			letter-spacing: 0.42px;	
+			white-space: nowrap;
+		}
+		&__counter {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 44px;
+			background: $greyLight;
+			color: $mainDark;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%; /* 24.3px */
+			letter-spacing: 0.54px;
+			border-radius: 5px;
+			min-width: 107px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-right: 18px;
+			border: 1px solid $greyBlack;
+			@include max(md) {
+				order: 3;
+				margin-bottom: 30px;
+			}
+			@include max(sm) {
+				margin-top: 0;
+			}
+			&__text {
+				position: absolute;
+				display: inline-block;
+				white-space: nowrap;
+				left: 0;
+				bottom: -33px;
+			}
+			&__count {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				margin-left: 12px;
+				margin-right: 12px;
+				@include max(xs) {
+					margin-left: 15px;
+					margin-right: 15px;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 550;
+					line-height: 135%; /* 18.9px */
+					letter-spacing: 0.42px;
+				}      
+			}
+			&__prev {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				width: 18px;
+				height: 18px;
+				cursor: pointer;
+				&:hover {
+					svg {
+						rect {
+							fill: $mainDark;
+						}
+					}
+				}
+			}
+			&__next {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				width: 18px;
+				height: 18px;
+				cursor: pointer;
+				&:hover {
+					svg {
+						rect {
+							fill: $mainDark;
+						}
+					}
+				}
+			}
+		}
+		&__advice {
+			position: relative;
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			border-bottom: 1px solid #CBCECF;
+			flex-flow: column nowrap;
+			padding-bottom: 25px;
+			margin-bottom: 33px;
+			&__title {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				color: $mainDark;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 135%;
+				margin-bottom: 22px;
+				svg {
+					margin-right: 8px;
+				}
+			}			
+		}
+		&__block { 
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-flow: row wrap;
+			width: 100%;
+			&__wrap {
+				position: relative;
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-flow: column nowrap;
+				margin-bottom: 22px;
+			}
+			&__title {
+				color: $mainDark;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: normal;
+				margin-bottom: 14px;			
+			}
+		}
+		.accordions.product-cart__accordion {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			border-bottom: 1px solid #CBCECF;
+			padding-bottom: 10px;
+			margin-bottom: 33px;			
+			@include max(lg) {
+				display: none;
+			}
+			.accordion {
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+				margin-bottom: 0px;
+				display: block;
+				&__intro {
+					position: relative;
+					display: flex;
+					width: 100%;
+					cursor: pointer;
+					color: $mainFont;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 550;
+					line-height: normal;
+					flex-flow: row nowrap;
+					justify-content: space-between;
+					align-items: flex-start;
+					margin-bottom: 21px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&:hover {
+						transition: all 0.1s;
+					}
+					p {
+						position: relative;
+						display: block;
+						color: $mainFont;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						padding-right: 30px;				
+					}
+					&__img {
+						position: relative;
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						animation-name: rotationCloseMenuSidebar;
+						animation-duration: .2s;
+						animation-iteration-count: 1;
+						animation-timing-function: linear;
+						animation-fill-mode: forwards;
+						&:hover {
+							background: transparent;
+						}
+					}
+					a {
+						padding-left: 20px;
+						position: relative;
+						cursor: pointer;
+						color: $mainFont;
+						font-style: normal;
+						font-size: 16px;
+						line-height: 24px;
+						font-weight: 600;
+						padding: 8px 20px;
+						padding-right: 0;
+						background: transparent;
+						flex-flow: row nowrap;
+						width: 100%;
+						transition: all 0.1s;
+						&:hover {
+							transition: all 0.1s;
+							font-weight: 800;
+							text-shadow: none;
+							background: $white;
+						}
+					}
+				} 
+			
+				&__content {
+					max-height: 0;
+					overflow: hidden;
+					will-change: max-height;
+					transition: all 0.25s ease-out;
+					opacity: 0;
+					position: relative;
+					background: transparent;
+					max-width: 100%;
+					transition: all 0.1s;
+					cursor: pointer;
+					display: flex;;
+					justify-content: flex-start;
+					align-items: flex-start;
+					flex-flow: column;
+					color: $greyBlack;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					a {
+						color: $greyBlack;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						width: 100%;
+						transition: all 0.1s;
+						margin-bottom: 22px;
+						text-decoration: none;
+						&:hover {
+							color: $grey;
+						}
+					}
+				} 
+			
+				&__active {
+					.accordion__intro {
+						border-bottom: none;
+						margin-bottom: 15px;
+						.accordion__intro__img {
+							animation-name: rotationOpenMenuSidebar;
+							animation-duration: .2s;
+							animation-iteration-count: 1;
+							animation-timing-function: linear;
+							animation-fill-mode: forwards;
+						}
+			
+					}
+					.accordion__content{
+						border-bottom: 1px solid #E3E3E3;
+						margin-bottom: 27px;
+						opacity: 1;
+						width: 100%;
+						transition: all 0.1s;
+			
+					}
+					&:last-child {
+						.accordion__content {
+							margin-bottom: 0;
+							border-bottom: none;
+						}
+					}
+			
+			
+				}
+			
+			
+			}
+			@keyframes rotationOpenMenuSidebar  {
+				0% {
+					transform-origin: 50% 35%;
+					transform: rotate(0deg);
+				}
+			
+				100% {
+					transform-origin: 50% 35%;
+					transform: rotate(90deg);
+				}
+			
+			}
+			@keyframes rotationCloseMenuSidebar {
+				0% {
+					transform-origin: 50% 35%;
+					transform: rotate(90deg);
+				}
+				100% {
+					transform-origin: 50% 35%;
+					transform: rotate(0deg);
+				}
+			
+			}
+		}
+
+	}
+
+}

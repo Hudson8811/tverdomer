@@ -454,6 +454,7 @@ body {
             }
         }
     }
+
     &--filter {
         position: absolute;
         bottom: 14px;
@@ -597,7 +598,49 @@ body {
           background: $greyBlack;
         }        
     }
+    &--border {
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px;
+        background: transparent;
+        color: $mainDark !important;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 135%;
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid $mainDark;
+        text-transform: uppercase;
+        transition: all .3s;
+        padding-bottom: 0;
+        height: 45px;
+        &::after {
+          display: none;
+        }
+        &::before {
+            display: none;
+        }
+        svg,img {
+            margin-right: 10px;
+            path {
+                @include max(sm) {
+                    fill: $red;
+                }
+            }
 
+        }
+        &:hover {
+          transition: all .3s;
+          background: $mainDark;
+          border: 1px solid $mainDark;
+          color: $white !important;
+        }
+    }
 }
 
 @keyframes rotateCircle {
@@ -709,27 +752,6 @@ body {
         line-height: 170%;
     }
 }
-.input__block  {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    &--checkbox {
-        label {
-            input:checked+span {
-                background: #F6F6F6;
-                color: #CE181F;
-                border-bottom: 1px solid #CE181F;;
-            }
-            span {
-                padding-left: 0;
-                padding-right: 0;
-                margin-right: 24px;
-                
-            }
-        }  
-    }
-}
 .input-block--checkbox {
     display: flex;
     flex-flow: row nowrap;
@@ -785,6 +807,87 @@ body {
             background-color: #ffffff;
             border-radius: 3px;
             box-sizing: border-box;
+        }
+    }
+}
+.input-block--star {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    &--title{
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-left: 10px;
+			
+    }
+    &.no-star {
+        svg {
+            display: none !important;
+        }
+    }
+    label:not(.checkbox-container) {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        vertical-align: top;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: normal;
+        text-transform: uppercase;
+        color: $greyBlack;
+        padding-left: 12px;
+        padding-right: 12px;
+        span {
+            position: relative;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: normal;
+            text-transform: uppercase;
+            color: $greyBlack
+        }
+
+        input {
+            display: none;
+            &:checked + span + svg {
+                path {
+                    fill: #FF3E41;
+                }
+            }
+            &:checked + span  {
+                color: #FF3E41;
+            }
+            &:checked + span + svg + b {
+                border: 1px solid #FF3E41;
+            }
+        }
+
+        b {
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 35px;
+            width: 100%;
+            border: 1px solid #a5a5a5;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        svg {
+            position: relative;
+            display: block;
+            margin-left: 6px;
+            margin-top: -2px;
         }
     }
 }

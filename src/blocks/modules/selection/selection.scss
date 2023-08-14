@@ -1,16 +1,19 @@
 .selection {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  margin-bottom: 104px;
-  @include max(mdHeader) {
-    flex-flow: column nowrap;
+  &__section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 104px;
+    @include max(mdHeader) {
+      flex-flow: column nowrap;
+    }
+    @include max(sm) {
+      margin-bottom: 56px;
+    }
   }
-  @include max(sm) {
-    margin-bottom: 56px;
-  }
+
   &__item {
     position: relative;
     display: flex;
