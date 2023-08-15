@@ -1,0 +1,24 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Reviews";
+
+block content
+	.section.section__white.section--breadcrumbs.reviews__section.reviews__section--cards
+		.section__breadcrumbs
+			.container 
+				.breadcrumbs
+					a.breadcrumbs__item 
+						| Главная
+					a.breadcrumbs__item.breadcrumbs__item__active
+						| Отзывы
+		.reviews
+			.container
+				.reviews__title.title__40 Отзывы 
+				.reviews__top
+					select(name="reviews__select").reviews__select.myselect-class
+						option(value="1") ПОКАЗАТЬ Все1
+						option(value="2") ПОКАЗАТЬ Все2
+						option(value="3") ПОКАЗАТЬ Все3
+					.reviews__top-btn.btn.btn--black.text__18 
+					
