@@ -32,6 +32,7 @@
 		$('.myselect-class').select2();
 
 
+		
 		$(".news-show-more-mybtn1").click(function(e){
 			$(".news__row1 >*:hidden").slice(0,3).slideDown();
 			if ($(".news__row1 >*:hidden").length < 1) $(this).slideUp();
@@ -47,6 +48,12 @@
 		$(".news-show-more-mybtn4").click(function(e){
 			$(".news__row4 >*:hidden").slice(0,3).slideDown();
 			if ($(".news__row4 >*:hidden").length < 1) $(this).slideUp();
+		})
+		
+		
+		
+		$(".header-reviews").click(function(e){
+			$(this).parent().toggleClass("js-active");
 		})
 	})
 
