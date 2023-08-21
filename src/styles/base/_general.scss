@@ -37,6 +37,9 @@ body {
         padding-top: 54px;
         padding-bottom: 54px;       
     }
+    &__border-b {
+        border-bottom: 1px solid #292B32;
+    }
     &__black {
         background: $fonBlack;
         .swiper-buttons {
@@ -426,6 +429,9 @@ body {
         }
         &::before {
             display: none;
+        }
+        @include max(md) {
+            padding-bottom: 0;
         }
         @include max(sm) {
             color: $red;

@@ -1,0 +1,214 @@
+.accessories {
+  position: relative;
+	display: flex;
+	width: calc(100% + 11px);
+	align-items: stretch;
+	flex-flow: row wrap;
+	margin-left: -11px;
+	margin-bottom: 21px;
+	padding-bottom: 0px;
+	@include max(lg) {
+		width: calc(100% + 11px);
+		margin-left: -11px;
+	}
+	@include max(md) {
+    margin-bottom: 0;
+	}
+	@include max(sm) {
+		width: calc(100% + 0px);
+		margin-left:  0px;
+	}
+  .accessory {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    background: $white;
+    border: 1px solid #E3E3E3;
+    padding: 0px;
+		flex: 0 0 25%;
+		max-width: calc(25% - 11px);
+		margin-left: 11px;
+    margin-bottom: 14px;
+		@include max(lg) {
+      flex: 0 0 33.333%;
+			max-width: calc(33.333% - 11px);
+			margin-left: 11px;
+		}
+		@include max(sm) {
+      flex: 0 0 100%;
+			max-width: calc(100% - 0px);
+			margin-left: 0px;
+			margin-bottom: 12px;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+		}
+
+    &__title {
+      color:  $mainDark;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      margin-left: 12px;
+      margin-right: 12px;
+      @include max(sm) {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 11px;   
+      }
+   
+    }
+    &__bottom {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3px;
+      padding: 12px;
+      @include max(sm) {
+        width: 33px;
+        padding: 0;
+        position: absolute;
+        right: 18px;
+      }
+    }
+    &__text {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      @include max(sm) {
+        padding-left: 18px;
+        margin-right: 60px;
+      }
+    }
+    &__cost  {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+      &__title {
+        color: $greyBlack;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;    
+      }
+      &__value {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &--sale {
+          color: $greyBlack;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 125%; /* 30px */
+          text-decoration: line-through;
+          margin-right: 11px; 
+          @include max(md) {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%; 
+          }        
+        }
+        &--actual {
+          color: #1B1F22;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          &.desc {
+            @include max(sm) {
+              display: none;
+            }
+          }
+          &.mob{
+            display: none;
+            @include max(sm) {
+              display: block;
+              font-weight: 700;
+            }
+          }
+          @include max(md) {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%; 
+          }         
+        }
+      }
+    }
+    &__buttons {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__cart {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: $red;
+      margin-right: 0px;
+      transition: all .3s;
+      svg, img {
+        width: 12px;
+        height: 11px;
+      }
+      &:hover {
+        transition: all .3s;
+        background: $greyBlack;
+      }
+    }
+    &__picture {
+      position: relative;
+      width: 100%;
+      display: block;
+      border-radius: 0 10px 10px 0;
+      overflow: hidden;
+      background: #F5F5F5;
+      margin-bottom: 12px;
+      @include max(sm) {
+        margin-bottom: 0;
+        max-width: 150px;
+      }
+      @include max(xs) {
+        margin-bottom: 0;
+        max-width: 95px;
+      }
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 91.35%;   
+        position: relative;
+        
+      }
+      img, picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        object-position: center center;
+        z-index: 1;
+      }
+    }
+
+  }
+ 
+}

@@ -4,6 +4,8 @@
 @@include("./libs/swiper-bundle.min.js") 
 @@include("./libs/stroll.min.js") 
 @@include("./libs/select2.min.js") 
+@@include("./libs/tippy/popper.min.js")
+@@include("./libs/tippy/tippy-bundle.umd.js")
 
 //my files
 @@include("./import/main.js")

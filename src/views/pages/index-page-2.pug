@@ -1,0 +1,430 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Project title"
+
+block content
+	.main__header.main__header__two 
+		.container
+			.main__header__title.animate__animated 
+				!="Портативные твердомеры"
+			include ../../blocks/components/portable/portable
+			.main__header__registry.animate__animated
+				img(src="img/svg/reestr.svg" alt="")
+			.button__circle.animate__animated
+				.button__circle-inner
+					img.button__circle-outside(src="img/svg/label-circle.svg" alt="")
+					img.button__circle-inside(src="img/svg/play.svg" alt="logo")
+	include ../../blocks/modules/soc/soc
+	include ../../blocks/modules/main-pagination/main-pagination
+	.section.section__black.section__border-b
+		.container
+			.sonic-sensor
+				.sonic-sensor__row
+					.sonic-sensor__col
+						.sonic-sensor__list__title Ультразвуковой датчик
+						.sonic-sensor__list 
+							ul 
+								li Тонкие детали от 1 мм
+								li Отсутсвие ударных элементов – повышенная надёжность
+								li Наилучшее соотношение прикладываемой нагрузки к допускаемой шероховатости среди аналогов
+					.sonic-sensor__col
+						.sonic-sensor__tabel__title Нагрузка под разное  качество поверхности
+						.sonic-sensor__tabel
+							.sonic-sensor__tabel__row
+								.sonic-sensor__tabel__col 
+									span *
+								.sonic-sensor__tabel__col
+								.sonic-sensor__tabel__col 
+									span *
+									span *
+								.sonic-sensor__tabel__col
+								.sonic-sensor__tabel__col 
+									span *
+									span *
+									span *
+							.sonic-sensor__tabel__row
+								.sonic-sensor__tabel__col У10
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 1 кгс
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 2,5 Ra
+							.sonic-sensor__tabel__row
+								.sonic-sensor__tabel__col У15
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 1,5 кгс
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 2,5 Ra
+							.sonic-sensor__tabel__row
+								.sonic-sensor__tabel__col У50
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 5 кгс
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 4,5 Ra
+							.sonic-sensor__tabel__row
+								.sonic-sensor__tabel__col У100
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 10 кгс
+								.sonic-sensor__tabel__col =
+								.sonic-sensor__tabel__col 8 Ra
+							.sonic-sensor__tabel__desc
+								.sonic-sensor__tabel__desc__item
+									.sonic-sensor__tabel__desc__star
+										span *
+									!="Тип датчика"
+								.sonic-sensor__tabel__desc__item
+									.sonic-sensor__tabel__desc__star
+										span *
+										span *
+									!="Торированная нагрузка"
+								.sonic-sensor__tabel__desc__item
+									.sonic-sensor__tabel__desc__star
+										span *
+										span *
+										span *
+									!="Макс. допустимая шероховатость"
+				.sonic-sensor__bg
+					img(src="img/index/sonic-sensor__1.png", srcset="img/index/sonic-sensor__1--2x.png 2x" alt="")
+					.hints.hint__sonic-sensor
+						div.hint.hint__sonic-sensor(data-template="one")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"  transform="scale(1)"/>
+							</svg>
+						div.hint.hint__sonic-sensor(data-template="two")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__sonic-sensor(data-template="tree")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__sonic-sensor(data-template="four")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__sonic-sensor(data-template="five")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+
+						.hint__lists(style="display:none")
+							.hint__list(id="one")
+								p Эргономичная ручка  
+								ul
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="two")
+								p Эргономичная ручка  
+								ul
+									li Надежный и ...
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="tree")
+								p Эргономичная ручка  
+								ul
+									li Надежный 3
+							.hint__list(id="four")
+								p Эргономичная ручка  
+								ul
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="five")
+								p Эргономичная ручка  
+								ul
+									li Надежный 5
+									li Надежный 5
+									li Надежный 5
+									li Надежный 5
+	
+	.section.section__black.section__border-b
+		.container
+			.dynamic-sensor
+				.dynamic-sensor__col
+					.dynamic-sensor__list
+						.dynamic-sensor__list__title.title__40  Динамический датчик
+						ul 
+							li Быстрее всех других методов
+							li Массивные детали
+							li Самый популярный портативный способ (точно есть на соседнем заводе)
+				.dynamic-sensor__bg
+					img(src="img/index/dynamic-sensor__bg.png", srcset="img/index/dynamic-sensor__bg--2x.png 2x" alt="")
+					.hints.hint__dynamic-sensor
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__one")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"  transform="scale(1)"/>
+							</svg>
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__two")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__tree")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__four")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__five")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+
+						.hint__lists(style="display:none")
+							.hint__list(id="dynamic-sensor__one")
+								p Эргономичная ручка  
+								ul
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="dynamic-sensor__two")
+								p Эргономичная ручка  
+								ul
+									li Надежный и ...
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="dynamic-sensor__tree")
+								p Эргономичная ручка  
+								ul
+									li Надежный 3
+							.hint__list(id="dynamic-sensor__four")
+								p Эргономичная ручка  
+								ul
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="dynamic-sensor__five")
+								p Эргономичная ручка  
+								ul
+									li Надежный 5
+									li Надежный 5
+									li Надежный 5
+									li Надежный 5
+	.section.section__black.section__border-b
+		.container
+			.electronic-unit
+				.electronic-unit__title Электронный блок
+				.electronic-unit__row
+					.sonic-sensor__col
+						.electronic-unit__list
+							.electronic-unit__list__title.text__20 
+								span 1. 
+								!="Разъёмы BINDER (Германия)"
+							ul 
+								li Проверенное немецкое качество
+						.electronic-unit__list
+							.electronic-unit__list__title.text__20 
+								span 2. 
+								!="ЖК экран"
+							ul 
+								li Чёткое отображение
+								li Понятный интерфейс
+						.electronic-unit__list
+							.electronic-unit__list__title.text__20 
+								span 3. 
+								!="Клавиатура"
+							ul 
+								li Простое и понятное управление
+								li Долговечность
+					
+					.electronic-unit__col
+						.electronic-unit__list
+							.electronic-unit__list__title.text__20 
+								span 4. 
+								!="Электронный блок"
+							ul 
+								li Пересчёт между шкалами твёрдости
+								li Вычисление среднего значения из серии измерений
+								li Архив измерений
+						.electronic-unit__list
+							.electronic-unit__list__title.text__20 
+								span 5. 
+								!="Алюминиевый литой корпус"
+							ul 
+								li Алюминиевый корпус с защитой от пыли и влаги IP65 (Германия)
+				.electronic-unit__bg.animate__animated
+					img(src="img/index/electronic-unit__bg.png", srcset="img/index/electronic-unit__bg--2x.png 2x" alt="")
+	.section.section__black.section__border-b
+		.container
+			.calibrate
+				.calibrate__title.title__40 Как мы калибруем наши твердомеры
+				.calibrate__row
+					.calibrate__col.calibrate__col__me
+						.calibrate__col__title
+							!="Преимущества калибровки"
+							<svg xmlns="http://www.w3.org/2000/svg" width="83" height="32" viewBox="0 0 83 32" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 31.557H8.61712V13.4242C12.3965 19.6746 16.0852 25.7749 19.8494 32.0001C23.5913 25.8329 27.3556 19.6103 31.0994 13.4205V31.557H37.2695H39.2165H61.2209L57.4502 25.501H39.2166V18.757H53.5816L49.8109 12.7009H39.2167V6.11806H46.0616L42.2909 0.0619894C38.561 0.0619894 34.8824 0.000198364 31.0996 0.000198364L19.8585 19.1376L8.61733 0.000198364H0.500214V31.5571L0.5 31.557ZM82.5 0.0619201C69.4915 0.0619201 56.7344 0.0619201 43.7235 0.0619201L47.4941 6.11799H56.7436H59.2232V25.501L63.2756 32.0001L67.3402 25.501V6.11799H69.4799H78.7293L82.4999 0.0619201H82.5Z" fill="#FF3E41"/>
+							</svg>
+						.calibrate__error
+							.calibrate__error__col
+								.calibrate__error__value 
+									p Погрешность
+									<svg width="187" height="59" viewBox="0 0 187 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M43.36 21.88C42.48 30.36 38.4 34.92 31.92 34.92C28.88 34.92 24.24 33.32 21.2 32.36C18.4 31.4 13.68 29.4 11.2 29.4C8.48 29.4 6.32 31.64 5.84 35.08H0.64C1.28 28.52 4.48 21.96 12 21.96C15.2 21.96 19.6 23.64 22.8 24.68C27.6 26.28 30.08 27.32 32.96 27.32C35.68 27.32 37.52 25.4 38.16 21.88H43.36ZM43.36 37.8C42.48 46.28 38.4 50.84 31.92 50.84C28.88 50.84 24.24 49.24 21.2 48.28C18.4 47.32 13.68 45.32 11.2 45.32C8.48 45.32 6.32 47.56 5.84 51H0.64C1.28 44.44 4.48 37.88 12 37.88C15.2 37.88 19.6 39.56 22.8 40.6C27.6 42.2 30.08 43.24 32.96 43.24C35.68 43.24 37.52 41.32 38.16 37.8H43.36ZM86.0488 48.92V57H47.8088C48.2088 44.2 55.0088 39.16 64.5288 32.76C70.1288 29 76.8488 25.48 76.8488 17.72C76.8488 11.88 73.4088 8.28 67.8088 8.28C59.5688 8.28 58.2888 15 58.1288 21.56H49.2488V20.12C49.2488 8.12 56.5287 0.439999 68.0488 0.439999C78.9288 0.439999 86.1288 7.08 86.1288 17.24C86.1288 27.8 78.6088 32.44 70.7688 37.64C66.6888 40.28 60.6888 44.28 58.7688 48.92H86.0488ZM106.982 46.2V57H96.1019V46.2H106.982ZM116.208 19C116.528 7.48 123.408 0.439999 134.448 0.439999C144.768 0.439999 151.808 6.52 151.808 15.48C151.808 20.92 148.768 25.32 143.968 26.92C150.288 28.52 154.128 33.4 154.128 40.12C154.128 50.84 145.968 58.2 134.288 58.2C122.608 58.2 114.848 50.84 114.848 39.8V38.6H123.648C123.888 46.44 127.488 50.36 134.528 50.36C140.688 50.36 144.608 46.52 144.608 40.36C144.608 33.48 139.408 31 133.408 31C132.368 31 131.888 31 130.528 31.08V24.2H131.328C136.928 24.2 142.848 23.32 142.848 16.12C142.848 11.24 139.488 7.96 134.288 7.96C128.448 7.96 125.168 11.8 124.928 19H116.208ZM166.227 47.032V57H164.477V52.52H159.913V57H158.163V47.032H159.913V50.994H164.477V47.032H166.227ZM168.28 47.032H172.998C174.79 47.032 176.358 47.746 176.358 49.804C176.358 51.008 175.756 51.89 174.706 52.254C175.98 52.534 176.106 53.5 176.19 54.522C176.288 55.712 176.316 56.552 176.722 57H174.846C174.594 56.622 174.58 55.936 174.524 55.012C174.426 53.444 174.034 52.884 172.34 52.884H170.016V57H168.28V47.032ZM170.016 48.46V51.582H172.326C173.474 51.582 174.622 51.414 174.622 49.986C174.622 48.67 173.6 48.46 172.55 48.46H170.016ZM186.692 53.206C186.51 55.628 184.844 57.238 182.352 57.238C179.538 57.238 177.69 55.166 177.69 52.016C177.69 49.188 179.412 46.808 182.436 46.808C184.424 46.808 186.272 47.9 186.608 50.21H184.872C184.634 49.006 183.696 48.292 182.408 48.292C180.308 48.292 179.454 50.182 179.454 52.016C179.454 53.864 180.266 55.754 182.394 55.754C184.018 55.754 184.76 54.676 184.942 53.206H186.692Z" fill="#FF3E41"/>
+									</svg>
+							.calibrate__error__col
+								.calibrate__error__metod
+									.calibrate__error__metod__item
+										!="Погрешность самого твердомера (2.0 HRC) <br><span>+</span><br> Погрешность меры твёрдости 1 разряда (0.3 HRC)"
+						.calibrate__list
+								ul 
+									li Используем эталонные меры твёрдости 1 разряда для калибровки
+									li Минимальная погрешность за счёт прямой калибровки, минуя другие этапы поверочной схемы
+									li Каждая шкала твёрдости калибруется по своим мерам твёрдости: для HRC - меры твёрдости именно по шкале HRC, для HB - именно по шкале HB и т.д.					
+					.calibrate__col
+						.calibrate__col__title
+							!="Калибровка аналогов"
+						.calibrate__error
+							.calibrate__error__col
+								.calibrate__error__value 
+									p Погрешность
+									<svg width="187" height="59" viewBox="0 0 187 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M43.36 21.88C42.48 30.36 38.4 34.92 31.92 34.92C28.88 34.92 24.24 33.32 21.2 32.36C18.4 31.4 13.68 29.4 11.2 29.4C8.48 29.4 6.32 31.64 5.84 35.08H0.64C1.28 28.52 4.48 21.96 12 21.96C15.2 21.96 19.6 23.64 22.8 24.68C27.6 26.28 30.08 27.32 32.96 27.32C35.68 27.32 37.52 25.4 38.16 21.88H43.36ZM43.36 37.8C42.48 46.28 38.4 50.84 31.92 50.84C28.88 50.84 24.24 49.24 21.2 48.28C18.4 47.32 13.68 45.32 11.2 45.32C8.48 45.32 6.32 47.56 5.84 51H0.64C1.28 44.44 4.48 37.88 12 37.88C15.2 37.88 19.6 39.56 22.8 40.6C27.6 42.2 30.08 43.24 32.96 43.24C35.68 43.24 37.52 41.32 38.16 37.8H43.36ZM49.4888 19C49.8088 7.48 56.6888 0.439999 67.7288 0.439999C78.0488 0.439999 85.0888 6.52 85.0888 15.48C85.0888 20.92 82.0488 25.32 77.2488 26.92C83.5688 28.52 87.4088 33.4 87.4088 40.12C87.4088 50.84 79.2488 58.2 67.5688 58.2C55.8888 58.2 48.1288 50.84 48.1288 39.8V38.6H56.9288C57.1688 46.44 60.7688 50.36 67.8088 50.36C73.9688 50.36 77.8888 46.52 77.8888 40.36C77.8888 33.48 72.6888 31 66.6888 31C65.6488 31 65.1688 31 63.8088 31.08V24.2H64.6088C70.2088 24.2 76.1288 23.32 76.1288 16.12C76.1288 11.24 72.7688 7.96 67.5688 7.96C61.7288 7.96 58.4488 11.8 58.2088 19H49.4888ZM106.982 46.2V57H96.1019V46.2H106.982ZM142.848 0.679996V57H133.088V18.28H119.168V11.56C125.168 11.56 133.888 10.44 135.488 0.679996H142.848ZM166.227 47.032V57H164.477V52.52H159.913V57H158.163V47.032H159.913V50.994H164.477V47.032H166.227ZM168.28 47.032H172.998C174.79 47.032 176.358 47.746 176.358 49.804C176.358 51.008 175.756 51.89 174.706 52.254C175.98 52.534 176.106 53.5 176.19 54.522C176.288 55.712 176.316 56.552 176.722 57H174.846C174.594 56.622 174.58 55.936 174.524 55.012C174.426 53.444 174.034 52.884 172.34 52.884H170.016V57H168.28V47.032ZM170.016 48.46V51.582H172.326C173.474 51.582 174.622 51.414 174.622 49.986C174.622 48.67 173.6 48.46 172.55 48.46H170.016ZM186.692 53.206C186.51 55.628 184.844 57.238 182.352 57.238C179.538 57.238 177.69 55.166 177.69 52.016C177.69 49.188 179.412 46.808 182.436 46.808C184.424 46.808 186.272 47.9 186.608 50.21H184.872C184.634 49.006 183.696 48.292 182.408 48.292C180.308 48.292 179.454 50.182 179.454 52.016C179.454 53.864 180.266 55.754 182.394 55.754C184.018 55.754 184.76 54.676 184.942 53.206H186.692Z" fill="#898989"/>
+									</svg>
+							.calibrate__error__col
+								.calibrate__error__metod
+									.calibrate__error__metod__item
+										!="Погрешность самого твердомера (2.0 HRC) <br><span>+</span><br> Погрешность других этапов поверочной схемы в мере твёрдости 2 разряда (1.1 HRC)"
+						.calibrate__list
+								ul 
+									li Используют менее однородные эталонные меры 2 разряда
+									li Меры твёрдости 2 разряда уже содержат сумму погрешностей твердомера-компаратора и меры твёрдости 1 разряда.		
+									li Используют переводные таблицы твёрдости при калибровке, что даёт дополнительную погрешность. Такие таблицы нестандартизированы в РФ, так как неточны		
+	.section.section__black.section__border-b
+		.container
+			.equipment
+				.equipment__col
+					.equipment__title Комплектация
+					.equipment__list
+						.equipment__list__title.text__20 Итальянский кейс
+						ul 
+							li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							li Nemo enim ipsam voluptatem quia voluptas 
+					.equipment__list
+						.equipment__list__title.text__20 Документация
+						ul 
+							li 
+								a(href="") Паспорт устройства
+							li 
+								a(href="") Методика поверки
+							li 
+								a(href="") Свидетельство о поверке
+				.equipment__bg.animate__animated
+					img(src="img/index/equipment__bg.png", srcset="img/index/equipment__bg--2x.png 2x" alt="")
+	.section.section__black.section__border-b
+		.container
+			.comparison
+				.comparison__tabel
+					.comparison__tabel__top
+						.comparison__tabel__row
+							.comparison__tabel__col
+								.comparison__tabel__col__title Сравнение
+								.comparison__tabel__col__subtitle Портативные твердомеры
+							.comparison__tabel__col
+								.comparison__tabel__picture 
+									img(src="img/index/comparison__tabel__picture__1.png", srcset="img/index/comparison__tabel__picture__1--2x.png 2x" alt="")
+									.comparison__tabel__picture__desc МЕТ-Д1А
+							.comparison__tabel__col
+								.comparison__tabel__picture 
+									img(src="img/index/comparison__tabel__picture__2.png", srcset="img/index/comparison__tabel__picture__2--2x.png 2x" alt="")
+									.comparison__tabel__picture__desc МЕТ-У1А
+							.comparison__tabel__col
+								.comparison__tabel__picture 
+									img(src="img/index/comparison__tabel__picture__3.png", srcset="img/index/comparison__tabel__picture__2--2x.png 2x" alt="")
+									.comparison__tabel__picture__desc МЕТ-УДА
+					.comparison__tabel__row
+						.comparison__tabel__col Ультразвуковой датчик
+						.comparison__tabel__col -
+						.comparison__tabel__col +
+						.comparison__tabel__col +
+					.comparison__tabel__row
+						.comparison__tabel__col Динамический датчик
+						.comparison__tabel__col +
+						.comparison__tabel__col -
+						.comparison__tabel__col +
+					.comparison__tabel__row
+						.comparison__tabel__col Тип корпуса
+						.comparison__tabel__col 
+						.comparison__tabel__col Алюминиевый IP 67
+						.comparison__tabel__col 
+					.comparison__tabel__row
+						.comparison__tabel__col Время одного замера твёрдости, с
+						.comparison__tabel__col 0,5
+						.comparison__tabel__col 2
+						.comparison__tabel__col 0,5
+					.comparison__tabel__row
+						.comparison__tabel__col Минимальная масса детали, кг
+						.comparison__tabel__col 3
+						.comparison__tabel__col 0,01
+						.comparison__tabel__col 0,01
+					.comparison__tabel__row
+						.comparison__tabel__col Минимальная толщина детали, мм
+						.comparison__tabel__col 10
+						.comparison__tabel__col 1
+						.comparison__tabel__col 1
+					.comparison__tabel__row
+						.comparison__tabel__col Передача данных архива на ПК
+						.comparison__tabel__col +
+						.comparison__tabel__col +
+						.comparison__tabel__col +
+					.comparison__tabel__row
+						.comparison__tabel__col Гарантия
+						.comparison__tabel__col 
+						.comparison__tabel__col 3 года
+						.comparison__tabel__col
+					.comparison__tabel__row
+						.comparison__tabel__col Измерение твёрдости цилиндрических и сферических поверхностей
+						.comparison__tabel__col +
+						.comparison__tabel__col +
+						.comparison__tabel__col +
+					.comparison__tabel__row
+						.comparison__tabel__col Максимально допустимая шероховатость
+						.comparison__tabel__col 3.2 Ra
+						.comparison__tabel__col
+							p 3.2 Ra
+							p 4.5 Ra (датчик У50)
+							p 8.0 Ra (датчик У100)*
+						.comparison__tabel__col
+							p 2.5 Ra (датчик У15)
+							p 4.5 Ra (датчик У50)
+							p 8.0 Ra (датчик У100)*
+					.comparison__tabel__row
+						.comparison__tabel__col Использование штатива*
+						.comparison__tabel__col -
+						.comparison__tabel__col +
+						.comparison__tabel__col +
+					.comparison__tabel__row
+						.comparison__tabel__col Погрешность, HRC
+						.comparison__tabel__col ±2
+						.comparison__tabel__col ±2
+						.comparison__tabel__col ±2
+					.comparison__tabel__row
+						.comparison__tabel__col Погрешность, НВ
+						.comparison__tabel__col ±10
+						.comparison__tabel__col ±10
+						.comparison__tabel__col ±10
+					.comparison__tabel__row
+						.comparison__tabel__col Погрешность, HV
+						.comparison__tabel__col ±12
+						.comparison__tabel__col ±12
+						.comparison__tabel__col ±12
+					.comparison__tabel__row
+						.comparison__tabel__col Глубина проникновения индентора, мкм
+						.comparison__tabel__col 200
+						.comparison__tabel__col 30
+						.comparison__tabel__col 30; 200
+	.section.section__white.infocenter__section
+		.container
+			.title__40 Наша продукция
+			include ../../blocks/components/hardness-tester/hardness-tester
+

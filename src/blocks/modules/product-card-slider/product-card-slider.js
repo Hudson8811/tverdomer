@@ -5,12 +5,19 @@ var galleryThumbs = new Swiper(".gallery-thumbs", {
   watchOverflow: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  direction: 'vertical',
-  spaceBetween: 14,
+  direction: 'horizontal',
+  spaceBetween: 10,
   navigation: {
           nextEl: ".gallery-thumbs-next",
           prevEl: ".gallery-thumbs-prev"
   },
+    breakpoints: {
+  	// when window width is >= 480px
+  	992: {
+  		direction: 'vertical',
+      spaceBetween: 14,
+  	},
+  }
   
 });
 
@@ -24,6 +31,10 @@ var galleryMain = new Swiper(".gallery-main",  {
   thumbs: {
           swiper: galleryThumbs
   },
+  navigation: {
+    nextEl: ".gallery-main-next",
+    prevEl: ".gallery-main-prev"
+},
   // breakpoints: {
   // 	// when window width is >= 480px
   // 	992: {

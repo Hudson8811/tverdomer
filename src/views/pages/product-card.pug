@@ -4,19 +4,27 @@ block variables
 	- const title = "New Page";
 
 block content
-	.section.section__white.section--breadcrumbs
+	.section.section__white.section--breadcrumbs.product-card__section
 		include ../../blocks/modules/breadcrumbs/breadcrumbs
+		.container
+			.product-card__wrap
+				.title__40 Ультразвуковой твердомер МЕТ-У1
+				.product-card
+						.product-card__col
+							include ../../blocks/modules/product-card-slider/product-card-slider
+
+						.product-card__col
+							include ../../blocks/modules/product-cart-filter/product-cart-filter
+							//- два других фильтра, выводится только нужный
+							include ../../blocks/modules/product-cart-filter-two/product-cart-filter-two
+							include ../../blocks/modules/product-cart-filter-tree/product-cart-filter-tree
 		.container
 			.product-card__section
 				.product-card
 						.product-card__col
-							include ../../blocks/modules/product-card-slider/product-card-slider
 							include ../../blocks/modules/product-card-question/product-card-question
-
 						.product-card__col
-							include ../../blocks/modules/product-cart-filter/product-cart-filter
-							include ../../blocks/modules/product-cart-filter-two/product-cart-filter-two
-							include ../../blocks/modules/product-cart-filter-tree/product-cart-filter-tree
+
 		.container
 			.title__40 Другие модели
 			include ../../blocks/components/hardness-tester/hardness-tester
