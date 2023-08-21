@@ -914,6 +914,120 @@ body {
 }
 
 
+.scroll-down{
+	position: relative;
+	display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+	pointer-events: none;
+	user-select: none;
+    &__wrap {
+        position: relative;
+        width: 100%;
+        position: fixed;
+        left: 20px;
+        bottom: 93px;
+        .container {
+            position: relative;
+            width: 1920px;
+            padding-left: 80px;
+            padding-right: 80px;
+            @include max(xl) {
+              padding-left: 0;
+                padding-right: 0;
+                max-width: calc(100% - 40px * 2);
+                padding-left: 0px;
+                padding-right: 0px;
+                left: 0;
+            }
+                @include max(lg) {
+                    //1024
+                    width: 1168px;
+                    max-width: calc(100% - 32px * 2);
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
+            
+                @include max(md) {
+                    max-width: calc(100% - 32px * 2);
+                }
+            
+                @include max(sm) {
+                    max-width: calc(100% - 16px * 2);
+                }
+          }
+    }
+    @include max(xl) {
+		left: 0;
+	}
+	@include max(lg) {
+		display: none;
+	}
+
+	&__icon{
+        display: block;
+		width: 14px;
+		height: 20px;
+		box-sizing: border-box;
+		border: 3px solid #191919;
+		border-radius: 7px;
+		position: relative;
+		span{
+			border-radius: 50%;
+			background: #191919;
+			display: block;
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			width: 6px;
+			height: 6px;
+			animation: 1.3s infinite normal scrollDown;
+		}
+	}
+	&__text{
+        position: relative;
+        display: inline-block;
+        margin-bottom: 14px;
+        width: 14px;
+		color: #191919;
+		font-size: 14px;
+		line-height: 1;
+        transform: rotate(-90deg);
+	}
+	&--white{
+		.scroll-down{
+			&__icon{
+				border-color: $grey;
+				span{
+					background: $grey;
+				}
+			}
+			&__text{
+				color: $grey;
+			}
+		}
+	}
+}
+@keyframes scrollDown {
+	0% {
+		top: 1px;
+		opacity: 0;
+	}
+	20% {
+		top:1px;
+		opacity: 1;
+	}
+	80% {
+		top: 7px;
+		opacity: 1;
+	}
+	100% {
+		top: 7px;
+		opacity: 0;
+	}
+}
+
 .tab-pane {
     display: none;
     &.active {

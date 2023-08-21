@@ -5,7 +5,7 @@ block variables
 	- const title = "Project title"
 
 block content
-	.main__header 
+	.main__header(id="index02") 
 		.container
 			.main__header__title.animate__animated 
 				!="Точность без компромисcов"
@@ -17,26 +17,45 @@ block content
 				.button__circle-inner
 					img.button__circle-outside(src="img/svg/label-circle.svg" alt="")
 					img.button__circle-inside(src="img/svg/play.svg" alt="logo")
+	.scroll-down__wrap
+		.container
+			.scroll-down.scroll-down--white
+				.scroll-down__icon
+					span
+				.scroll-down__text Вниз
+	
 	include ../blocks/modules/soc/soc
 	include ../blocks/modules/main-pagination/main-pagination
-
-	.section.section__black
+	//- .main__pagination.animate__animated
+	//- 	.container
+	//- 		.main__pagination__wrap
+	//- 			a(href="#index01").main__pagination__item.active
+	//- 				!="01"
+	//- 			a(href="#index02").main__pagination__item
+	//- 				!="02"
+	//- 			a(href="#index03").main__pagination__item
+	//- 				!="03"
+	//- 			a(href="#index04").main__pagination__item
+	//- 				!="04"
+	//- 			a(href="#index05").main__pagination__item
+	//- 				!="05"
+	.section.section__black(id="index02")
 		.container
 			include ../blocks/components/hardness/hardness
 			include ../blocks/components/ultrasonic/ultrasonic
 			include ../blocks/components/measure/measure
 			include ../blocks/components/warranty/warranty
-	.section.section__white.products__section
+	.section.section__white.products__section(id="index02")
 		include ../blocks/modules/products/products
 
-	.section.section__black
+	.section.section__black(id="index03")
 		.container
 			include ../blocks/components/arguments/arguments	
 			include ../blocks/modules/soc-big/soc-big
 
 			include ../blocks/components/fabrication/fabrication
 
-	.section.section__white.infocenter__section
+	.section.section__white.infocenter__section(id="index05")
 		.container
 			.title__40 Наша продукция
 			include ../blocks/components/hardness-tester/hardness-tester

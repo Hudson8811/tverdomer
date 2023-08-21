@@ -109,6 +109,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      &.no-active {
+        svg {
+          path {
+            fill: #CBCECF;
+          }
+        }
+      }
     }
     &__load {
       position: relative;

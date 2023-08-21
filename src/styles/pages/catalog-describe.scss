@@ -4,6 +4,12 @@
   justify-content: space-between;
   width: 100%;
   align-items: flex-start;
+  .text-block {
+    margin-bottom: 55px;
+    @include max(sm) {
+      margin-bottom: 35px;
+    }
+  }
   &__title {
     margin-bottom: 68px;
     @include max(sm) {
