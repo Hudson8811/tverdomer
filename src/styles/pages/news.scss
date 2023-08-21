@@ -6,6 +6,7 @@
 		@media (max-width: 767px){
 			gap: 10px;
 		}
+
 	}
 	&__tab {
 		border-radius: 5px;
@@ -18,11 +19,11 @@
 		}
 
 		&:hover{
-			color: #ffffff;
+			color: #ffffff!important;
 		}
 		&.active {
 			background: var(--main-dark, #1B1F22);
-			color: #ffffff;
+			color: #ffffff!important;
 		}
 	}
 
@@ -97,6 +98,15 @@
 		justify-content: space-between;
 		@media (max-width: 1200px){
 			flex-direction: column;
+		}
+		
+		.select2-selection__rendered {
+			padding-top: 0!important;
+			padding-bottom: 0!important;
+		}
+		.selection .select2-selection__arrow b[role=presentation] {
+			width: 9px;
+			height: 9px;
 		}
 	}
 }

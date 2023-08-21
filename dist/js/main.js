@@ -3052,7 +3052,7 @@ galleryMain.controller.control =  galleryThumbs;
 		
 		
 		
-		$(".header-reviews").click(function(e){
+		$(".header-reviews-page").click(function(e){
 			$(this).parent().toggleClass("js-active");
 		})
 	})
