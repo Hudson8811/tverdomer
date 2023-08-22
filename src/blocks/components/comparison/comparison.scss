@@ -1,0 +1,188 @@
+.comparison {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  &__section {
+    @include max(xs) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .container {
+      @include max(sm) {
+        max-width: calc(100% - 0px);
+        padding-left: 16px;
+      }
+    }
+  }
+  &__tabel {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    width: 100%;
+    min-width: 1200px;
+    padding-bottom: 16px;
+    @include max(sm) {
+      min-width: 600px;    
+    }
+    @include max(xs) {
+      min-width: 573px;    
+    }
+    &__top {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      @include max(sm) {
+        margin-bottom: 15px;
+      }
+      .comparison__tabel__row {
+        margin-bottom: 34px;
+        border-bottom: none;
+      }
+      .comparison__tabel__col {
+        &:first-child {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        &__title {
+          position: relative;
+          display: block;
+          color: $white;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 135%;
+          margin-bottom: 16px;
+          @include max(sm) {
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 135%;
+              margin-bottom: 10px;
+          }
+        }
+        &__subtitle {
+          position: relative;
+          display: block;
+          color: $white;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 550;
+          line-height: 150%;
+          @include max(sm) {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%;
+          }
+        }
+      }
+    }
+    &__row {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      min-height: 37px;
+      border-bottom: 1px solid #25292C;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      @include max(sm) {
+        min-height: 25px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;      
+      }
+    }
+    &__col {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      color: $grey;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+      @include max(sm) {
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;       
+      }
+      &:nth-child(1) {
+        width: 38.05%;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      &:nth-child(2) {
+        width: 20.65%;
+      }
+      &:nth-child(3) {
+        width: 20.65%;
+      }
+      &:nth-child(4) {
+        width: 20.65%;
+      }
+      p {
+       margin-bottom: 10px;
+       &:last-child {
+        margin-bottom: 0;
+       }
+      }
+
+    }
+    &__picture  {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-flow: column nowrap;
+      align-items: center;
+      width: 220px;
+      @include max(sm) {
+        width: 123px;
+      }
+      &:before {
+        width: 100%;
+        content: "";
+        display: block;
+        padding-top: 100%;   
+        position: relative;
+        
+      }
+      img, picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        object-position: top center;
+        z-index: 1;
+      }
+      &__desc  {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 6px;
+      }
+    }
+  }
+}

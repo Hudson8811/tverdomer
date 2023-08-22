@@ -1,0 +1,387 @@
+.sonic-sensor {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+	min-height: 795px;
+	overflow: hidden;
+  &__section {
+    @include max(xs) {
+      padding-top: 40px;
+      padding-botton: 40px;
+    }
+  }
+  @include max(lg) {
+    justify-content: flex-end;
+  }
+  @include max(mdHeader) {
+    flex-flow: column-reverse nowrap;
+    padding-top: 138px;
+  }
+	@include max(md) {
+		padding-bottom: 0;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 32px;
+		min-height: auto;
+    padding-top: 138px;
+	}
+	@include max(sm) {
+    padding-top: 88px;
+	}
+  &__list {
+    &__title {
+      position: relative;
+      display: block;
+      color: $white;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 135%;
+      margin-bottom: 48px;
+      &--mob {
+        display: none;
+        @include max(mdHeader) {
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          max-width: 300px;
+          @include max(sm) {
+            max-width: 200px;
+          }
+        }
+      }
+      &--desc {
+        @include max(mdHeader) {
+          display: none;
+        }
+      }
+      @include max(sm) {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 135%;
+          margin-bottom: 24px;
+      }
+    }
+    ul {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-left: 15px;
+      padding-top: 0;
+      margin-top: 0;
+      color: #CBCECF;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 550;
+      line-height: 135%;
+      margin-bottom: 0px;
+      @include max(sm) {
+          font-size: 12px;
+          font-style: normal;
+          line-height: 150%;
+          margin-bottom: 10px;
+      }
+      li {
+        position: relative;
+        list-style-type: none;
+        color: #CBCECF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 135%;
+        margin-bottom: 14px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include max(sm) {
+            font-size: 12px;
+            font-style: normal;
+            line-height: 150%;
+            margin-bottom: 10px;
+        }
+        &::before {
+          content: '';
+          display: block;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          background-color: $red;
+          left: -15px;
+          top: 7px;
+          position: absolute;
+        }
+      }
+    }
+  }
+  &__row  {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		z-index: 5;
+		@include max(lg) {
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			
+		}
+		@include max(mdHeader) {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			
+		}
+    @include max(sm) {
+      flex-flow: column nowrap;
+    }
+	}
+	&__col {
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		&__title {
+			margin-bottom: 30px;
+			@include max(md) {
+				margin-bottom: 16px;
+				
+			}
+		}
+		&:nth-child(1) {
+			max-width: 320px;
+      @include max(lg) {
+        margin-bottom: 35px;
+      }
+			@include max(md) {
+				margin-bottom: 23px;
+				
+			}
+      @include max(sm) {
+        max-width: 100%;
+      }
+		}
+		&:nth-child(2) {
+			max-width: 300px;
+			@include max(sm) {
+				max-width: 180px;
+				
+			}
+      @include max(sm) {
+        max-width: 100%;
+      }
+		}
+	}
+	&__bg  {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: -10px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 764px;
+    z-index: 800;
+    @include max(lg) {
+      left: auto;
+      right: 0;
+    }
+    @include max(mdHeader) {
+      position: relative;
+    }
+		@include max(md) {
+			position: relative;
+			width: 100%;
+		}
+		img,picture {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right top;
+      @include max(mdHeader) {
+        object-position: left center;
+      }
+		}		
+	}
+  &__tabel {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: self-start;
+    flex-flow: column nowrap;
+    margin-left: 25px;
+    @include max(sm) {
+      margin-left: 0;
+      width: 100%;
+    }
+    &__title {
+      color: $white;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 135%;
+      margin-bottom: 20px;
+      @include max(sm) {
+        font-size: 16px;
+        margin-bottom: 25px;
+        max-width: 245px;          
+      }
+    }
+    &__row {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #25292C;
+      margin-bottom: 22px;
+      @include max(xs) {
+        width: 100%;
+      }
+      &:first-child {
+        border-bottom: none;
+        margin-bottom: 0px;
+      }
+
+    }
+    &__col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      color:  #CBCECF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 550;
+      line-height: 135%;
+      min-width: 68px;
+
+      &:nth-child(2n) {
+        min-width: 40px;
+      }
+      &:nth-child(1) {
+        justify-content: flex-start;
+        min-width: 50px;
+      }
+      @include max(sm) {
+        font-size: 12px;
+      } 
+      span {
+        color: $red;
+        text-align: right;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        margin-right: 4px;
+        &:first-child {
+          margin-left: 7px;
+        }
+        @include max(sm) {
+          font-size: 14px;
+        }      
+      }  
+    }
+    &__desc {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      flex-flow: column nowrap;
+      &__item {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        color: $grey;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        padding-left: 37px;
+        @include max(sm) {
+          font-size: 11px;           
+        }
+      }
+      &__star {
+        position: absolute;
+        left: 0;
+        top:0; 
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        span {
+          color: $red;
+          text-align: right;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 125%;
+          margin-right: 4px;
+          @include max(sm) {
+            font-size: 14px;
+          }      
+        }  
+      }
+    }
+  }
+  .hint__sonic-sensor {
+    &:nth-child(1) {
+      top: 0;
+      left: 240px;
+      @include max(sm) {
+        top: 0%;
+        left: 25%;
+      }
+      @include max(xs) {
+        top: -2%;
+        left: 25%;
+      }
+    }
+    &:nth-child(2) {
+      top: 50px;
+      left: 190px;
+      @include max(sm) {
+        top: 8%;
+        left: 20%;
+      }
+      @include max(xs) {
+        top: 8%;
+        left: 15%;
+      }
+    }
+    &:nth-child(3) {
+      top: 200px;
+      left: 190px;
+      @include max(sm) {
+        top: 28%;
+        left: 18%;
+      }
+    }
+    &:nth-child(4) {
+      top: 400px;
+      left: 190px;
+      @include max(sm) {
+        top: 50%;
+        left: 18%;
+      }
+    }
+    &:nth-child(5) {
+      top: 600px;
+      left: 120px;
+      @include max(sm) {
+        top: 73%;
+        left: 8%;
+      }
+    }
+  }
+}

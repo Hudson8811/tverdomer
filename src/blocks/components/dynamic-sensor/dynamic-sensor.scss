@@ -1,0 +1,223 @@
+.dynamic-sensor {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+	overflow: hidden;
+  min-height: 768px;
+  &__section {
+    @include max(xs) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+	@include max(md) {
+		padding-bottom: 0;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 32px;
+		min-height: auto;
+	}
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    width: 100%;
+    max-width: 443px;
+    @include max(sm) {
+      max-width: 220px;
+    }
+    &__title {
+      position: relative;
+      display: block;
+      color: $white;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 135%;
+      margin-bottom: 48px;
+      &--mob {
+        display: none;
+        @include max(mdHeader) {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          max-width: 300px;
+        }
+        @include max(sm) {
+          max-width: 190px;
+        }
+      }
+      &--desc {
+        @include max(mdHeader) {
+          display: none;
+        }
+      }
+      @include max(sm) {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 135%;
+          margin-bottom: 24px;
+      }
+    }
+    ul {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-left: 15px;
+      padding-top: 0;
+      margin-top: 0;
+      color: #CBCECF;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 550;
+      line-height: 135%;
+      margin-bottom: 0px;
+      @include max(sm) {
+          font-size: 12px;
+          font-style: normal;
+          line-height: 150%;
+          margin-bottom: 10px;
+      }
+      li {
+        position: relative;
+        list-style-type: none;
+        color: #CBCECF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 135%;
+        margin-bottom: 28px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include max(sm) {
+            font-size: 12px;
+            font-style: normal;
+            line-height: 150%;
+            margin-bottom: 10px;
+        }
+        &::before {
+          content: '';
+          display: block;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          background-color: $red;
+          left: -15px;
+          top: 7px;
+          position: absolute;
+        }
+      }
+    }
+  }
+  &__bg  {
+		position: absolute;
+		right: auto;
+		left: 0;
+		bottom: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 764px;
+    z-index: 800;
+		@include max(lg) {
+			position: relative;
+			width: 100%;
+		}
+		img,picture {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right top;
+		}		
+	}
+  &__col {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 764px);
+    @include max(mdHeader) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 330px;
+    }
+    @include max(lg) {
+      max-width: 330px;
+    }
+    @include max(sm) {
+      bottom: -10px;
+    }
+  }
+  .hint__dynamic-sensor {
+    &:nth-child(1) {
+      top: 130px;
+      right: 185px;
+      @include max(sm) {
+        top: 13%;
+        right: 16%;
+      }
+      @include max(xs) {
+        top: 13%;
+        right: 14%;
+      }
+    }
+    &:nth-child(2) {
+      top: 221px;
+      right: 174px;
+      @include max(sm) {
+        top: 28%;
+        right: 14%;
+      }
+      @include max(xs) {
+        top: 26%;
+        right: 12%;
+      }
+    }
+    &:nth-child(3) {
+      top: 290px;
+      right: 205px;
+      @include max(sm) {
+        top: 46%;
+        right: 18%;
+      }
+      @include max(xs) {
+        top: 43%;
+        right: 18%;
+      }
+    }
+    &:nth-child(4) {
+      top: 600px;
+      right: 225px;
+
+      @include max(sm) {
+        top: 75%;
+        right: 23%;
+      }
+      @include max(xs) {
+        top: 73%;
+        right: 20%;
+      }
+    }
+    &:nth-child(5) {
+      top: 628px;
+      right: 125px;
+      @include max(sm) {
+        top: 83%;
+        right: 8%;
+      }
+      @include max(xs) {
+        top: 82%;
+        right: 9%;
+      }
+    }
+  }
+}
