@@ -5,7 +5,7 @@ block variables
 	- const title = "Project title"
 
 block content
-	.main__header.main__header__two 
+	.main__header.main__header__two(id="index1") 
 		.container
 			.main__header__title.animate__animated 
 				!="Портативные твердомеры"
@@ -23,8 +23,27 @@ block content
 					span
 				.scroll-down__text Вниз
 	include ../../blocks/modules/soc/soc
-	include ../../blocks/modules/main-pagination/main-pagination
-	.section.section__black.section__border-b.sonic-sensor__section
+	.main__pagination.animate__animated
+		.container
+			.main__pagination__wrap
+				a(href="#index1").main__pagination__item.active
+					!="01"
+				a(href="#index2").main__pagination__item
+					!="02"
+				a(href="#index3").main__pagination__item
+					!="03"
+				a(href="#index4").main__pagination__item
+					!="04"
+				a(href="#index5").main__pagination__item
+					!="05"
+				a(href="#index6").main__pagination__item
+					!="06"
+				a(href="#index7").main__pagination__item
+					!="07"
+				a(href="#index8").main__pagination__item
+					!="08"
+
+	.section.section__black.section__border-b.sonic-sensor__section(id="index2")
 		.container
 			.sonic-sensor
 				.sonic-sensor__list__title.sonic-sensor__list__title--mob Ультразвуковой датчик
@@ -151,7 +170,7 @@ block content
 									li Надежный 5
 									li Надежный 5
 	
-	.section.section__black.section__border-b.dynamic-sensor__section
+	.section.section__black.section__border-b.dynamic-sensor__section(id="index3")
 		.container
 			.dynamic-sensor
 				.dynamic-sensor__list__title.dynamic-sensor__list__title--mob.title__40  Динамический датчик
@@ -221,7 +240,7 @@ block content
 									li Надежный 5
 									li Надежный 5
 									li Надежный 5
-	.section.section__black.section__border-b.electronic-unit__section
+	.section.section__black.section__border-b.electronic-unit__section(id="index4")
 		.container
 			.electronic-unit.electronic-unit--desc
 				.electronic-unit__title Электронный блок
@@ -311,7 +330,7 @@ block content
 								ul
 									li Надежный и удобный обхват
 									li Уменьшает дискомфорт при большом количестве измерений
-	.section.section__black.section__border-b.calibrate__section
+	.section.section__black.section__border-b.calibrate__section(id="index5")
 		.container
 			.calibrate
 				.calibrate__title.title__40 Как мы калибруем наши твердомеры
@@ -357,7 +376,7 @@ block content
 									li Используют менее однородные эталонные меры 2 разряда
 									li Меры твёрдости 2 разряда уже содержат сумму погрешностей твердомера-компаратора и меры твёрдости 1 разряда.		
 									li Используют переводные таблицы твёрдости при калибровке, что даёт дополнительную погрешность. Такие таблицы нестандартизированы в РФ, так как неточны		
-	.section.section__black.section__border-b.equipment__section
+	.section.section__black.section__border-b.equipment__section(id="index6")
 		.container
 			.equipment
 				.equipment__title.equipment__title--mob Комплектация
@@ -382,7 +401,7 @@ block content
 					picture
 						source(media="(max-width: 560px)", srcset="img/index/equipment__bg--mob.png")
 						img(src="img/index/equipment__bg.png", srcset="img/index/equipment__bg--2x.png 2x" alt="")
-	.section.section__black.section__border-b.comparison__section
+	.section.section__black.section__border-b.comparison__section(id="index7")
 		.container
 			.comparison
 				.comparison__tabel
@@ -484,7 +503,7 @@ block content
 						.comparison__tabel__col 200
 						.comparison__tabel__col 30
 						.comparison__tabel__col 30; 200
-	.section.section__white.infocenter__section.section--pr-none
+	.section.section__white.infocenter__section.section--pr-none(id="index8")
 		.container
 			.title__40 Наша продукция
 			include ../../blocks/components/hardness-tester/hardness-tester
