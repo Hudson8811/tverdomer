@@ -1,0 +1,823 @@
+extends ../layouts/default
+
+block variables
+	- const title = "reviews-page";
+
+block content
+	.section.section__white.section--breadcrumbs.reviews-page__section.reviews-page__section--cards
+		.section__breadcrumbs
+			.container 
+				.breadcrumbs
+					a.breadcrumbs__item 
+						| Главная
+					a.breadcrumbs__item.breadcrumbs__item__active
+						| Отзывы
+		.reviews-page
+			.container
+				.reviews-page__title.title__40 Отзывы 
+				.reviews-page__top
+					select(name="reviews-page__select").reviews-page__select.myselect-class
+						option(value="1") ПОКАЗАТЬ Все1
+						option(value="2") ПОКАЗАТЬ Все2
+						option(value="3") ПОКАЗАТЬ Все3
+					.reviews-page__top-btn.btn.btn--black.text__18 Оставить отзыв
+				.reviews-page-content
+					.reviews-page-content__item.js-active
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title ООО «НПП «Линэртон»
+								.header-reviews-page__origin.desk-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+					.reviews-page-content__item
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title ОаО «Нефтехимзапчасть»
+								.header-reviews-page__origin.desk-my-class.hidden-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class.hidden-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+					.reviews-page-content__item
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title ЗаО «СТАРООСКОЛЬСКАЯ ОПАЛУБКА»
+								.header-reviews-page__origin.desk-my-class.hidden-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class.hidden-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+					.reviews-page-content__item
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title ОаО «НЕФТЕХИМЗАПЧАСТЬ»
+								.header-reviews-page__origin.desk-my-class.hidden-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class.hidden-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+					.reviews-page-content__item
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title оаО «БАЛАКОВСКИЙ СУДОРЕМОНТНЫЙ ЗАВОД»
+								.header-reviews-page__origin.desk-my-class.hidden-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class.hidden-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+					.reviews-page-content__item
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title ОаО «МЦЕНСКИЙ ЛИТЕЙНЫЙ ЗАВОД»
+								.header-reviews-page__origin.desk-my-class.hidden-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class.hidden-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+					.reviews-page-content__item
+						.reviews-page-content__header.header-reviews-page 
+							.header-reviews-page__left-desk
+								.header-reviews-page__title ооО «ПРЕЦИЗИОННЫЕ СТАНКИ СКБ-ЗТС»
+								.header-reviews-page__origin.desk-my-class.hidden-my-class 
+									a(href="") 
+										svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+											path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+											circle(cx='12' cy='18' r='1' fill='#1B1F22')
+											circle(cx='16' cy='18' r='1' fill='#1B1F22')
+											circle(cx='20' cy='18' r='1' fill='#1B1F22')
+										span Есть оригинал
+								.header-reviews-page__estimation
+									include ../../blocks/components/review-rating/review-rating
+							.header-reviews-page__origin.mob-my-class.hidden-my-class 
+								a(href="") 
+									svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(fill-rule='evenodd' clip-rule='evenodd' d='M4 1.33337H19.219L28 10.1144V30.6667H4V1.33337ZM6.66667 4.00004V28H25.3333V12H17.3333V4.00004H6.66667ZM20 5.88566L23.4477 9.33337H20V5.88566Z' fill='#1B1F22')
+										circle(cx='12' cy='18' r='1' fill='#1B1F22')
+										circle(cx='16' cy='18' r='1' fill='#1B1F22')
+										circle(cx='20' cy='18' r='1' fill='#1B1F22')
+									span Оригинал
+							.header-reviews-page__estimation-text МеТ УД
+							.header-reviews-page__arrow 
+								svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M21.421 8L12.2105 17.2105L2.99997 8' stroke='#1B1F22' stroke-width='1.97368')
+
+						.reviews-page-content__body.body-reviews-page
+							.body-reviews-page__inner 
+								.body-reviews-page__side.desk-my-class 
+									.body-reviews-page__side-inner 
+										include ../../blocks/components/review-rating/review-rating
+										.body-reviews-page__estimations
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Качество товара
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Надежность
+												.body-reviews-page__estimations-num 4.9
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Срок поставки
+												.body-reviews-page__estimations-num 4.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+											.body-reviews-page__estimations-item 
+												.body-reviews-page__estimations-name Сервис
+												.body-reviews-page__estimations-num 5.0
+												.body-reviews-page__estimations-line 
+													.body-reviews-page__estimations-line-grey
+													.body-reviews-page__estimations-line-yellow
+										.body-reviews-page__side-image 
+											img(src="img/new/wqw.png", alt="alt")
+								.body-reviews-page__content 
+									.body-reviews-page__content-title ООО «НПП «Линэртон»
+									.body-reviews-page__content-address г. Нижний Новгород, Нижегородская область, ул. Ларина, д. 7
+									.body-reviews-page__side.mob-my-class 
+										.body-reviews-page__side-inner 
+											.body-reviews-page__side-header
+												include ../../blocks/components/review-rating/review-rating
+											.body-reviews-page__estimations
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Качество товара
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Надежность
+													.body-reviews-page__estimations-num 4.9
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Срок поставки
+													.body-reviews-page__estimations-num 4.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+												.body-reviews-page__estimations-item 
+													.body-reviews-page__estimations-name Сервис
+													.body-reviews-page__estimations-num 5.0
+													.body-reviews-page__estimations-line 
+														.body-reviews-page__estimations-line-grey
+														.body-reviews-page__estimations-line-yellow
+									.body-reviews-page__content-text 
+										p НПП «Линэтрон-Нижний Новгород» занимается разработкой и внедрением упрочняющих технологий на основе пучково-импульсного облучения ионами углерода. В настоящее время мы специализируемся на обработке мощными ионными пучками (МИП) режущего твердосплавного инструмента железнодорожной номенклатуры.
+										p Одним из важнейших показателей физико-механических свойств твёрдых сплавов является твёрдость HRA,  которая строго регламентируется. Поэтому при входном контроле твердосплавного инструмента, приобретаемого  у предприятий-изготовителей, перед нами остро встал вопрос об определении твёрдости и установлении  её соответствия требованиям нормативной документации (ГОСТ, ТУ).
+										p Измерения на обычных твёрдомерах с большими нагрузками (на индентор) зачастую не оправдывают себя, т.к. проводятся, как правило, на образцах-свидетелях, имеют значительную глубину внедрения (видимый отпечаток)  и характеризуют твёрдость основного материала. Твёрдость же в рабочей зоне твердосплавных пластин может существенно отличаться (вследствие механической, термической и различных видов поверхностной обработок)  от основы материала.
+										p Имея положительный опыт работы с твердомером портативным ультразвуковым МЕТ-У1, разработанным Вами для металлов и сплавов, мы обратились в Центр физико-механических измерений "МЕТ" с просьбой разработать программное обеспечение для работы с твёрдыми сплавами различных марок.
+									.body-reviews-page__content-name Инженер по качеству Царёва И.Н., март 2015 Г.
+									.body-reviews-page__product 
+										.body-reviews-page__product-title Товар из отзыва
+										.body-reviews-page__product-item 
+											.body-reviews-page__product-row 
+												.body-reviews-page__product-img 
+													img(src="img/new/tverd.png", alt="alt")
+												.body-reviews-page__product-body
+													.body-reviews-page__product-name Ультразвуковой твердомер МЕТ-У1А
+													.body-reviews-page__product-price 79 368 ₽
+
+			.reviews-page__feedback.feedback
+				.container
+					.feedback__title Оставить отзыв
+					.feedback__estimations 
+						.feedback__estimation
+							.feedback__estimation-title Качество товара
+							.feedback__estimation-stars 
+								include ../../blocks/components/review-rating/review-rating
+						.feedback__estimation
+							.feedback__estimation-title Надежность
+							.feedback__estimation-stars 
+								include ../../blocks/components/review-rating/review-rating
+						.feedback__estimation
+							.feedback__estimation-title Срок поставки
+							.feedback__estimation-stars 
+								include ../../blocks/components/review-rating/review-rating
+						.feedback__estimation
+							.feedback__estimation-title Сервис
+							.feedback__estimation-stars 
+								include ../../blocks/components/review-rating/review-rating
+					form.feedback__form(action="") 
+						.feedback__item 
+							input.feedback__input.feedback__field(type="text" placeholder="Имя")
+						.feedback__item 
+							input.feedback__input.feedback__field(type="text" placeholder="Название компании")
+						.feedback__item 
+							input.feedback__input.feedback__field(type="email" placeholder="Электронный адрес")
+						.feedback__item 
+							select(name="reviews-page__select").feedback__input.feedback__field.myselect-class
+								option(value="1") Адрес компании
+								option(value="2") Адрес компании1
+								option(value="3") Адрес компании2
+						.feedback__item 
+							input.feedback__input.feedback__field(type="tel" placeholder="Телефон")
+						.feedback__item 
+							input.feedback__input.feedback__field(type="text" placeholder="Наименование товара")
+						.feedback__item.feedback__item--fullwidth 
+							textarea.feedback__textarea.feedback__field(placeholder='Задать вопрос' style="resize: none")
+						.feedback__item.feedback__item--fullwidth.feedback__item--file 
+							.feedback__input.feedback__input--file.feedback__field
+								.feedback__input--file-name
+									|Прикрепить файлы
+								svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none')
+									path(d='M23.933 20.2761C25.4951 18.714 25.4951 16.1813 23.933 14.6192L18.2761 8.96239C15.6726 6.35889 11.4515 6.35889 8.84804 8.96239C6.24454 11.5659 6.24454 15.787 8.84804 18.3905L15.4477 24.9901L17.3333 23.1045L10.7337 16.5049C9.17156 14.9428 9.17156 12.4101 10.7337 10.848C12.2958 9.28591 14.8284 9.28591 16.3905 10.848L22.0474 16.5049C22.5681 17.0256 22.5681 17.8698 22.0474 18.3905C21.5267 18.9112 20.6824 18.9112 20.1617 18.3905L14.5049 12.7336L12.6193 14.6192L18.2761 20.2761C19.8382 21.8382 22.3709 21.8382 23.933 20.2761Z' fill='#1B1F22')
+
+								input(type="file" placeholder="Прикрепить файлы")
+						.feedback__bottom
+							.feedback__bottom-submit
+								input.feedback__bottom-submit-btn(type="submit" placeholder="Отправить")
+							.feedback__bottom-text Отправляя форму я принимаю условия политики конфиденциальности и даю согласие на обработку моих персональных данных
