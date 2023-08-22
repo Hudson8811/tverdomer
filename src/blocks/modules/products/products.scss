@@ -5,6 +5,10 @@
   justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
+  margin-bottom: 104px;
+  @include max(sm) {
+    margin-bottom: 24px;
+  }
   &__title {
     margin-bottom: 70px;
   }

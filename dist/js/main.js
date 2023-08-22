@@ -2715,6 +2715,37 @@ $('.review__button').click(function() {
         accordionContentHeight = $(this).parent().closest( "div.accordion__content" ).innerHeight();
         accordionContent.css({"maxHeight": accordionContentHeight})
 });
+$('.js-example-responsive').select2({
+        theme: "custom-theme",
+        language: 'ru',
+        // width: '100%',
+        minimumResultsForSearch: Infinity,
+        dropdownAutoWidth: true,
+});
+
+let btnCity = document.querySelector(".btn__city")
+let cities = document.querySelector(".offices__cities")
+let officesMap = document.querySelector(".offices__map")
+let officesMapSection = document.querySelector(".offices__map__section")
+
+btnCity.addEventListener("click", ()=> {
+       let active = cities.classList.contains("noActive");
+       let citiesHieght = cities.offsetHeight;
+       console.log(citiesHieght)
+       if(active == true)  {
+        console.log("true")
+        officesMap.style.opacity = "0"
+        officesMapSection.style.height = citiesHieght + "px";
+        cities.classList.remove("noActive")
+        cities.classList.remove("animate__fadeOutRight")
+        cities.classList.add("animate__fadeInRight")
+       } else {
+        officesMap.style.opacity = "1"
+        cities.classList.remove("animate__fadeInRight")
+        cities.classList.add("animate__fadeOutRight", "noActive")
+        officesMapSection.style.height = "auto";
+       }
+})
 var hardnessTesters;
 $('.js-infocenter').each(function(){
 	var slider=$(this)
