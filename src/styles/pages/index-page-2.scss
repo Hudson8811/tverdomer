@@ -1921,3 +1921,23 @@
   border-right-color: #fff;
   transform: scale(2.5);
 }
+.tippy-box[data-theme~='tomato'][data-placement^='top'] > .tippy-svg-arrow svg {
+  border-top-color: #fff;
+  fill: #fff;
+  transform: scale(2.5);
+}
+.tippy-box[data-theme~='tomato'][data-placement^='bottom'] > .tippy-svg-arrow svg {
+  border-bottom-color: #fff;
+  fill: #fff;
+  transform: scale(2.5);
+}
+.tippy-box[data-theme~='tomato'][data-placement^='left'] > .tippy-svg-arrow svg {
+  border-left-color: #fff;
+  fill: #fff;
+  transform: scale(2.5);
+}
+.tippy-box[data-theme~='tomato'][data-placement^='right'] > .tippy-svg-arrow svg {
+  border-right-color: #fff;
+  fill: #fff;
+  transform: scale(2.5);
+}

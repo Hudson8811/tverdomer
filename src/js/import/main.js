@@ -1,3 +1,5 @@
+
+
 jQuery(function () {
 
         new Skroll()
@@ -70,18 +72,36 @@ jQuery(function () {
 //         // content: 'Global content',
 //         // arrow: tippy.roundArrow,
 // });
-tippy('.hint', {
-        content(reference) {
-          const id = reference.getAttribute('data-template');
-          const template = document.getElementById(id);
-          return template.innerHTML;
-        },
-        theme: 'tomato',
-        // arrow:  roundArrow,
-        allowHTML: true,
-        placement: 'right',
-        inlinePositioning: true,
-});
+if (document.documentElement.clientWidth < 767) {
+        tippy('.hint', {
+                content(reference) {
+                  const id = reference.getAttribute('data-template');
+                  const template = document.getElementById(id);
+                  return template.innerHTML;
+                },
+                theme: 'tomato',
+                // arrow: tippy.roundArrow,
+                allowHTML: true,
+                // placement: 'right',
+                inlinePositioning: true,
+        
+        });
+} else {
+        tippy('.hint', {
+                content(reference) {
+                  const id = reference.getAttribute('data-template');
+                  const template = document.getElementById(id);
+                  return template.innerHTML;
+                },
+                theme: 'tomato',
+                // arrow: tippy.roundArrow,
+                allowHTML: true,
+                placement: 'right',
+                inlinePositioning: true,
+        
+        });
+};
+
 function bodyNoScroll() {
         let bodyBodymotionless = document.querySelector('body')
         bodyBodymotionless.classList.add("Bodymotionless")
