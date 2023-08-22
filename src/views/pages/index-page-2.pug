@@ -24,12 +24,13 @@ block content
 				.scroll-down__text Вниз
 	include ../../blocks/modules/soc/soc
 	include ../../blocks/modules/main-pagination/main-pagination
-	.section.section__black.section__border-b
+	.section.section__black.section__border-b.sonic-sensor__section
 		.container
 			.sonic-sensor
+				.sonic-sensor__list__title.sonic-sensor__list__title--mob Ультразвуковой датчик
 				.sonic-sensor__row
 					.sonic-sensor__col
-						.sonic-sensor__list__title Ультразвуковой датчик
+						.sonic-sensor__list__title.sonic-sensor__list__title--desc Ультразвуковой датчик
 						.sonic-sensor__list 
 							ul 
 								li Тонкие детали от 1 мм
@@ -91,7 +92,9 @@ block content
 										span *
 									!="Макс. допустимая шероховатость"
 				.sonic-sensor__bg
-					img(src="img/index/sonic-sensor__1.png", srcset="img/index/sonic-sensor__1--2x.png 2x" alt="")
+					picture
+						source(media="(max-width: 767px)", srcset="img/index/sonic-sensor__1--mob.png")
+						img(src="img/index/sonic-sensor__1.png", srcset="img/index/sonic-sensor__1--2x.png 2x" alt="")
 					.hints.hint__sonic-sensor
 						div.hint.hint__sonic-sensor(data-template="one")
 							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
@@ -148,76 +151,79 @@ block content
 									li Надежный 5
 									li Надежный 5
 	
-	.section.section__black.section__border-b
+	.section.section__black.section__border-b.dynamic-sensor__section
 		.container
 			.dynamic-sensor
+				.dynamic-sensor__list__title.dynamic-sensor__list__title--mob.title__40  Динамический датчик
 				.dynamic-sensor__col
 					.dynamic-sensor__list
-						.dynamic-sensor__list__title.title__40  Динамический датчик
+						.dynamic-sensor__list__title.dynamic-sensor__list__title--desc.title__40  Динамический датчик
 						ul 
 							li Быстрее всех других методов
 							li Массивные детали
 							li Самый популярный портативный способ (точно есть на соседнем заводе)
 				.dynamic-sensor__bg
-					img(src="img/index/dynamic-sensor__bg.png", srcset="img/index/dynamic-sensor__bg--2x.png 2x" alt="")
-					.hints.hint__dynamic-sensor
-						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__one")
+					picture
+						source(media="(max-width: 767px)", srcset="img/index/dynamic-sensor__bg--mob.png")
+						img(src="img/index/dynamic-sensor__bg.png", srcset="img/index/dynamic-sensor__bg--2x.png 2x" alt="")
+					.hints.hints__dynamic-sensor
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__1")
 							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
 							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
 							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"  transform="scale(1)"/>
 							</svg>
-						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__two")
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__2")
 							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
 							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
 							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
 							</svg>
-						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__tree")
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__2")
 							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
 							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
 							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
 							</svg>
-						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__four")
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__3")
 							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
 							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
 							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
 							</svg>
-						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__five")
+						div.hint.hint__dynamic-sensor(data-template="dynamic-sensor__5")
 							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
 							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
 							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
 							</svg>
 
 						.hint__lists(style="display:none")
-							.hint__list(id="dynamic-sensor__one")
+							.hint__list(id="dynamic-sensor__1")
 								p Эргономичная ручка  
 								ul
 									li Надежный и удобный обхват
 									li Уменьшает дискомфорт при большом количестве измерений
-							.hint__list(id="dynamic-sensor__two")
+							.hint__list(id="dynamic-sensor__2")
 								p Эргономичная ручка  
 								ul
 									li Надежный и ...
 									li Надежный и удобный обхват
 									li Уменьшает дискомфорт при большом количестве измерений
-							.hint__list(id="dynamic-sensor__tree")
+							.hint__list(id="dynamic-sensor__3")
 								p Эргономичная ручка  
 								ul
 									li Надежный 3
-							.hint__list(id="dynamic-sensor__four")
+							.hint__list(id="dynamic-sensor__4")
 								p Эргономичная ручка  
 								ul
 									li Надежный и удобный обхват
 									li Уменьшает дискомфорт при большом количестве измерений
-							.hint__list(id="dynamic-sensor__five")
+							.hint__list(id="dynamic-sensor__5")
 								p Эргономичная ручка  
 								ul
 									li Надежный 5
 									li Надежный 5
 									li Надежный 5
 									li Надежный 5
-	.section.section__black.section__border-b
+	.section.section__black.section__border-b.electronic-unit__section
 		.container
-			.electronic-unit
+			.electronic-unit.electronic-unit--desc
 				.electronic-unit__title Электронный блок
 				.electronic-unit__row
 					.sonic-sensor__col
@@ -259,7 +265,53 @@ block content
 								li Алюминиевый корпус с защитой от пыли и влаги IP65 (Германия)
 				.electronic-unit__bg.animate__animated
 					img(src="img/index/electronic-unit__bg.png", srcset="img/index/electronic-unit__bg--2x.png 2x" alt="")
-	.section.section__black.section__border-b
+			.electronic-unit.electronic-unit--mob
+				.electronic-unit__title Электронный блок
+				.electronic-unit__bg
+					img(src="img/index/electronic-unit__bg--mob.png", srcset="img/index/electronic-unit__bg--mob--2x.png 2x" alt="")
+					.hints
+						div.hint.hint__electronic-unit(data-template="electronic-unit__1")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"  transform="scale(1)"/>
+							</svg>
+						div.hint.hint__electronic-unit(data-template="electronic-unit__2")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__electronic-unit(data-template="electronic-unit__2")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						div.hint.hint__electronic-unit(data-template="electronic-unit__3")
+							<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+							<path d="M46.3852 23.0103C46.3852 35.5796 36.1957 45.7691 23.6264 45.7691C11.0571 45.7691 0.867653 35.5796 0.867653 23.0103C0.867653 10.4409 11.0571 0.251442 23.6264 0.251442C36.1957 0.251442 46.3852 10.4409 46.3852 23.0103Z" fill="#7F8589" fill-opacity="0.4" stroke="#7F8589" stroke-width="0.482376"/>
+							<ellipse cx="23.6259" cy="23.0101" rx="2.55555" ry="2.55556" fill="#FF3E41"/>
+							</svg>
+						.hint__lists(style="display:none")
+							.hint__list(id="electronic-unit__1")
+								p Эргономичная ручка  
+								ul
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="electronic-unit__2")
+								p Эргономичная ручка  
+								ul
+									li Надежный и ...
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+							.hint__list(id="electronic-unit__3")
+								p Эргономичная ручка  
+								ul
+									li Надежный 3
+							.hint__list(id="electronic-unit__4")
+								p Эргономичная ручка  
+								ul
+									li Надежный и удобный обхват
+									li Уменьшает дискомфорт при большом количестве измерений
+	.section.section__black.section__border-b.calibrate__section
 		.container
 			.calibrate
 				.calibrate__title.title__40 Как мы калибруем наши твердомеры
@@ -305,11 +357,12 @@ block content
 									li Используют менее однородные эталонные меры 2 разряда
 									li Меры твёрдости 2 разряда уже содержат сумму погрешностей твердомера-компаратора и меры твёрдости 1 разряда.		
 									li Используют переводные таблицы твёрдости при калибровке, что даёт дополнительную погрешность. Такие таблицы нестандартизированы в РФ, так как неточны		
-	.section.section__black.section__border-b
+	.section.section__black.section__border-b.equipment__section
 		.container
 			.equipment
+				.equipment__title.equipment__title--mob Комплектация
 				.equipment__col
-					.equipment__title Комплектация
+					.equipment__title.equipment__title--desc Комплектация
 					.equipment__list
 						.equipment__list__title.text__20 Итальянский кейс
 						ul 
@@ -326,8 +379,10 @@ block content
 							li 
 								a(href="") Свидетельство о поверке
 				.equipment__bg.animate__animated
-					img(src="img/index/equipment__bg.png", srcset="img/index/equipment__bg--2x.png 2x" alt="")
-	.section.section__black.section__border-b
+					picture
+						source(media="(max-width: 560px)", srcset="img/index/equipment__bg--mob.png")
+						img(src="img/index/equipment__bg.png", srcset="img/index/equipment__bg--2x.png 2x" alt="")
+	.section.section__black.section__border-b.comparison__section
 		.container
 			.comparison
 				.comparison__tabel
@@ -429,7 +484,7 @@ block content
 						.comparison__tabel__col 200
 						.comparison__tabel__col 30
 						.comparison__tabel__col 30; 200
-	.section.section__white.infocenter__section
+	.section.section__white.infocenter__section.section--pr-none
 		.container
 			.title__40 Наша продукция
 			include ../../blocks/components/hardness-tester/hardness-tester
