@@ -190,7 +190,7 @@
   flex-flow: column nowrap;
   padding: 35px 39px;
   border-radius: 28px;
-  padding-bottom: 0;
+  // padding-bottom: 0;
 	@include max(sm) {
 		padding: 37px 14px;
 	}

@@ -2701,7 +2701,6 @@ accordions.forEach((accordion) => {
 	};
 });
 
-
 $('.review__button').click(function() {
         if ($(this).text() == 'Отзыв полностью') {
                          $(this).text('скрыть');
@@ -2722,30 +2721,83 @@ $('.js-example-responsive').select2({
         minimumResultsForSearch: Infinity,
         dropdownAutoWidth: true,
 });
-
-let btnCity = document.querySelector(".btn__city")
+let btnCity = document.querySelectorAll(".btn__city")
 let cities = document.querySelector(".offices__cities")
 let officesMap = document.querySelector(".offices__map")
 let officesMapSection = document.querySelector(".offices__map__section")
+if(btnCity !==null) {
+        btnCity.forEach( (item)=> {
+                if (document.documentElement.clientWidth > 1079){
+                        item.addEventListener("click", ()=> {
+                                let active = cities.classList.contains("noActive");
+                                let citiesHieght = cities.offsetHeight;
+                                if(active == true)  {
+                                 officesMap.style.opacity = "0";
+                                 officesMapSection.style.height = citiesHieght + "px";
+                                 cities.classList.remove("noActive");
+                                 cities.classList.remove("animate__fadeOutRight");
+                                 cities.classList.add("animate__fadeInRight");
+                                 item.innerText = "посмотреть на карте";
+                                } else {
+                                 officesMap.style.opacity = "1"
+                                 cities.classList.remove("animate__fadeInRight")
+                                 cities.classList.add("animate__fadeOutRight", "noActive")
+                                 officesMapSection.style.height = "auto";
+                                 item.innerText = "посмотреть списком";
+                                }
+                         })
+                } else {
+                        item.addEventListener("click", ()=> {
+                                let active = cities.classList.contains("noActive");
+                                let officesMap = document.querySelector(".offices__map")
+                                if(active == true)  {
+                                        officesMap.classList.add("noActive");
+                                        cities.classList.remove("noActive");
+                                        cities.classList.remove("animate__fadeOutRight");
+                                        cities.classList.add("animate__fadeInRight");
+                                        item.innerText = "на карте";
+                                } else {
+                                        officesMap.classList.remove("noActive");
+                                        officesMap.style.display = "flex";
+                                        cities.classList.remove("animate__fadeInRight")
+                                        cities.classList.add("animate__fadeOutRight", "noActive")
+                                        item.innerText = "списком";
+                                }
+                        })  
+                }
+        
+        })
+}
 
-btnCity.addEventListener("click", ()=> {
-       let active = cities.classList.contains("noActive");
-       let citiesHieght = cities.offsetHeight;
-       console.log(citiesHieght)
-       if(active == true)  {
-        console.log("true")
-        officesMap.style.opacity = "0"
-        officesMapSection.style.height = citiesHieght + "px";
-        cities.classList.remove("noActive")
-        cities.classList.remove("animate__fadeOutRight")
-        cities.classList.add("animate__fadeInRight")
-       } else {
-        officesMap.style.opacity = "1"
-        cities.classList.remove("animate__fadeInRight")
-        cities.classList.add("animate__fadeOutRight", "noActive")
-        officesMapSection.style.height = "auto";
-       }
-})
+
+
+
+let officesCitySoloClose = document.querySelector(".offices__city-solo__close")
+let officesCitySoloSection = document.querySelector(".offices__city-solo__section")
+//- удалить эту кнопку она для демострации
+let btnTemporery = document.querySelectorAll(".btn__temporery")
+if(btnTemporery !== null) {
+        btnTemporery.forEach( (item)=> {
+                item.addEventListener("click", ()=> {
+                        showOfficesCitySoloSection();
+                })
+        })
+}
+
+if(officesCitySoloClose !== null) {
+        officesCitySoloClose.addEventListener("click", ()=> {
+                closeOfficesCitySoloSection();
+        })
+}
+
+function showOfficesCitySoloSection() {
+        officesCitySoloSection.classList.remove("animate__fadeOutLeft");
+        officesCitySoloSection.classList.add("animate__fadeInLeft");
+}
+function closeOfficesCitySoloSection() {
+        officesCitySoloSection.classList.remove("animate__fadeInLeft");
+        officesCitySoloSection.classList.add("animate__fadeOutLeft");
+}
 var hardnessTesters;
 $('.js-infocenter').each(function(){
 	var slider=$(this)

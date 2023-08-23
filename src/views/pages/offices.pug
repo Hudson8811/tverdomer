@@ -6,10 +6,15 @@ block variables
 block content
 	.section.section__white.section--breadcrumbs.offices__section
 		include ../../blocks/modules/breadcrumbs/breadcrumbs
+		//- удалить эту кнопку она для демострации
 		.offices
 			.container
+				//- удалить эту кнопку она для демострации
+				.btn.btn--border.btn__temporery кнопка для демострации
 				.offices__top
-					.offices__title.title__40 Дилерская сеть
+					.offices__top__left
+						.offices__title.title__40 Дилерская сеть
+						.btn.btn__city.btn__city--mob посмотреть списком
 					.offices__top__right 
 						.periodSelect
 							<select class="js-example-responsive periodSelect__date__value__month date-month">
@@ -25,7 +30,7 @@ block content
 								<option value="" >Самара</option>  
 								<option value="" >Пермь</option> 
 							</select>
-						.btn.btn--border.btn__city посмотреть списком
+						.btn.btn--border.btn__city.btn__city--desc посмотреть списком
 				.offices__pointers
 					.offices__pointer
 						.offices__pointer__icon
@@ -56,7 +61,73 @@ block content
 							</svg>
 						.offices__pointer__text Есть демонстрационные приборы
 			.offices__map__section
-				.container 
+				.container
+					.offices__city-solo__section.animate__animated.animate__fadeOutLeft
+						.offices__city-solo__close 
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+							<path d="M11.3468 15L0.256836 26.09L3.91022 29.7434L15.0002 18.6534L26.0902 29.7434L29.7436 26.09L18.6536 15L29.7436 3.91007L26.0902 0.256683L15.0002 11.3467L3.91022 0.256683L0.256836 3.91007L11.3468 15Z" fill="black"/>
+							</svg>
+						.offices__city-solo
+							.offices__city
+								.offices__city__title Москва
+								.offices__city__office.red
+									.offices__city__office__company ООО «ЛКС»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+								.offices__city__office
+									.offices__city__office__company ООО «ЛКС»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+								.offices__city__office
+									.offices__city__office__company ООО «ЛКС»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+								.offices__city__office
+									.offices__city__office__company ООО «ГЕО-НДТ»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95							
+								.offices__city__office
+									.offices__city__office__company ООО «ГЕО-НДТ»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95							
+								.offices__city__office
+									.offices__city__office__company ООО «ГЕО-НДТ»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95							
+								.offices__city__office
+									.offices__city__office__company ООО «ГЕО-НДТ»
+									.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+									a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95							
+					.offices__city-solo__accordions.accordions
+						.accordion
+							.accordion__intro
+								p Москва
+								.accordion__intro__img
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+									<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+									</svg>
+								.accordion__intro__img--close 
+									<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+									<path d="M6.43723 8.50002L0.176758 14.7605L2.23915 16.8229L8.49962 10.5624L14.7601 16.8229L16.8225 14.7605L10.562 8.50002L16.8225 2.23955L14.7601 0.177155L8.49962 6.43762L2.23915 0.177155L0.176758 2.23955L6.43723 8.50002Z" fill="#1B1F22"/>
+									</svg>
+							.accordion__content
+								.offices__city
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+									.offices__city__office
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+									.offices__city__office
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+									.offices__city__office
+										.offices__city__office__company ООО «ГЕО-НДТ»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95	
 					.offices__map
 						img(src="img/index/map.png", alt="")
 					.offices__cities.noActive.animate__animated.animate__fadeOutRight
@@ -107,55 +178,54 @@ block content
 										a(href="").offices__city__office__site  geo-ndt.ru							
 								.offices__city
 									.offices__city__title Казань
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК-Казань»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-								.offices__city
-									.offices__city__title Челябинск
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК-Казань»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-								.offices__city
-									.offices__city__title Самара
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК-Казань»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-							.offices__cities__list__col
-								.offices__city
-									.offices__city__title Санкт-Петербург
 									.offices__city__office.red
 										.offices__city__office__company ООО «ЕЦНК»
 										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
 										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
-										a(href="").offices__city__office__site  geo-ndt.ru							
-								.offices__city
-									.offices__city__title Казань
-									.offices__city__office
-										.offices__city__office__company ООО «ЕЦНК»
-										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
-										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
 									.offices__city__office
 										.offices__city__office__company ООО «ЕЦНК-Казань»
 										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
 										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
 								.offices__city
 									.offices__city__title Челябинск
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
 									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК-Казань»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+										a(href="").offices__city__office__site  geo-ndt.ru															
+								.offices__city
+									.offices__city__title Самара
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+							.offices__cities__list__col
+								.offices__city
+									.offices__city__title Екатеринбург
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+									.offices__city__office
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+									.offices__city__office
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+										a(href="").offices__city__office__site  geo-ndt.ru									
+								.offices__city
+									.offices__city__title Красноярск
+									.offices__city__office.red
 										.offices__city__office__company ООО «ЕЦНК»
 										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
 										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
@@ -164,12 +234,178 @@ block content
 										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
 										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
 								.offices__city
-									.offices__city__title Самара
+									.offices__city__title Пермь
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+						.offices__cities__accordions.accordions
+							.accordion
+								.accordion__intro
+									p Москва
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+
+								.accordion__content
+									.offices__city
+										.offices__city__office.red
+											.offices__city__office__company ООО «ЛКС»
+											.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+											a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+										.offices__city__office
+											.offices__city__office__company ООО «ЛКС»
+											.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+											a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+										.offices__city__office
+											.offices__city__office__company ООО «ЛКС»
+											.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+											a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+										.offices__city__office
+											.offices__city__office__company ООО «ГЕО-НДТ»
+											.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+											a(href="tel:+4952252595").offices__city__office__fone  (495) 225-25-95
+							
+							.accordion
+								.accordion__intro
+									p Санкт-Петербург
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+										a(href="").offices__city__office__site  geo-ndt.ru									
+							.accordion
+								.accordion__intro
+									p Казань
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК-Казань»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95					
+							.accordion
+								.accordion__intro
+									p Екатеринбург
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+									.offices__city__office
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+									.offices__city__office
+										.offices__city__office__company ООО «ЛКС»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+										a(href="").offices__city__office__site  geo-ndt.ru									
+							.accordion
+								.accordion__intro
+									p Нижний Новгород
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
+									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+										a(href="").offices__city__office__site  geo-ndt.ru					
+							.accordion
+								.accordion__intro
+									p Уфа
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
 									.offices__city__office
 										.offices__city__office__company ООО «ЕЦНК»
 										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
 										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
 									.offices__city__office
 										.offices__city__office__company ООО «ЕЦНК-Казань»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95					
+							.accordion
+								.accordion__intro
+									p Челябинск
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК-Казань»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+										a(href="").offices__city__office__site  geo-ndt.ru		
+							.accordion
+								.accordion__intro
+									p Самара
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95				
+							.accordion
+								.accordion__intro
+									p Красноярск
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
+									.offices__city__office
+										.offices__city__office__company ООО «ЕЦНК-Казань»
+										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
+										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95						
+							.accordion
+								.accordion__intro
+									p Пермь
+									.accordion__intro__img
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+										<path d="M16.9941 0.719971L9.2573 8.45681L1.52046 0.719971" stroke="#1B1F22" stroke-width="1.6579"/>
+										</svg>
+								.accordion__content
+									.offices__city__office.red
+										.offices__city__office__company ООО «ЕЦНК»
 										.offices__city__office__adress УЛ. Грайвороновская, д 89а, стр. 1
 										a(href="tel:+(812)6404013").offices__city__office__fone  (495) 225-25-95
