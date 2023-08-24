@@ -8,10 +8,8 @@
 	background: $greyLight;
 	border-radius: 35px;
 	padding: 54px 39px;
-	margin-bottom: 104px;
 	@include max(sm) {
 		padding: 54px 16px;
-		margin-bottom: 47px;
 	}
 	.accordion {
 		width: 100%;

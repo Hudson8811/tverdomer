@@ -111,7 +111,7 @@ body {
 	flex: 1 0 auto;
     padding-top: 73px;
     background: $mainDark;
-    overflow: hidden;
+    // overflow: hidden;
     @include max(mdHeader) {
         padding-top: 55px;  
     }
@@ -1020,13 +1020,13 @@ body {
 	&--white{
 		.scroll-down{
 			&__icon{
-				border-color: $grey;
+				border-color: $greyBlack;
 				span{
-					background: $grey;
+					background: $greyBlack;
 				}
 			}
 			&__text{
-				color: $grey;
+				color: $greyBlack;
 			}
 		}
 	}

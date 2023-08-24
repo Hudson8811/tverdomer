@@ -237,3 +237,11 @@ function closeOfficesCitySoloSection() {
         officesCitySoloSection.classList.remove("animate__fadeInLeft");
         officesCitySoloSection.classList.add("animate__fadeOutLeft");
 }
+
+
+var sidebar = new StickySidebar('#sidebar', {
+        containerSelector: '#main-filter',
+        innerWrapperSelector: '.sidebar__inner',
+        topSpacing: 80,
+        bottomSpacing: 0
+    });

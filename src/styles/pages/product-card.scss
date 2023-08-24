@@ -27,10 +27,14 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
+  margin-bottom: 104px;
   @include max(lg) {
     flex-flow: column nowrap;
+  }
+  @include max(sm ) {
+    margin-bottom: 47px;
   }
   &__col {
     position: relative;
@@ -48,6 +52,7 @@
 
     }
     &:nth-child(2) {
+      display: block;
       width: 32.81%;
       @include max(lg) {
         width: 50%;
