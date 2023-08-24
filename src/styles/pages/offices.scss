@@ -481,7 +481,12 @@
 	border-radius: 35px;
 	padding: 54px 39px;
 	margin-bottom: 104px;
+  display: none;
+	@include max(mdHeader) {
+    display: flex;
+	}
 	@include max(sm) {
+    // display: flex;
 		padding: 54px 16px;
 		margin-bottom: 0px;
 	}
