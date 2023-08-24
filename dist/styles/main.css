@@ -10016,7 +10016,7 @@ body {
 .footer {
   position: relative;
   width: 100%;
-  background: #1B1F22;
+  background: #0F1214;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -10049,7 +10049,7 @@ body {
   align-items: flex-start;
   width: 100%;
   border-top: 1px solid #2B3032;
-  background: #1B1F22;
+  background: #0F1214;
   padding-top: 32px;
   padding-bottom: 32px;
 }

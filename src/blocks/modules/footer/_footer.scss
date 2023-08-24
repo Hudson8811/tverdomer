@@ -1,7 +1,7 @@
 .footer {
 	position: relative;
 	width: 100%;
-	background: $fonBlack;
+	background: #0F1214;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -45,7 +45,7 @@
 			align-items: flex-start;
 			width: 100%;
 			border-top: 1px solid #2B3032;
-			background: $mainDark;
+			background: #0F1214;
 			padding-top: 32px;
 			padding-bottom: 32px;
 			@include max(md) {
