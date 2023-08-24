@@ -15955,7 +15955,7 @@ body {
 
 .new__container {
   display: flex;
-  margin-bottom: 56px;
+  margin-bottom: 120px;
 }
 
 .new__side {
@@ -21698,6 +21698,10 @@ body {
     bottom: 0;
     font-size: 3.0769230769vw;
     padding-bottom: 1.2820512821vw;
+  }
+
+  .new__container {
+    margin-bottom: 50px;
   }
 
   .product-card__wrap:first-child {
