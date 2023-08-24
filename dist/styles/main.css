@@ -19440,7 +19440,7 @@ body {
   }
 
   .ultrasonic__title {
-    margin-bottom: 30px;
+    margin-bottom: 32px !important;
   }
 
   .ultrasonic__row {
@@ -19454,7 +19454,7 @@ body {
   }
 
   .ultrasonic__col:nth-child(1) {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
 
   .ultrasonic__bg {
@@ -20930,8 +20930,25 @@ body {
     width: 100%;
   }
 
+  .hardness__table__col__title {
+    margin-bottom: 12px;
+  }
+
+  .hardness__table__row {
+    padding-top: 11px;
+    padding-bottom: 7px;
+  }
+
   .hardness__bg img {
     width: 100%;
+  }
+
+  .ultrasonic__row {
+    margin-bottom: -45px;
+  }
+
+  .ultrasonic__col__title {
+    margin-bottom: 12px;
   }
 
   .ultrasonic__col:nth-child(2) {
