@@ -524,7 +524,8 @@
 	align-items: flex-start;
 	z-index: 999;
 	background: $mainDark;
-	height: 100vh;
+	height: calc(100vh - 54px);
+	overflow-y: auto;
 	&__section {
 		position: fixed;
 		top: 55px;

@@ -23,7 +23,7 @@
 	}
 	&__title {
 		text-align: center;
-		margin-bottom: 58px;
+		margin-bottom: 67px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -48,7 +48,8 @@
 	}
 
 	&__item {
-		padding: 70px 47px;
+		padding: 80px 47px;
+		padding-bottom: 60px;
 		margin-bottom: 0;
 		height: 100%;
 		&--brend {
@@ -60,6 +61,11 @@
 			}
 		}
 		&--awards {
+			padding-left: 90px;
+			padding-top: 80px;
+			@include max(xl) {
+				padding: 80px 47px;
+			}
 			@include max(lg) {
 				padding: 32px 24px;
 			}
@@ -96,7 +102,7 @@
 			max-width: calc(33.3333% - 0px);
 			height: auto;
 			height: 35px;
-			margin-top: 10px;
+			margin-top: 15px;
 			margin-bottom: 48px;
 			border-right: 1px solid #3F3F3F;
 			@include max(lg) {
@@ -121,7 +127,7 @@
 			}
 		}
 		&__title {
-			margin-bottom: 58px;
+			margin-bottom: 40px;
 			@include max(md) {
 				margin-bottom: 22px;
 
@@ -159,6 +165,11 @@
 		}
 		&__button {
 			max-width: 100%;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%;
+			text-transform: none;
 			&--double {
 				&:first-child {
 					margin-right: 5px;

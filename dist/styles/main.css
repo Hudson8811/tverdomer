@@ -9622,7 +9622,8 @@ body {
   align-items: flex-start;
   z-index: 999;
   background: #1B1F22;
-  height: 100vh;
+  height: calc(100vh - 54px);
+  overflow-y: auto;
 }
 
 .mob-menu__section {
@@ -10021,7 +10022,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding-top: 88px;
-  padding-bottom: 88px;
+  padding-bottom: 80px;
   color: #fff;
 }
 
@@ -10050,7 +10051,7 @@ body {
   width: 100%;
   border-top: 1px solid #2B3032;
   background: #0F1214;
-  padding-top: 32px;
+  padding-top: 27px;
   padding-bottom: 32px;
 }
 
@@ -10064,8 +10065,8 @@ body {
 }
 
 .footer__lists--column:first-child {
-  max-width: 171px;
-  min-width: 171px;
+  max-width: 150px;
+  min-width: 150px;
 }
 
 .footer__lists--column--last {
@@ -10076,6 +10077,10 @@ body {
 .footer__lists--column--last ul {
   width: 100%;
   position: relative;
+}
+
+.footer__lists--column .footer__lists--item:last-child {
+  margin-bottom: 0;
 }
 
 .footer__lists--string {
@@ -10127,7 +10132,7 @@ body {
 
 .footer__lists--item--border {
   border-bottom: 1px solid #2B3032;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   align-items: center;
   color: #fff;
   font-size: 15px;
@@ -10135,6 +10140,7 @@ body {
   font-weight: 400;
   line-height: 125%;
   transition: all 0.3s;
+  margin-bottom: 35px;
 }
 
 .footer__lists--item--border:hover {
@@ -10152,7 +10158,7 @@ body {
 }
 
 .footer__lists--item--border svg {
-  margin-right: 16px;
+  margin-right: 25px;
 }
 
 .footer__lists--item--border a {
@@ -10171,7 +10177,12 @@ body {
   justify-content: flex-start;
   align-items: flex-end;
   margin-bottom: 32px;
-  width: 40px;
+  width: 73px;
+}
+
+.footer__lists--item--logo img,
+.footer__lists--item--logo svg {
+  width: 100%;
 }
 
 .footer__lists--item--logo--mob {
@@ -10233,7 +10244,7 @@ body {
 
 .footer__lists--item--adress--title {
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -10242,11 +10253,10 @@ body {
 
 .footer__lists--item--adress--text {
   color: #7F8589;
-  margin-bottom: 16px;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
-  line-height: 125%;
+  line-height: 135%;
 }
 
 .footer__lists--item--mail {
@@ -10276,7 +10286,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 125%;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .footer__lists--item--tel a {
@@ -12961,7 +12971,7 @@ body {
 
 .arguments__title {
   text-align: center;
-  margin-bottom: 58px;
+  margin-bottom: 67px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -12979,7 +12989,8 @@ body {
 }
 
 .arguments__item {
-  padding: 70px 47px;
+  padding: 80px 47px;
+  padding-bottom: 60px;
   margin-bottom: 0;
   height: 100%;
 }
@@ -12987,6 +12998,11 @@ body {
 .arguments__item--brend {
   justify-content: space-between;
   align-items: center;
+}
+
+.arguments__item--awards {
+  padding-left: 90px;
+  padding-top: 80px;
 }
 
 .arguments__item--awards .arguments__item__text {
@@ -13015,7 +13031,7 @@ body {
   max-width: calc(33.3333% - 0px);
   height: auto;
   height: 35px;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 48px;
   border-right: 1px solid #3F3F3F;
 }
@@ -13025,7 +13041,7 @@ body {
 }
 
 .arguments__item__title {
-  margin-bottom: 58px;
+  margin-bottom: 40px;
 }
 
 .arguments__item__year {
@@ -13058,6 +13074,11 @@ body {
 
 .arguments__item__button {
   max-width: 100%;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 135%;
+  text-transform: none;
 }
 
 .arguments__item__button--double:first-child {
@@ -18135,6 +18156,10 @@ body {
     top: 0px;
   }
 
+  .arguments__item--awards {
+    padding: 80px 47px;
+  }
+
   .offices__map__section .container {
     width: 1920px;
     max-width: calc(100% - 0px);
@@ -19200,6 +19225,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 125%;
+    margin-bottom: 10px;
   }
 
   .footer__lists a.footer__lists--string {
@@ -19220,7 +19246,12 @@ body {
     margin-bottom: 30px;
   }
 
+  .footer__lists--item--adress {
+    margin-top: 36px;
+  }
+
   .footer__lists--item--adress--title {
+    margin-bottom: 16px;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -19234,6 +19265,7 @@ body {
     font-weight: 400;
     line-height: 150%;
     margin-bottom: 0;
+    margin-bottom: 16px;
   }
 
   .products__top {
@@ -21862,6 +21894,18 @@ body {
 }
 
 @media only screen and (max-width: 560px) {
+  .footer {
+    padding-bottom: 40px;
+  }
+
+  .footer__lists--item--logo {
+    width: 60px;
+  }
+
+  .footer__lists--item--adress--text {
+    margin-bottom: 0px;
+  }
+
   .filters .filter {
     justify-content: center;
     margin-right: 7.5px;
