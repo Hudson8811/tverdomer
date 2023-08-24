@@ -38,6 +38,9 @@
       right: 0;
       bottom: 30px;
     }
+    @include max(sm) {
+      right: 16px;
+    }
   }
   &__title {
     text-align: center;

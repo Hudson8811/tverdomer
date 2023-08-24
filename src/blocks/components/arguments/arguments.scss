@@ -139,6 +139,9 @@
 			@include max(md) {
 				margin-bottom: 20px;
 			}
+			@include max(xs) {
+				margin-bottom: 15px;
+			}
 		}
 
 		&__buttons {
@@ -157,9 +160,24 @@
 				width: 100%;
 				max-width: 464px;
 				margin-bottom: 16px;
-				
+				@include max(xs) {
+					margin-bottom: 8px;
+				}
 				&:last-child {
 					margin-bottom: 0;
+				}
+			}
+			.btn {
+				text-transform: none;
+				@include max(xs) {
+					font-size: 12px;
+					line-height: 150%
+				}
+				svg,img {
+					@include max(xs) {
+						transform: scale(0.8);
+						margin-right: 7px;
+					}
 				}
 			}
 		}
@@ -169,8 +187,11 @@
 			font-style: normal;
 			font-weight: 550;
 			line-height: 135%;
-			text-transform: none;
+
 			&--double {
+				@include max(xs) {
+
+				}
 				&:first-child {
 					margin-right: 5px;
 				}

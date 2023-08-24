@@ -1,25 +1,26 @@
 	///tabs
-	var tabNavs = document.querySelectorAll(".products__tab");
-	var tabPanes = document.querySelectorAll(".products-pane");
-  if(tabNavs !==null & tabPanes !==null) {
+	var ProductsTabNavs = document.querySelectorAll(".products__tab");
+	var ProductsTabPanes = document.querySelectorAll(".products-pane");
+  if(ProductsTabNavs !==null & ProductsTabPanes !==null) {
 		tabClick() 
 	}
 	function tabClick() {
-		for (var i = 0; i < tabNavs.length; i++) {
+		console.log("клик")
+		for (var i = 0; i < ProductsTabNavs.length; i++) {
 
-			tabNavs[i].addEventListener("click", function(e){
+			ProductsTabNavs[i].addEventListener("click", function(e){
 				e.preventDefault();
 				var activeTabAttr = e.target.getAttribute("data-tab");
 	
-				for (var j = 0; j < tabNavs.length; j++) {
-					var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+				for (var j = 0; j < ProductsTabNavs.length; j++) {
+					var contentAttr = ProductsTabPanes[j].getAttribute("data-tab-content");
 	
 					if (activeTabAttr === contentAttr) {
-						tabNavs[j].classList.add("active");
-						tabPanes[j].classList.add("active"); 
+						ProductsTabNavs[j].classList.add("active");
+						ProductsTabPanes[j].classList.add("active"); 
 					} else {
-						tabNavs[j].classList.remove("active");
-						tabPanes[j].classList.remove("active");
+						ProductsTabNavs[j].classList.remove("active");
+						ProductsTabPanes[j].classList.remove("active");
 					}
 				};
 			});

@@ -2566,59 +2566,59 @@ jQuery(function () {
         new Skroll()
                 .add(".hardness__bg", {
                         animation: "fadeInRight",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".warranty__bg", {
                         animation: "fadeInRight",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".ultrasonic__bg", {
                         animation: "fadeInUp",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".security__bg", {
                         animation: "fadeInUp",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".measure__bg", {
                         animation: "fadeInLeft",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .init();
         new Skroll()
                 .add(".portable__picture", {
                         animation: "fadeInRight",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".portable__col__one", {
                         animation: "fadeInLeft",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".sonic-sensor__bg", {
                         animation: "fadeInUp",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".dynamic-sensor__bg", {
                         animation: "fadeInUp",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".electronic-unit__bg", {
                         animation: "fadeInUp",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".equipment__bg", {
                         animation: "fadeInLeft",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .init();
@@ -2970,27 +2970,28 @@ $('.js-main__slider').each(function(){
 })
 
 	///tabs
-	var tabNavs = document.querySelectorAll(".products__tab");
-	var tabPanes = document.querySelectorAll(".products-pane");
-  if(tabNavs !==null & tabPanes !==null) {
+	var ProductsTabNavs = document.querySelectorAll(".products__tab");
+	var ProductsTabPanes = document.querySelectorAll(".products-pane");
+  if(ProductsTabNavs !==null & ProductsTabPanes !==null) {
 		tabClick() 
 	}
 	function tabClick() {
-		for (var i = 0; i < tabNavs.length; i++) {
+		console.log("клик")
+		for (var i = 0; i < ProductsTabNavs.length; i++) {
 
-			tabNavs[i].addEventListener("click", function(e){
+			ProductsTabNavs[i].addEventListener("click", function(e){
 				e.preventDefault();
 				var activeTabAttr = e.target.getAttribute("data-tab");
 	
-				for (var j = 0; j < tabNavs.length; j++) {
-					var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+				for (var j = 0; j < ProductsTabNavs.length; j++) {
+					var contentAttr = ProductsTabPanes[j].getAttribute("data-tab-content");
 	
 					if (activeTabAttr === contentAttr) {
-						tabNavs[j].classList.add("active");
-						tabPanes[j].classList.add("active"); 
+						ProductsTabNavs[j].classList.add("active");
+						ProductsTabPanes[j].classList.add("active"); 
 					} else {
-						tabNavs[j].classList.remove("active");
-						tabPanes[j].classList.remove("active");
+						ProductsTabNavs[j].classList.remove("active");
+						ProductsTabPanes[j].classList.remove("active");
 					}
 				};
 			});
@@ -3107,34 +3108,34 @@ galleryMain.controller.control =  galleryThumbs;
 
 
 //extra-scripts
-	///tabs-news
-	var tabNavs = document.querySelectorAll(".news__tab");
-	var tabPanes = document.querySelectorAll(".news-pane");
-  if(tabNavs !==null & tabPanes !==null) {
-		tabClick() 
-	}
-	function tabClick() {
-		for (var i = 0; i < tabNavs.length; i++) {
+	// ///tabs-news
+	// var tabNavs = document.querySelectorAll(".news__tab");
+	// var tabPanes = document.querySelectorAll(".news-pane");
+  // if(tabNavs !==null & tabPanes !==null) {
+	// 	tabClick() 
+	// }
+	// function tabClick() {
+	// 	for (var i = 0; i < tabNavs.length; i++) {
 
-			tabNavs[i].addEventListener("click", function(e){
-				e.preventDefault();
-				var activeTabAttr = e.target.getAttribute("data-tab");
+	// 		tabNavs[i].addEventListener("click", function(e){
+	// 			e.preventDefault();
+	// 			var activeTabAttr = e.target.getAttribute("data-tab");
 	
-				for (var j = 0; j < tabNavs.length; j++) {
-					var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+	// 			for (var j = 0; j < tabNavs.length; j++) {
+	// 				var contentAttr = tabPanes[j].getAttribute("data-tab-content");
 	
-					if (activeTabAttr === contentAttr) {
-						tabNavs[j].classList.add("active");
-						tabPanes[j].classList.add("active"); 
-					} else {
-						tabNavs[j].classList.remove("active");
-						tabPanes[j].classList.remove("active");
-					}
-				};
-			});
-		}
-	}
-	///tabs-news
+	// 				if (activeTabAttr === contentAttr) {
+	// 					tabNavs[j].classList.add("active");
+	// 					tabPanes[j].classList.add("active"); 
+	// 				} else {
+	// 					tabNavs[j].classList.remove("active");
+	// 					tabPanes[j].classList.remove("active");
+	// 				}
+	// 			};
+	// 		});
+	// 	}
+	// }
+	// ///tabs-news
 
 //show-more
 	jQuery(document).ready(function($){

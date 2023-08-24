@@ -12,6 +12,11 @@
       margin-bottom: 56px;
     }
   }
+  &__title {
+    @include max(sm) {
+      margin-bottom: 56px;
+    }
+  }
   position: relative;
   display: flex;
   justify-content: space-between;

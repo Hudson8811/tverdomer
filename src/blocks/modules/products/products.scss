@@ -30,6 +30,10 @@
     @include max(md) {
       margin-bottom: 35px;
     }
+    @include max(xs) {
+      height: 45px;
+      margin-bottom: 30px;
+    }
     .catalog__button {
       position: absolute;
       right: 0;
@@ -96,6 +100,11 @@
       padding: 8px 15px;
       margin-right: 0;
     }
+    @include max(xs) {
+      height: 45px;
+      padding: 6px 8px;
+      margin-right: 25px;
+    }
     cursor: pointer;
     &:last-child {
       margin-right: 0;
@@ -107,6 +116,9 @@
   }
   &__section {
     padding-top: 98px;
+    @include max(xs) {
+      padding-top: 45px;
+    }
     &--cards {
       justify-content: flex-start;
       .products {

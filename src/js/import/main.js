@@ -5,59 +5,59 @@ jQuery(function () {
         new Skroll()
                 .add(".hardness__bg", {
                         animation: "fadeInRight",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".warranty__bg", {
                         animation: "fadeInRight",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".ultrasonic__bg", {
                         animation: "fadeInUp",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".security__bg", {
                         animation: "fadeInUp",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".measure__bg", {
                         animation: "fadeInLeft",
-                        delay: 900,
+                        delay: 200,
                         duration: 750
                 })
                 .init();
         new Skroll()
                 .add(".portable__picture", {
                         animation: "fadeInRight",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".portable__col__one", {
                         animation: "fadeInLeft",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".sonic-sensor__bg", {
                         animation: "fadeInUp",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".dynamic-sensor__bg", {
                         animation: "fadeInUp",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".electronic-unit__bg", {
                         animation: "fadeInUp",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .add(".equipment__bg", {
                         animation: "fadeInLeft",
-                        delay: 600,
+                        delay: 200,
                         duration: 750
                 })
                 .init();

@@ -32,6 +32,9 @@
       width: 315px;
       padding: 48px 24px;
     }
+    @include max(xs) {
+      padding: 28px 30px;
+    }
     &__title {
       width: 100%;
       max-width: 252px;
@@ -40,6 +43,10 @@
       position: relative;
       display: flex;
       width: 100%;
+      @include max(xs) {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+      }
     }
     &__bottom {
       position: relative;
@@ -166,7 +173,9 @@
 	justify-content: center;
 	height: 100%;
   padding-bottom: 90px;
-
+  @include max(xs) {
+    padding-bottom: 30px;
+  }
   .swiper-pagination-bullet {
     background: $grey;
     &-active {

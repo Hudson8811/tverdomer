@@ -4,8 +4,8 @@
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	margin-bottom: 58px;
-	@include max(sm) {
-		padding-top: 35px;     
+	@include max(md) {
+		margin-bottom: 30px;
 	}
 	&__item {
 		position: relative;
@@ -22,6 +22,13 @@
 		letter-spacing: 0.6px;
 		height: 12px;
 		transition: all .3s;
+		@include max(sm) {
+			font-size: 11px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			letter-spacing: 0.55px;
+		}
 		cursor: pointer;
 		&:hover {
 			transition: all .3s;
@@ -43,11 +50,4 @@
 		}
 	}
 }
-@include max(md) {
-	.breadcrumbs {
-		padding-left: 0px;
-	}
-	.section__breadcrumbs {
-		display: none;
-	}
-}
+
