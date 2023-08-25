@@ -3466,9 +3466,15 @@ function getYaMap() {
 				console.log(1);
 				var myMap1;
 				var myPlacemark1;
+				var gitPrefix='';
+				if(document.location.href.match('gitghub.io')!==null){
+					gitPrefix='/tverdomer/dist';
+				}
+
+				
 
 				$.ajax({
-					url: '/jsons/map.json?v=2',
+					url:	gitPrefix+'/jsons/map.json?v=2',
 					type: 'get',
 					success: function (response) {
 						//var yyy = JSON.parse(response).main;
@@ -3495,7 +3501,7 @@ function getYaMap() {
 
 								clusterIcons: [
 									{
-										href: '/img/icons_map/cluster.svg',
+										href: gitPrefix+'/img/icons_map/cluster.svg',
 										size: [48, 48],
 										offset: [-24, -24]
 									}],
@@ -3659,7 +3665,7 @@ function getYaMap() {
 
 										defaultOptions: {
 											iconLayout: 'default#image',
-											iconImageHref: '/img/icons_map/' + typeSW,
+											iconImageHref: gitPrefix+'/img/icons_map/' + typeSW,
 											"iconImageSize": [56, 47],
 											"iconImageOffset": [-28, -47],
 											"openBalloonOnClick": false
@@ -3668,7 +3674,7 @@ function getYaMap() {
 
 										activeOptions: {
 											iconLayout: 'default#image',
-											iconImageHref: '/img/icons_map/' + typeSWActive,
+											iconImageHref: gitPrefix+'/img/icons_map/' + typeSWActive,
 											"iconImageSize": [56, 47],
 											"iconImageOffset": [-28, -47],
 											"openBalloonOnClick": false
@@ -3676,7 +3682,7 @@ function getYaMap() {
 										}
 									}, {
 										iconLayout: 'default#image',
-										iconImageHref: '/img/icons_map/' + typeSW,
+										iconImageHref: gitPrefix+'/img/icons_map/' + typeSW,
 										"iconImageSize": [56, 47],
 										"iconImageOffset": [-28, -47],
 										"openBalloonOnClick": false
