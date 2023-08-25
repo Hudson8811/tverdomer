@@ -3467,7 +3467,7 @@ function getYaMap() {
 				var myMap1;
 				var myPlacemark1;
 				var gitPrefix='';
-				if(document.location.href.match('gitghub.io')!==null){
+				if(document.location.href.match('github.io')!==null){
 					gitPrefix='/tverdomer/dist';
 				}
 
