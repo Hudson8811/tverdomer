@@ -15,6 +15,57 @@
       display: none;
     }
   }
+  &.soc--gray {
+    .container {
+      position: relative;
+      box-sizing: border-box;
+      width: 1314px;
+      max-width: 95%;
+      max-width: calc(100% - 0px);
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-start;
+      @include max(xl) {
+        //1024
+        width: 1168px;
+        max-width: calc(100% - 80px * 2);
+      }
+      @include max(lg) {
+        //1024
+        width: 1168px;
+        max-width: calc(100% - 32px * 2);
+      }
+    
+      @include max(md) {
+        max-width: calc(100% - 32px * 2);
+      }
+    
+      @include max(sm) {
+        max-width: calc(100% - 16px * 2);
+      }      
+    }
+    .soc{
+      &__item {
+        &__picture  {
+          background: $grey;
+        }
+        &__text {
+          background: $grey;
+          right: auto;
+          left: 0;
+          padding-left: 0;
+        }
+        &:hover {
+          .soc__item__text {
+            transition: all .5s;
+            width: 192px;
+            padding-left: 60px;
+          }
+        }
+      }
+
+    }
+  }
   &__item {
     position: relative;
     display: flex;

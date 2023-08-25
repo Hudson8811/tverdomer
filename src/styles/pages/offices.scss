@@ -459,6 +459,22 @@
     padding-right: 219px;
     overflow-y: auto;
     height: 600px;
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+      background-color: $greyLight;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $greyBlack;
+    }
+    
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+
+      background-color: $grey;
+    }
     &__accordions {
       display: none;
       @include max(md) {
