@@ -4,11 +4,11 @@ block variables
 	- const title = "Catalog describe";
 
 block content
-	.section.section__white.section--breadcrumbs.products__section.products__section--cards
+	.section.section__white.section--breadcrumbs.filter-catalog__section.filter-catalog__section--cards
 		include ../../blocks/modules/breadcrumbs/breadcrumbs
-		.products
+		.filter-catalog
 			.container.container__section--cards
-				.products__title.title__40 Портативные твердомеры 
+				.filter-catalog__title.title__40 Портативные твердомеры 
 				.btn--description 
 					<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path  fill-rule="evenodd" clip-rule="evenodd" d="M13 11H24.4142L31 17.5858V33H13V11ZM15 13V31H29V19H23V13H15ZM25 14.4142L27.5858 17H25V14.4142Z" fill="#CBCECF"/>
@@ -17,26 +17,20 @@ block content
 						<rect  x="0.5" y="0.5" width="44" height="44" rx="9.5" stroke="#CBCECF"/>
 					</svg>			
 					!="Описание"
-			.products__top
+			.filter-catalog__top
 				.container
-					.products__tabs
-						.products__tab.text__18.active(data-tab="1") Все
-						.products__tab.text__18(data-tab="2") Динамические
-						.products__tab.text__18(data-tab="3") Ультразвуковые
-						.products__tab.text__18(data-tab="4") Комбинированные
+					.filter-catalog__tabs
+						.filter-catalog__tab.text__18.active Все
+						.filter-catalog__tab.text__18 Динамические
+						.filter-catalog__tab.text__18 Ультразвуковые
+						.filter-catalog__tab.text__18 Комбинированные
 			.container
-				.products__tab-content 
-					.products-pane.tab-pane(data-tab-content="1").active 
+				.filter-catalog__tab-content 
+					.filter-catalog-pane
 						include ../../blocks/components/cards/cards
-					.products-pane.tab-pane(data-tab-content="2") 
-						include ../../blocks/components/cards/cards
-					.products-pane.tab-pane(data-tab-content="3") 
-						include ../../blocks/components/cards/cards
-					.products-pane.tab-pane(data-tab-content="4") 
-						include ../../blocks/components/cards/cards
-		.products.products--two
+		.filter-catalog.filter-catalog--two
 			.container.container__section--cards
-				.products__title.title__40 Эталонные меры твердости
+				.filter-catalog__title.title__40 Эталонные меры твердости
 				.btn--description 
 					<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path  fill-rule="evenodd" clip-rule="evenodd" d="M13 11H24.4142L31 17.5858V33H13V11ZM15 13V31H29V19H23V13H15ZM25 14.4142L27.5858 17H25V14.4142Z" fill="#CBCECF"/>
@@ -45,12 +39,12 @@ block content
 						<rect  x="0.5" y="0.5" width="44" height="44" rx="9.5" stroke="#CBCECF"/>
 					</svg>			
 					!="Описание"
-			.products__top
+			.filter-catalog__top
 				.container
-					.products__tabs
-						.products__tab.text__18.active(data-tab="5") Все
-						.products__tab.text__18(data-tab="6") Поштучно
-						.products__tab.text__18(data-tab="7") Комплекты
+					.filter-catalog__tabs
+						.filter-catalog__tab.text__18.active Все
+						.filter-catalog__tab.text__18 Поштучно
+						.filter-catalog__tab.text__18 Комплекты
 					.btn--filter
 						<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 0.5L14 0.5V2.5H0V0.5Z" fill="white"/>
@@ -61,12 +55,8 @@ block content
 			.container
 				include ../../blocks/modules/filters/filters
 			.container
-				.products__tab-content 
-					.products-pane.tab-pane(data-tab-content="5").active 
-						include ../../blocks/components/cards/cards
-					.products-pane.tab-pane(data-tab-content="6") 
-						include ../../blocks/components/cards/cards
-					.products-pane.tab-pane(data-tab-content="7") 
+				.filter-catalog__tab-content 
+					.filter-catalog-pane
 						include ../../blocks/components/cards/cards
 		.container
 			include ../../blocks/components/general-links/general-links

@@ -4326,6 +4326,7 @@ $('.js-main__slider').each(function(){
 })
 
 	///tabs
+	
 	var ProductsTabNavs = document.querySelectorAll(".products__tab");
 	var ProductsTabPanes = document.querySelectorAll(".products-pane");
   if(ProductsTabNavs !==null & ProductsTabPanes !==null) {
