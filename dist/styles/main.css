@@ -17349,7 +17349,7 @@ body {
   overflow: hidden;
   z-index: 10;
   transition: all 0.8s;
-  min-height: 858px;
+  height: 858px;
   max-height: 80vh;
   opacity: 1;
   transition: all 0.5s;
@@ -17383,7 +17383,8 @@ body {
 }
 
 .offices__map img,
-.offices__map picture {
+.offices__map picture,
+.offices__map .offices-map-wrap {
   position: absolute;
   top: 0;
   left: 0;

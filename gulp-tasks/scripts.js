@@ -28,3 +28,15 @@ gulp.task("scripts", () => {
         }))
         .pipe(browsersync.stream());
 });
+
+
+
+gulp.task("jsons", () => {
+    return gulp.src(paths.jsons.src)
+
+        .pipe(gulp.dest(paths.jsons.dist))
+        .pipe(debug({
+            "title": "jsons files"
+        }))
+        .pipe(browsersync.stream());
+});

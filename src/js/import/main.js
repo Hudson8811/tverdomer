@@ -213,10 +213,20 @@ if(btnCity !==null) {
 
 let officesCitySoloClose = document.querySelector(".offices__city-solo__close")
 let officesCitySoloSection = document.querySelector(".offices__city-solo__section")
+
 //- удалить эту кнопку она для демострации
-let btnTemporery = document.querySelectorAll(".btn__temporery")
+/*let btnTemporery = document.querySelectorAll(".btn__temporery")
 if(btnTemporery !== null) {
         btnTemporery.forEach( (item)=> {
+                item.addEventListener("click", ()=> {
+                        showOfficesCitySoloSection();
+                })
+        })
+}*/
+
+let btnToOpenSideMenu = document.querySelectorAll(".js-btn-open-side-menu")
+if(btnToOpenSideMenu !== null) {
+        btnToOpenSideMenu.forEach( (item)=> {
                 item.addEventListener("click", ()=> {
                         showOfficesCitySoloSection();
                 })

@@ -9,6 +9,7 @@
 @@include("./libs/sticky-sidebar.js")
 
 //my files
+@@include("./import/maps.js")
 @@include("./import/main.js")
 @@include("./import/components.js")
 @@include("./import/modules.js")
