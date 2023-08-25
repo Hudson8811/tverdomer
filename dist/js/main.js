@@ -3466,9 +3466,15 @@ function getYaMap() {
 				console.log(1);
 				var myMap1;
 				var myPlacemark1;
+				var gitPrefix='';
+				if(document.location.href.match('github.io')!==null){
+					gitPrefix='/tverdomer/dist';
+				}
+
+				
 
 				$.ajax({
-					url: '/jsons/map.json?v=2',
+					url:	gitPrefix+'/jsons/map.json?v=2',
 					type: 'get',
 					success: function (response) {
 						//var yyy = JSON.parse(response).main;
@@ -3495,7 +3501,7 @@ function getYaMap() {
 
 								clusterIcons: [
 									{
-										href: '/img/icons_map/cluster.svg',
+										href: gitPrefix+'/img/icons_map/cluster.svg',
 										size: [48, 48],
 										offset: [-24, -24]
 									}],
@@ -3659,7 +3665,7 @@ function getYaMap() {
 
 										defaultOptions: {
 											iconLayout: 'default#image',
-											iconImageHref: '/img/icons_map/' + typeSW,
+											iconImageHref: gitPrefix+'/img/icons_map/' + typeSW,
 											"iconImageSize": [56, 47],
 											"iconImageOffset": [-28, -47],
 											"openBalloonOnClick": false
@@ -3668,7 +3674,7 @@ function getYaMap() {
 
 										activeOptions: {
 											iconLayout: 'default#image',
-											iconImageHref: '/img/icons_map/' + typeSWActive,
+											iconImageHref: gitPrefix+'/img/icons_map/' + typeSWActive,
 											"iconImageSize": [56, 47],
 											"iconImageOffset": [-28, -47],
 											"openBalloonOnClick": false
@@ -3676,7 +3682,7 @@ function getYaMap() {
 										}
 									}, {
 										iconLayout: 'default#image',
-										iconImageHref: '/img/icons_map/' + typeSW,
+										iconImageHref: gitPrefix+'/img/icons_map/' + typeSW,
 										"iconImageSize": [56, 47],
 										"iconImageOffset": [-28, -47],
 										"openBalloonOnClick": false
@@ -3827,6 +3833,25 @@ function getYaMap() {
 								console.log(city);
 						/*	filterCenters(myMap1, clusterer, $('#localities-centers__select').val(), $('.localities-centers__button-active.js-map-filter-brand').attr('data-filter'));*/
 						});
+
+
+
+						var isMobile = {
+							Android: function() {return navigator.userAgent.match(/Android/i);},
+							BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+							iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+							Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+							Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+							any: function() {
+								return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+							}
+						};
+						
+						// после вызова карты
+						if(isMobile.any()){
+							//myMap1.behaviors.disable('scrollZoom');
+							myMap1.behaviors.disable('drag');
+						}
 
 					}
 
