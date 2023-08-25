@@ -1,4 +1,39 @@
 .new {
+	position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: stretch;
+	margin-bottom: 120px;
+	@include max(sm) {
+		margin-bottom: 48px;
+	}
+	&__col {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    &:nth-child(1) {
+      width: 150px;
+      @include max(md) {
+        display: none;
+      }
+			z-index: 5;
+    }
+    &:nth-child(2) {
+      width: calc(100% - 150px);
+			max-width: 720px;
+			margin-left: 90px;
+			z-index: 3;
+      @include max(md) {
+				max-width: 100%;
+				margin-left: 0;
+        width: 100%;
+      }
+    }
+
+  }
 	.infocenter {
 		display: block;
 	}
@@ -8,23 +43,26 @@
 	&__container{
 		display: flex;
 		margin-bottom: 120px;
+		align-items: stretch;
 		@include max(sm) {
 			margin-bottom: 50px;
 		}
 	}
 	&__side {
+		display: block;
+		position: relative;
 		flex: 0 0 140px;
 		@media (max-width: 768px){
 			display: none;
 		}
 	}
-	&__side-inner {
-		position: sticky;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+	// &__side-inner {
+	// 	position: sticky;
+	// 	top: 0;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// }
 	&__side-date {
 
 	}
@@ -67,8 +105,12 @@
 
 
 	&__content {
-		margin-left: 90px;
 		max-width: 715px;
+		@include max(md) {
+			max-width: 100%;
+			margin-left: 0;
+			width: 100%;
+		}
 		@media (max-width: 768px){
 			margin: 0;
 			max-width: 100%;
@@ -152,6 +194,7 @@
 	padding: 56px 56px 60px;
 	border-radius: 28px;
 	background: var(--unnamed, #F5F5F5);
+	margin-bottom: 35px;
 	@media (max-width: 768px){
 		margin-top: 45px;
 		padding: 40px 22px;
@@ -255,6 +298,14 @@
 	&__item {
 		flex: 0 1 33.333%;
 		padding: 0 5px;
+		transition: all .87s;
+		&:hover {
+			transition: all .87s;
+			.contact-info__column {
+				transition: all .87s;
+				background: $greyBlack;
+			}
+		}
 		@media (max-width: 768px){
 			flex: 1 1 100%;
 			margin-top: 12px;

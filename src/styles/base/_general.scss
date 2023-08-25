@@ -111,7 +111,7 @@ body {
 	flex: 1 0 auto;
     padding-top: 73px;
     background: $mainDark;
-    overflow: hidden;   
+    // overflow: hidden;   
     @include max(mdHeader) {
         padding-top: 55px;  
     }
