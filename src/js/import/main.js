@@ -248,10 +248,13 @@ function closeOfficesCitySoloSection() {
         officesCitySoloSection.classList.add("animate__fadeOutLeft");
 }
 
-
-var sidebar = new StickySidebar('#sidebar', {
-        containerSelector: '#main-filter',
-        innerWrapperSelector: '.sidebar__inner',
-        topSpacing: 80,
-        bottomSpacing: 0
-    });
+let productCardSection = document.querySelector(".product-card__section")
+if(productCardSection !== null) {
+        var sidebar = new StickySidebar('#sidebar', {
+                containerSelector: '#main-filter',
+                innerWrapperSelector: '.sidebar__inner',
+                topSpacing: 80,
+                resizeSensor: false,
+                bottomSpacing: 0
+            });
+}

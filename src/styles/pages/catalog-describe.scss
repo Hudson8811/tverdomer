@@ -11,7 +11,7 @@
     }
   }
   &__title {
-    margin-bottom: 68px;
+    margin-bottom: 55px;
     @include max(sm) {
       font-size: 20px;
       font-style: normal;
@@ -56,7 +56,7 @@
     justify-content: flex-start;
     align-items: flex-start; 
     &:nth-child(1) {
-      width: 71%;
+      width: 69%;
       margin-right: 67px;
       @include max(lg) {
         width: 100%;
@@ -64,7 +64,7 @@
       }
     }
     &:nth-child(2) {
-      width: 29%;
+      width: 31%;
       @include max(lg) {
         width: 0%;
       }

@@ -20,7 +20,20 @@
     &:last-child {
       .accordion__intro {
         margin-bottom: 0;
+				border-bottom: none;
+				padding-bottom: 0;
       }
+			&.accordion__active {
+				.accordion__intro {
+					padding-bottom: 40px;
+					@include max(sm) {
+						padding-bottom: 20px;
+					}
+				}
+				.accordion__content {
+					margin-bottom: 0;
+				}
+			}
     }
 		&__intro {
 			position: relative;
