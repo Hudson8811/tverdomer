@@ -194,34 +194,43 @@ body {
 		}
 
 		&-outside {
-			width: 130px;
+
+			width: 100%;
 			animation: rotateCircle 15s infinite linear;
             @include max(xxl) {
-                height: vw(130);
+                // height: vw(130);
                 width: vw(130);
             }
             @include max(sm) {
                 width: vw2(72);
-                height: vw2(68);
+                // height: vw2(68);
             }
 		}
 
 		&-inside {
-			position: absolute;
-			left: 68px;
-			top: 65px;
+            position: absolute;
+            top: 49%;
+            left: 50%;
 			transform: translateX(-50%) translateY(-50%);
-			width: 18px;
+			width: 100%;
             @include max(xxl) {
-                left: vw(68);
-                top: vw(65);
-                width: vw(18);
+                // height: vw(130);
+                width: vw(130);
             }
             @include max(sm) {
-                width: vw2(11);
-                left: vw2(35.5);
-                top: vw2(35.5);
+                width: vw2(72);
+                // height: vw2(68);
             }
+            // @include max(xxl) {
+            //     left: vw(68);
+            //     top: vw(65);
+            //     width: vw(18);
+            // }
+            // @include max(sm) {
+            //     width: vw2(11);
+            //     left: vw2(35.5);
+            //     top: vw2(35.5);
+            // }
 		}
     }
 }

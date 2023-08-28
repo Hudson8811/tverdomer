@@ -21,6 +21,22 @@
     top: auto;
     margin-top: 236px;
     margin-left: 50px;
+    @include max(md) {
+      margin-top: 18px;
+      margin-bottom: 24px;
+      margin-left: 0;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .soc__wrap {
+      @include max(md) {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: auto;
+      }
+    }
     .container {
       position: relative;
       box-sizing: border-box;
@@ -51,14 +67,29 @@
     }
     .soc{
       &__item {
+        @include max(md) {
+          margin-bottom: 0;
+          margin-right: 14px;
+        }
+        @include max(sm) {
+          width: 45px;
+          height: 45px;
+        }
         &__picture  {
           background: $grey;
+          @include max(sm) {
+            width: 45px;
+            height: 45px;
+          }
         }
         &__text {
           background: $grey;
           right: auto;
           left: 0;
           padding-left: 0;
+          @include max(md) {
+            display: none;
+          }
         }
         &:hover {
           &:nth-child(3) {

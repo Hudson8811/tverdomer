@@ -8281,16 +8281,16 @@ body {
 }
 
 .button__circle-outside {
-  width: 130px;
+  width: 100%;
   animation: rotateCircle 15s infinite linear;
 }
 
 .button__circle-inside {
   position: absolute;
-  left: 68px;
-  top: 65px;
+  top: 49%;
+  left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 18px;
+  width: 100%;
 }
 
 .swiper-buttons {
@@ -16262,6 +16262,7 @@ body {
 .new .new__slider {
   margin: 0 -15px;
   position: relative;
+  max-width: 715px;
 }
 
 .new .new__slider .new__img {
@@ -18370,14 +18371,11 @@ body {
   }
 
   .button__circle-outside {
-    height: 6.7708333333vw;
     width: 6.7708333333vw;
   }
 
   .button__circle-inside {
-    left: 3.5416666667vw;
-    top: 3.3854166667vw;
-    width: 0.9375vw;
+    width: 6.7708333333vw;
   }
 
   .main__slider {
@@ -18654,6 +18652,10 @@ body {
 
   .main__header {
     margin-top: 4.1666666667vw;
+  }
+
+  .new .new__slider .new-swiper-button-prev {
+    left: 15px;
   }
 }
 
@@ -19672,8 +19674,33 @@ body {
     display: none;
   }
 
+  .soc.soc--gray {
+    margin-top: 18px;
+    margin-bottom: 24px;
+    margin-left: 0;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .soc.soc--gray .soc__wrap {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+  }
+
   .soc.soc--gray .container {
     max-width: calc(100% - 64px);
+  }
+
+  .soc.soc--gray .soc__item {
+    margin-bottom: 0;
+    margin-right: 14px;
+  }
+
+  .soc.soc--gray .soc__item__text {
+    display: none;
   }
 
   .products__top {
@@ -20239,8 +20266,14 @@ body {
     letter-spacing: 0.7px;
   }
 
+  .new {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .new__col:nth-child(1) {
-    display: none;
+    width: 100%;
   }
 
   .new__col:nth-child(2) {
@@ -20448,10 +20481,6 @@ body {
     font-size: 16px;
   }
 
-  .new .new__slider .new-swiper-button-prev {
-    left: 15px;
-  }
-
   .new .new-comment {
     margin-top: 20px;
     padding: 25px 35px;
@@ -20486,6 +20515,7 @@ body {
 
   .feedback__textarea {
     min-height: 150px;
+    padding-top: 22px;
   }
 
   .feedback__bottom-text {
@@ -20822,13 +20852,10 @@ body {
 
   .button__circle-outside {
     width: 18.4615384615vw;
-    height: 17.4358974359vw;
   }
 
   .button__circle-inside {
-    width: 2.8205128205vw;
-    left: 9.1025641026vw;
-    top: 9.1025641026vw;
+    width: 18.4615384615vw;
   }
 
   .btn--border svg path,
@@ -21106,6 +21133,16 @@ body {
 
   .soc.soc--gray .container {
     max-width: calc(100% - 32px);
+  }
+
+  .soc.soc--gray .soc__item {
+    width: 45px;
+    height: 45px;
+  }
+
+  .soc.soc--gray .soc__item__picture {
+    width: 45px;
+    height: 45px;
   }
 
   .main__slider {

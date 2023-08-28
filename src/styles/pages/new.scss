@@ -5,6 +5,11 @@
   width: 100%;
   align-items: stretch;
 	margin-bottom: 120px;
+	@include max(md) {
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
 	@include max(sm) {
 		margin-bottom: 48px;
 	}
@@ -14,12 +19,13 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start; 
+
     &:nth-child(1) {
       width: 150px;
-      @include max(md) {
-        display: none;
-      }
 			z-index: 5;
+			@include max(md) {
+				width: 100%;
+      }
     }
     &:nth-child(2) {
       width: calc(100% - 150px);
@@ -161,15 +167,17 @@
 	.new__slider {
 		margin: 0 -15px;
 		position: relative;
+		max-width: 715px;
 		.new__img {
 			padding: 0 15px;
 		}
 		.new-swiper-button-next {
 			right: -45px;
+			
 		}
 		.new-swiper-button-prev {
 			left: -45px;
-			@media (max-width: 768px){
+			@media (max-width: 1450px){
 				left: 15px;
 			}
 		}
@@ -269,6 +277,7 @@
 		min-height: 170px;
 		@media (max-width: 768px){
 			min-height: 150px;
+			padding-top: 22px;
 		}
 	}
 	&__bottom-text {

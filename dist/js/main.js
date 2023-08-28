@@ -4488,13 +4488,18 @@ galleryMain.controller.control =  galleryThumbs;
 // });
 let containerSocGray  = document.querySelector(".js-container__soc-gray ")
 if(containerSocGray !== null) {
-  var sidebar2 = new StickySidebar('#soc--gray', {
-          containerSelector: '.js-container__soc-gray',
-          innerWrapperSelector: '.sidebar__inner',
-          topSpacing: 80,
-          // resizeSensor: false,
-          bottomSpacing: 0
-      });
+  if(document.documentElement.clientWidth > 992) {
+    var sidebar2 = new StickySidebar('#soc--gray', {
+      containerSelector: '.js-container__soc-gray',
+      innerWrapperSelector: '.sidebar__inner',
+      topSpacing: 80,
+      // resizeSensor: false,
+      bottomSpacing: 0
+    });
+  } else {
+    var sidebar2 = null;
+  }
+
 }
 
 
