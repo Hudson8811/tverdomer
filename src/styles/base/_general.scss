@@ -1452,7 +1452,9 @@ body {
             }
             .select2-results__option--selected {
                 &:first-child {
-                    border-top: 1px solid $grey;
+                    @include max(sm) {
+                        border-top: 1px solid $grey;
+                    }
                 }
                 @include max(sm) {
                     text-transform: none;

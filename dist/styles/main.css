@@ -9284,10 +9284,6 @@ body {
   border-radius: 5px 5px 0 0;
 }
 
-.select2-container.select2-container--custom-theme--no-border .select2-dropdown .select2-results .select2-results__option--selected:first-child {
-  border-top: 1px solid #CBCECF;
-}
-
 .section__header {
   position: fixed;
   top: 0;
@@ -21155,6 +21151,10 @@ body {
     text-transform: none;
     margin-top: 10px;
     border-radius: 0;
+  }
+
+  .select2-container.select2-container--custom-theme--no-border .select2-dropdown .select2-results .select2-results__option--selected:first-child {
+    border-top: 1px solid #CBCECF;
   }
 
   .select2-container.select2-container--custom-theme--no-border .select2-dropdown .select2-results .select2-results__option--selected {
