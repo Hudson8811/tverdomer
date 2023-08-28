@@ -8232,6 +8232,7 @@ body {
   flex: 1 0 auto;
   padding-top: 73px;
   background: #1B1F22;
+  overflow: hidden;
 }
 
 .site-main.site-main__over-visidle {
@@ -8433,7 +8434,7 @@ body {
   border: 1px solid #1B1F22;
   text-transform: uppercase;
   transition: all 0.3s;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   height: 45px;
 }
 
@@ -16429,18 +16430,34 @@ body {
   padding-bottom: 0 !important;
 }
 
+.news__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
 .news__tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  position: relative;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 740px;
 }
 
 .news__tab {
   border-radius: 5px;
   border: 1px solid var(--gray-font, #7F8589);
-  max-width: 100%;
+  max-width: 173px;
   width: auto;
-  min-width: 173px;
+  width: 100%;
+  margin-right: 16px;
+  margin-bottom: 12px;
+  margin-left: 0;
 }
 
 .news__tab:hover {
@@ -16454,7 +16471,6 @@ body {
 
 .news__row {
   display: block;
-  margin-top: 12px;
   margin-left: -30px;
   display: flex;
   flex-wrap: wrap;
@@ -20288,6 +20304,10 @@ body {
     width: 100%;
   }
 
+  .news__tab:last-child {
+    margin-right: 0;
+  }
+
   .product-card__col:nth-child(2) {
     width: 100%;
   }
@@ -22240,6 +22260,27 @@ body {
     margin-bottom: 50px;
   }
 
+  .news__tabs {
+    flex-flow: row wrap;
+  }
+
+  .news__tab {
+    width: 114px;
+    height: 33px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 135%;
+    /* 14.85px */
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .news .periodSelect {
+    width: 275px;
+  }
+
   .product-card__wrap:first-child {
     margin-bottom: 0;
   }
@@ -22416,14 +22457,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  .news__tabs {
-    gap: 10px;
-  }
-
-  .news__tab {
-    min-width: 114px;
-  }
-
   .news__row > * {
     width: 100%;
     width: calc(100% - 30px);

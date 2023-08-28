@@ -111,7 +111,7 @@ body {
 	flex: 1 0 auto;
     padding-top: 73px;
     background: $mainDark;
-    // overflow: hidden;   
+    overflow: hidden;   
     @include max(mdHeader) {
         padding-top: 55px;  
     }
@@ -435,7 +435,7 @@ body {
         border: 1px solid $mainDark;
         text-transform: uppercase;
         transition: all .3s;
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
         height: 45px;
         &::after {
           display: none;

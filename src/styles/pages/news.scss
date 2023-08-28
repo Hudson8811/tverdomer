@@ -1,22 +1,50 @@
 .news {
+	&__top {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 100%;
+		flex-flow: row wrap;
+	}
 	&__tabs {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 16px;
-		@media (max-width: 767px){
-			gap: 10px;
+		position: relative;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		max-width: 740px;
+		@include max(sm) {
+			flex-flow: row wrap;
 		}
-
 	}
 	&__tab {
 		border-radius: 5px;
 		border: 1px solid var(--gray-font, #7F8589);
-		max-width: 100%;
+		max-width: 173px;
 		width: auto;
-		min-width: 173+px;
-		@media (max-width: 767px){
-			min-width: 114px;
+		width: 100%;
+		margin-right: 16px;
+		margin-bottom: 12px;
+		margin-left: 0;
+		@include max(sm) {
+			width: 114px;
+			height: 33px;
+			font-size: 11px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%; /* 14.85px */
+			text-transform: uppercase;
+			margin-right: 10px;
+			margin-bottom: 10px;		
 		}
+		&:last-child {
+			@include max(md) {
+				margin-right: 0;
+			}
+		}
+
 
 		&:hover{
 			color: #ffffff!important;
@@ -26,10 +54,15 @@
 			color: #ffffff!important;
 		}
 	}
-
+	.periodSelect {
+		@include max(sm) {
+			width: 275px;
+		}
+		.select2-container .select2-selection--single {
+		}
+	}
 	&__row {
 		display: block;
-		margin-top: 12px;
 		margin-left: -30px;
 		display: flex;
 		flex-wrap: wrap;
