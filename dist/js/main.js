@@ -4081,6 +4081,13 @@ $('.js-example-responsive').select2({
         minimumResultsForSearch: Infinity,
         dropdownAutoWidth: true,
 });
+$('.js-example-responsive--no-border').select2({
+        theme: "custom-theme--no-border",
+        language: 'ru',
+        // width: '100%',
+        minimumResultsForSearch: Infinity,
+        dropdownAutoWidth: true,
+});
 let btnCity = document.querySelectorAll(".btn__city")
 let cities = document.querySelector(".offices__cities")
 let officesMap = document.querySelector(".offices__map")
