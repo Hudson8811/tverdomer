@@ -17,6 +17,7 @@
 		max-width: 740px;
 		@include max(sm) {
 			flex-flow: row wrap;
+			margin-bottom: 14px;
 		}
 	}
 	&__tab {
@@ -52,13 +53,6 @@
 		&.active {
 			background: var(--main-dark, #1B1F22);
 			color: #ffffff!important;
-		}
-	}
-	.periodSelect {
-		@include max(sm) {
-			width: 275px;
-		}
-		.select2-container .select2-selection--single {
 		}
 	}
 	&__row {

@@ -6,7 +6,7 @@ $('.js-hardness-testers').each(function(){
 		slidesPerView: "auto",
     loop: false,
     speed: 800,
-    allowTouchMove: false,
+    allowTouchMove: true,
 		navigation: {
 				nextEl: ".hardness-tester-next",
 				prevEl: ".hardness-tester-prev"
@@ -15,6 +15,7 @@ $('.js-hardness-testers').each(function(){
 		// when window width is >= 480px
 		992: {
 			spaceBetween: 30,
+			allowTouchMove: false,
 		},
 		}
 	});
@@ -28,8 +29,12 @@ $('.js-hardness-gallery').each(function(){
 		spaceBetween: 0,
     centeredSlides: true,
 		slidesPerView: 1,
-    loop: false,
+    loop: true,
     speed: 800,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 2000,
+		},
 		navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]
@@ -39,15 +44,14 @@ $('.js-hardness-gallery').each(function(){
 		// },
 		pagination: {
 				el: slider.find('.swiper-pagination')[0],
-        clickable: true,
+        clickable: false,
 
-		}
-		// breakpoints: {
-		//     // when window width is >= 480px
-		//     992: {
-		//         slidesPerView: 2.2,
-		//         spaceBetween: 30
-		//     },
-		// }
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			992: {
+				allowTouchMove: true,
+			},
+			}
 	});
 })

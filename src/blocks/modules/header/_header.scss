@@ -8,7 +8,7 @@
 	width: 100%;
 	padding: 0;
 	background: $fonBlack;
-	z-index: 999;
+	z-index: 1000;
 	height: 73px;
 	box-sizing: border-box;
 	border-bottom: 1px solid #292B32;
@@ -522,7 +522,7 @@
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	z-index: 999;
+	z-index: 9999;
 	background: $mainDark;
 	height: calc(100vh - 54px);
 	overflow-y: auto;

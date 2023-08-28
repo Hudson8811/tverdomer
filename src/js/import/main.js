@@ -96,6 +96,7 @@ if (document.documentElement.clientWidth < 767) {
                 theme: 'tomato',
                 // arrow: tippy.roundArrow,
                 allowHTML: true,
+                zIndex:	900,
                 placement: 'right',
                 inlinePositioning: true,
         

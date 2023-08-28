@@ -20,9 +20,16 @@ hamburger.on("click", function(e) {
   hamburger.toggleClass("is-active");
 });
 var search = $(".header__other__search");
-search.hover( function(e) {
-  $(this).children(".header__other__search__input").toggleClass("active"); 
+search.click( function(e) {
+  $(this).children(".header__other__search__input").addClass("active"); 
 
+});
+$(document).mouseup(function (e){ 
+  var search = $(".header__other__search");
+  if (!search.is(e.target) 
+      && search.has(e.target).length === 0) { 
+        search.children(".header__other__search__input").removeClass("active"); 
+  }
 });
 
 overlayBg.addEventListener("click", function () {

@@ -111,7 +111,7 @@ body {
 	flex: 1 0 auto;
     padding-top: 73px;
     background: $mainDark;
-    overflow: hidden;   
+    overflow: hidden;  
     @include max(mdHeader) {
         padding-top: 55px;  
     }
@@ -458,6 +458,7 @@ body {
           border: 1px solid $mainDark;
           color: $white;
         }
+
     }
     &--red {
         padding-bottom: 0;
@@ -531,9 +532,6 @@ body {
         &:hover {
           transition: all .3s;
           background: $greyBlack;
-          @include max(sm) {
-            background: $greyLight;
-            }
         }
     }
 
@@ -1320,4 +1318,156 @@ body {
   border-right-color: #fff;
   fill: #fff;
   transform: scale(2.5);
+}
+
+.periodSelect {
+	position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include max(sm) {
+    width: 100%;
+  }
+  .select2-container {
+    @include max(sm) {
+      width: 100% !important;
+    }
+  }
+}
+.select2-container {
+	color: $mainDark;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 275px !important;
+	.select2-selection--single {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        height: 45px;
+        padding-left: 18px;
+        padding-right: 18px;
+		.select2-selection__rendered {
+			padding-left: 0;
+			padding-right: 0;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: normal;
+			color: $mainDark;
+		}
+	}
+	.select2-dropdown {
+		border: none;
+		border-radius: 0 0px 5px 5px;
+		.select2-results {
+			padding-bottom: 16px;
+			padding-top: 16px;
+			border-radius: 0;
+            background: #FFFFFF;
+            border: 1px solid $grey;
+            border-top: none;
+            border-radius: 0 0px 5px 5px;
+	    .select2-results__option {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: normal;
+				color: $mainDark;
+				padding-left: 16px;
+				transition: all .1s;
+				&:hover {
+					transition: all .1s;
+					background: $grey;
+				}
+			}
+			.select2-results__option--selected {
+				font-weight: 700;
+				&:hover {
+					transition: all .1s;
+					background: $grey;
+				}
+			}
+		}
+	}
+	.select2-selection__arrow {
+		position: relative;
+		display: block;
+		width: 16px;
+		height: 8px;
+		background: url(../img/svg/select2-selection__arrow.svg) no-repeat center center;
+		background-size: contain;
+		transition: transform .3s;
+		transform: rotate(0deg);
+		b {
+			display: none;
+		}
+
+	}
+}
+.select2-container--open {
+	transition: all .3s;
+	.select2-selection__arrow {
+		transition: transform .3s;
+		transform: rotate(180deg);
+	}
+  .select2-selection--single {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.select2-container.select2-container--custom-theme--no-border {
+    &.select2-container--open {
+        @include max(sm) {
+            width: 160px !important;     
+        } 
+    }
+    @include max(sm) {
+        width: 160px !important;     
+    }
+
+    .select2-selection--single {
+        @include max(sm) {
+            padding: 0;
+            height: 20px;
+            border: none;
+            text-transform: none;
+
+        }
+    }
+    .select2-dropdown {
+        .select2-results {
+            @include max(sm) {
+                width: 160px !important;  
+                border: none !important;
+                padding-top: 0;
+                text-transform: none;
+                margin-top: 10px;
+                border-radius: 0;
+                    
+            }
+            .select2-results__option--selected {
+                &:first-child {
+                    border-top: 1px solid $grey;
+                }
+                @include max(sm) {
+                    text-transform: none;
+                        
+                }
+
+            }
+            .select2-results__option {
+                @include max(sm) {
+                    padding-left: 10px;
+                }
+            }
+        }
+    } 
+
+
+
 }
