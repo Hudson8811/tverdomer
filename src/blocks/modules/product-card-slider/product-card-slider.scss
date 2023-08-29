@@ -9,6 +9,7 @@
     background: $greyLight;
     border-radius: 28px;
     margin-bottom: 40px;
+    z-index: 5;
     @include max(md) {
       flex-flow: column-reverse nowrap;
       justify-content: center;

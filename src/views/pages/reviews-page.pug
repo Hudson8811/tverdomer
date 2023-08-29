@@ -16,10 +16,14 @@ block content
 			.container
 				.reviews-page__title.title__40 Отзывы 
 				.reviews-page__top
-					select(name="reviews-page__select").reviews-page__select.myselect-class
-						option(value="1") ПОКАЗАТЬ Все1
-						option(value="2") ПОКАЗАТЬ Все2
-						option(value="3") ПОКАЗАТЬ Все3
+					.periodSelect.periodSelect--no-border
+						<select class="js-example-responsive--no-border periodSelect__date__value__month date-month">
+							<option  value="" selected>Показать за все время</option>  
+							<option  value="" >Пункт 1</option>
+							<option  value="" >Пункт 2</option>
+							<option  value="" >Пункт 3</option>
+							<option  value="" >Пункт 4</option>
+						</select>
 					.reviews-page__top-btn.btn.btn--black.text__18 Оставить отзыв
 				.reviews-page-content
 					.reviews-page-content__item.js-active
@@ -799,14 +803,18 @@ block content
 						.feedback__item 
 							input.feedback__input.feedback__field(type="email" placeholder="Электронный адрес")
 						.feedback__item 
-							select(name="reviews-page__select").feedback__input.feedback__field.myselect-class
-								option(value="1") Адрес компании
-								option(value="2") Адрес компании1
-								option(value="3") Адрес компании2
+							input.feedback__input.feedback__field(type="text" placeholder="Адрес компании")
+
 						.feedback__item 
 							input.feedback__input.feedback__field(type="tel" placeholder="Телефон")
-						.feedback__item 
-							input.feedback__input.feedback__field(type="text" placeholder="Наименование товара")
+						.feedback__item.feedback__item__selection
+							<select class="js-example-responsive--form">
+								<option  value="" selected>Наименование товара</option>  
+								<option  value="" >товар 1</option>
+								<option  value="" >товар 2</option>
+								<option  value="" >товар 3</option>
+								<option  value="" >товар 4</option>
+							</select>
 						.feedback__item.feedback__item--fullwidth 
 							textarea.feedback__textarea.feedback__field(placeholder='Задать вопрос' style="resize: none")
 						.feedback__item.feedback__item--fullwidth.feedback__item--file 

@@ -1,4 +1,7 @@
 .reviews-page {
+	&__section {
+		padding-bottom: 0 !important;
+	}
 	&__title {
 	}
 	&__top {
@@ -9,19 +12,7 @@
 			flex-direction: column;
 		}
 	}
-	.select2.select2-container {
-		width: 360px !important;
-		height: 45px;
-		margin: 0!important;
-	}
-	.selection .select2-selection__arrow b[role=presentation] {
-		width: 9px;
-		height: 9px;
-	}
-	.selection .select2-selection__arrow {
-		right: 20px !important;
-		top: 38% !important;
-	}
+
 	&__top-btn {
 		height: 45px;
 		width: 240px;
@@ -102,51 +93,43 @@
 			}
 			&--file {
 			}
-			.select2-container {
-				border: none!important;
-				width: 100%!important;
-				outline: none!important;
-				min-height: 64px;
-				padding: 0 34px;
-				margin-bottom: 16px!important;
-				border-radius: 15px;
-				background: var(--white, #FFF);
-				display: flex;
-				@media (max-width: 768px){
-					padding: 0 24px;
-					min-height: 48px;
-					padding: 0 24px;
-					margin-bottom: 12px;
-					font-size: 12px;
-				}
-				.selection {
-					width: 100%;
-					.select2-selection {
-						border: none!important;
-						outline: none!important;
-					}
-					.select2-selection__rendered {
-						padding: 0!important;
-						color: var(--gray-font, #7F8589);
-						font-weight: 400;
-						@media (max-width: 768px){
-							font-size: 12px;
-						}
-					}
-					.select2-selection__arrow {
-						right: 0!important;
-					}
-				}
-			}
+			// &__selection {
+			// 	@include max(sm) {
+			// 		margin-bottom: 12px;
+			// 	}
+			// }
+
 		}
 		&__input {
+			color: $greyBlack;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+			text-transform: none;
+			@include max(sm) {
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 150%;
+			}
 			&--file {
 				position: relative;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				color: var(--gray-font, #7F8589);
-				font-weight: 400;
+				color: $greyBlack;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 150%;
+				text-transform: none;
+				@include max(sm) {
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 550;
+					line-height: 150%;
+				}
 				input {
 					cursor: pointer;
 					position: absolute;
@@ -161,7 +144,20 @@
 		&__field {
 		}
 		&__textarea {
+			color: $greyBlack;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+			text-transform: none;
+			@include max(sm) {
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 550;
+				line-height: 150%;
+			}
 		}
+
 		&__bottom {
 			display: flex;
 			flex-direction: column;
@@ -175,6 +171,10 @@
 				&-submit-btn {
 				}
 		}
+	}
+	.reviews-page__feedback {
+		border-radius: 0;
+		margin-bottom: 0;
 	}
 }
 .reviews-page-content {
@@ -683,5 +683,3 @@
 
 
 
-.reviews-page__feedback {
-}

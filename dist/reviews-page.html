@@ -164,11 +164,14 @@
           <div class="container">
             <div class="reviews-page__title title__40">Отзывы </div>
             <div class="reviews-page__top">
-              <select class="reviews-page__select myselect-class" name="reviews-page__select">
-                <option value="1">ПОКАЗАТЬ Все1</option>
-                <option value="2">ПОКАЗАТЬ Все2</option>
-                <option value="3">ПОКАЗАТЬ Все3</option>
-              </select>
+              <div class="periodSelect periodSelect--no-border"><select class="js-example-responsive--no-border periodSelect__date__value__month date-month">
+<option  value="" selected>Показать за все время</option>  
+<option  value="" >Пункт 1</option>
+<option  value="" >Пункт 2</option>
+<option  value="" >Пункт 3</option>
+<option  value="" >Пункт 4</option>
+</select>
+              </div>
               <div class="reviews-page__top-btn btn btn--black text__18">Оставить отзыв</div>
             </div>
             <div class="reviews-page-content">
@@ -1780,17 +1783,18 @@
                   <input class="feedback__input feedback__field" type="email" placeholder="Электронный адрес">
                 </div>
                 <div class="feedback__item"> 
-                  <select class="feedback__input feedback__field myselect-class" name="reviews-page__select">
-                    <option value="1">Адрес компании</option>
-                    <option value="2">Адрес компании1</option>
-                    <option value="3">Адрес компании2</option>
-                  </select>
+                  <input class="feedback__input feedback__field" type="text" placeholder="Адрес компании">
                 </div>
                 <div class="feedback__item"> 
                   <input class="feedback__input feedback__field" type="tel" placeholder="Телефон">
                 </div>
-                <div class="feedback__item"> 
-                  <input class="feedback__input feedback__field" type="text" placeholder="Наименование товара">
+                <div class="feedback__item feedback__item__selection"><select class="js-example-responsive--form">
+<option  value="" selected>Наименование товара</option>  
+<option  value="" >товар 1</option>
+<option  value="" >товар 2</option>
+<option  value="" >товар 3</option>
+<option  value="" >товар 4</option>
+</select>
                 </div>
                 <div class="feedback__item feedback__item--fullwidth"> 
                   <textarea class="feedback__textarea feedback__field" placeholder="Задать вопрос" style="resize: none"></textarea>

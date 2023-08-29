@@ -168,6 +168,13 @@ $('.js-example-responsive--no-border').select2({
         minimumResultsForSearch: Infinity,
         dropdownAutoWidth: true,
 });
+$('.js-example-responsive--form').select2({
+        theme: "custom-theme--form",
+        language: 'ru',
+        width: '100%',
+        minimumResultsForSearch: Infinity,
+        dropdownAutoWidth: true,
+});
 let btnCity = document.querySelectorAll(".btn__city")
 let cities = document.querySelector(".offices__cities")
 let officesMap = document.querySelector(".offices__map")
@@ -222,16 +229,6 @@ if(btnCity !==null) {
 let officesCitySoloClose = document.querySelector(".offices__city-solo__close")
 let officesCitySoloSection = document.querySelector(".offices__city-solo__section")
 
-//- удалить эту кнопку она для демострации
-/*let btnTemporery = document.querySelectorAll(".btn__temporery")
-if(btnTemporery !== null) {
-        btnTemporery.forEach( (item)=> {
-                item.addEventListener("click", ()=> {
-                        showOfficesCitySoloSection();
-                })
-        })
-}*/
-
 let btnToOpenSideMenu = document.querySelectorAll(".js-btn-open-side-menu")
 if(btnToOpenSideMenu !== null) {
         btnToOpenSideMenu.forEach( (item)=> {
@@ -266,3 +263,68 @@ if(productCardSection !== null) {
                 bottomSpacing: 0
             });
 }
+
+
+$('.product-cart__filter__counter__prev').on('click', function () {
+        var $count = $(this).siblings('.product-cart__filter__counter__count');
+        var $input = $(this).siblings('input');
+        var count = parseInt($count.text(), 10);
+        var minimum = 0;
+    
+        if ($input.data('minimum')) {
+          minimum = parseInt($input.data('minimum'), 10);
+        }
+    
+        count--;
+    
+        if (count < minimum) {
+          count = minimum;
+        }
+    
+        $count.text(count);
+        $input.val(count);
+        if (count === 0) {
+                $(this).closest('.calc-page__underBlok').addClass('disabled');
+              } else {
+                $(this).closest('.calc-page__underBlok').removeClass('disabled');
+              }
+          
+              if ($input.data('minimum')) {
+                if (count === minimum) {
+                  $(this).addClass('hidden');
+                }
+        }
+
+});
+$('.product-cart__filter__counter__next').on('click', function () {
+        console.log($(this))
+        var $count = $(this).siblings('.numberPeople--count');
+        var $input = $(this).siblings('input');
+        var count = parseInt($count.text(), 10);
+        console.log($count)
+        console.log($input)
+        console.log(count)
+        var minimum = 0;
+
+        if ($input.data('minimum')) {
+                minimum = parseInt($input.data('minimum'), 10);
+        }
+
+        count++;
+        $count.text(count);
+        $input.val(count);
+        if (count === 0) {
+                $(this).closest('.calc-page__underBlok').addClass('disabled');
+              } else {
+                $(this).closest('.calc-page__underBlok').removeClass('disabled');
+              }
+          
+              if ($input.data('minimum')) {
+                if (count > minimum) {
+                  $(this).siblings('.numberPeople--perv').removeClass('hidden');
+                }
+        }
+
+});
+
+$('.js-mask-phone').mask('+7(000)000-00-00');

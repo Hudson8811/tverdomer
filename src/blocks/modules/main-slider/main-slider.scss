@@ -139,10 +139,11 @@
 			font-style: normal;
 			font-weight: 700;
 			line-height: 125%;
-			@include max(xxl) {
-				font-size: vw(32);
-			}
-			img {
+			&__img {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				position: relative;
 				display: block;
 				width: 72px;
@@ -154,6 +155,25 @@
 					width: vw(72);
 					height: vw(72);
 				}
+				&::before {
+					content: "";
+					position: absolute;
+					margin-left: auto;
+					margin-right: auto;
+					left: 0;
+					right: 0;
+					width: 10px;
+					height: 10px;
+					background: $red;
+				}
+			}
+			@include max(xxl) {
+				font-size: vw(32);
+			}
+			img, svg {
+				position: relative;
+				width: 100%;
+				height: 100%;
 			}
 			&--wrap {
 				position: absolute;
@@ -207,7 +227,19 @@
 					text-align: right;
 
 				}
-			}			
+			}
+			.main__slide__button  {
+				svg {
+					margin-right: 25px;
+				}
+			}	
+		}
+		&--left {
+			.main__slide__button  {
+				svg {
+					margin-left: 25px;
+				}
+			}	
 		}
 		&__specif {
 			display: none;

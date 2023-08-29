@@ -8,6 +8,7 @@
 	width: 100%;
 	animation-name: fadeInLeft;
 	animation-delay: 1.3s;
+	z-index: 400;
 	@include max(xl) {
 		left: 0;
 	}

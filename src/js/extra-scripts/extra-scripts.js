@@ -37,18 +37,6 @@
 			$(".news__row1 >*:hidden").slice(0,3).slideDown();
 			if ($(".news__row1 >*:hidden").length < 1) $(this).slideUp();
 		})
-		$(".news-show-more-mybtn2").click(function(e){
-			$(".news__row2 >*:hidden").slice(0,3).slideDown();
-			if ($(".news__row2 >*:hidden").length < 1) $(this).slideUp();
-		})
-		$(".news-show-more-mybtn3").click(function(e){
-			$(".news__row3 >*:hidden").slice(0,3).slideDown();
-			if ($(".news__row3 >*:hidden").length < 1) $(this).slideUp();
-		})
-		$(".news-show-more-mybtn4").click(function(e){
-			$(".news__row4 >*:hidden").slice(0,3).slideDown();
-			if ($(".news__row4 >*:hidden").length < 1) $(this).slideUp();
-		})
 		
 		
 		
