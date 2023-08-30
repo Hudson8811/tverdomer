@@ -821,10 +821,25 @@ block content
 							.feedback__input.feedback__input--file.feedback__field
 								.feedback__input--file-name
 									|Прикрепить файлы
-								svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none')
-									path(d='M23.933 20.2761C25.4951 18.714 25.4951 16.1813 23.933 14.6192L18.2761 8.96239C15.6726 6.35889 11.4515 6.35889 8.84804 8.96239C6.24454 11.5659 6.24454 15.787 8.84804 18.3905L15.4477 24.9901L17.3333 23.1045L10.7337 16.5049C9.17156 14.9428 9.17156 12.4101 10.7337 10.848C12.2958 9.28591 14.8284 9.28591 16.3905 10.848L22.0474 16.5049C22.5681 17.0256 22.5681 17.8698 22.0474 18.3905C21.5267 18.9112 20.6824 18.9112 20.1617 18.3905L14.5049 12.7336L12.6193 14.6192L18.2761 20.2761C19.8382 21.8382 22.3709 21.8382 23.933 20.2761Z' fill='#1B1F22')
+								.file-loader__remove(onclick="this.parentElement.remove()")
+									svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none')
+										path(d='M23.933 20.2761C25.4951 18.714 25.4951 16.1813 23.933 14.6192L18.2761 8.96239C15.6726 6.35889 11.4515 6.35889 8.84804 8.96239C6.24454 11.5659 6.24454 15.787 8.84804 18.3905L15.4477 24.9901L17.3333 23.1045L10.7337 16.5049C9.17156 14.9428 9.17156 12.4101 10.7337 10.848C12.2958 9.28591 14.8284 9.28591 16.3905 10.848L22.0474 16.5049C22.5681 17.0256 22.5681 17.8698 22.0474 18.3905C21.5267 18.9112 20.6824 18.9112 20.1617 18.3905L14.5049 12.7336L12.6193 14.6192L18.2761 20.2761C19.8382 21.8382 22.3709 21.8382 23.933 20.2761Z' fill='#1B1F22')
 
-								input(type="file" placeholder="Прикрепить файлы")
+								input(type="file" placeholder="Прикрепить файлы" class="file-loader-js visually-hidden" accept=".png, .jpg, .jpeg, .pdf, .doc, .docx" aria-label="загрузить файл")
+						//- .feedback__item.feedback__item--fullwidth.feedback__item--file 
+						//- 	<div class="file-loader support__form-item">
+						//- 		<div class="file-loader__wrapper support__form-item">
+						//- 			<div class="file-loader__item support__form-item unvisible">
+						//- 				<input name="fileLoader1" id="fileLoader1" type="file" class="file-loader-js visually-hidden" accept=".png, .jpg, .jpeg, .pdf, .doc, .docx" aria-label="загрузить файл">
+						//- 				<div class="file-loader__view">
+						//- 					<output class="file-loader__output"></output>
+						//- 					<small class="file-loader__size"></small>
+						//- 				</div>
+						//- 				<button class="file-loader__remove" onclick="this.parentElement.remove()" type="button"></button>
+						//- 			</div>
+						//- 		</div>
+						//- 	<label for="fileLoader1" class="support__form-item js-fileloader-open file-loader__btn" data-error-mess="">Добавить ещё документ</label>
+						//- 	</div>
 						.feedback__bottom
 							.feedback__bottom-submit
 								input.feedback__bottom-submit-btn(type="submit" placeholder="Отправить")

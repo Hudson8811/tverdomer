@@ -5,6 +5,22 @@
   align-items: flex-start;
   width: 100%;
   overflow-x: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: $greyLight;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $greyBlack;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+    background-color: $grey;
+  }
   &__section {
     @include max(xs) {
       padding-top: 40px;

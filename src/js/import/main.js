@@ -60,6 +60,16 @@ jQuery(function () {
                         delay: 200,
                         duration: 750
                 })
+                .add(".equipment-two__bg", {
+                        animation: "fadeInUp",
+                        delay: 200,
+                        duration: 750
+                })
+                .add(".contacts-duoble__bg", {
+                        animation: "fadeInUp",
+                        delay: 200,
+                        duration: 750
+                })
                 .init();
 
 });
@@ -259,13 +269,15 @@ if(productCardSection !== null) {
                 containerSelector: '#main-filter',
                 innerWrapperSelector: '.sidebar__inner',
                 topSpacing: 80,
-                resizeSensor: false,
-                bottomSpacing: 0
+                resizeSensor: true,
+                bottomSpacing: 0,
+                minWidth: 0
             });
 }
 
 
 $('.product-cart__filter__counter__prev').on('click', function () {
+        console.log("ghbdtn")
         var $count = $(this).siblings('.product-cart__filter__counter__count');
         var $input = $(this).siblings('input');
         var count = parseInt($count.text(), 10);
@@ -283,22 +295,11 @@ $('.product-cart__filter__counter__prev').on('click', function () {
     
         $count.text(count);
         $input.val(count);
-        if (count === 0) {
-                $(this).closest('.calc-page__underBlok').addClass('disabled');
-              } else {
-                $(this).closest('.calc-page__underBlok').removeClass('disabled');
-              }
-          
-              if ($input.data('minimum')) {
-                if (count === minimum) {
-                  $(this).addClass('hidden');
-                }
-        }
 
 });
 $('.product-cart__filter__counter__next').on('click', function () {
         console.log($(this))
-        var $count = $(this).siblings('.numberPeople--count');
+        var $count = $(this).siblings('.product-cart__filter__counter__count');
         var $input = $(this).siblings('input');
         var count = parseInt($count.text(), 10);
         console.log($count)
@@ -313,18 +314,160 @@ $('.product-cart__filter__counter__next').on('click', function () {
         count++;
         $count.text(count);
         $input.val(count);
-        if (count === 0) {
-                $(this).closest('.calc-page__underBlok').addClass('disabled');
-              } else {
-                $(this).closest('.calc-page__underBlok').removeClass('disabled');
-              }
-          
-              if ($input.data('minimum')) {
-                if (count > minimum) {
-                  $(this).siblings('.numberPeople--perv').removeClass('hidden');
-                }
-        }
 
 });
 
 $('.js-mask-phone').mask('+7(000)000-00-00');
+
+// (function() {
+//         const fileLoaderContainers = document.querySelectorAll('.file-loader');
+      
+//         const renderFileLoader = function(fileLoaderContainer) {
+//           const wrapper = fileLoaderContainer.querySelector('.file-loader__wrapper');
+//           const btnAdd = fileLoaderContainer.querySelector('.js-fileloader-open');
+//           if (!wrapper || !btnAdd) {
+//             return;
+//           }
+//           const inputFileLoader = wrapper.querySelector('.file-loader__item');
+//           const inputTemplate = inputFileLoader.cloneNode(true);
+      
+//           const maxLoaders = 10;
+//           const limitBiteSize = 18000000;
+      
+//           const testImg = function(str) {
+//             return /\.(png|jpe?g|pdf|doc|docx)$/i.test(str);
+//           };
+      
+//           const setError = function(message) {
+//             if (btnAdd) {
+//               btnAdd.dataset.errorMess = message;
+//             }
+//           };
+      
+//           const isFileSizeCorrect = function(ctx) {
+//             const inputs = ctx.querySelectorAll('.file-loader-js');
+//             let size = 0;
+//             inputs.forEach(function(i) {
+//               if (i.files.length) {
+//                 size += i.files[0].size;
+//               }
+//             });
+//             return size < limitBiteSize;
+//           };
+      
+//           const renderNewInputAttr = function(attr) {
+//             const inputs = wrapper.querySelectorAll('.file-loader-js');
+//             const lastInput = inputs[inputs.length - 1];
+//             const regExpNumber = /\d+/;
+//             const regExpName = /\D+/;
+//             const currentNumber = +lastInput[attr].match(regExpNumber)[0];
+//             const currentName = lastInput[attr].match(regExpName)[0];
+//             return currentName + (currentNumber + 1);
+//           };
+      
+//           const addFileLoader = function() {
+//             const id = renderNewInputAttr('id');
+//             const name = renderNewInputAttr('name');
+//             const loaderItem = inputTemplate.cloneNode(true);
+//             const input = loaderItem.querySelector('input');
+//             input.id = id;
+//             input.name = name;
+//             wrapper.append(loaderItem);
+//             btnAdd.setAttribute('for', id );
+//           };
+      
+//           const formatSize = function(number) {
+//             let unitSize = ' Байт';
+//             let divider = 1;
+//             if (number > 1000000) {
+//               unitSize = ' Мб';
+//               divider = 1000000;
+//             } else if (number > 1000) {
+//               unitSize = ' Кб';
+//               divider = 1000;
+//             }
+//             return (number / divider).toFixed(1) + unitSize;
+//           };
+      
+//           wrapper.addEventListener('change', function(e) {
+//             const target = e.target;
+//             const parent = target.parentElement;
+//             let errorMess = '';
+//             if (!target.files.length) return;
+//             if (!testImg(target.files[0].name)) {
+//               target.value = '';
+//               errorMess = 'Некорректный тип файла';
+//             } else if (!isFileSizeCorrect(wrapper)) {
+//               target.value = '';
+//               errorMess = 'файлы превышают лимит 18мб';
+//             } else {
+//               if (wrapper.childElementCount < maxLoaders) {
+//                 const sizeEl = parent.querySelector('.file-loader__size');
+//                 const output = parent.querySelector('.file-loader__output');
+//                 if (sizeEl) {
+//                   sizeEl.innerText = formatSize(target.files[0].size);
+//                 }
+//                 if (output) {
+//                   output.innerText = target.files[0].name;
+//                 }
+//                 parent.classList.remove('unvisible');
+//                 addFileLoader();
+//               }
+//             }
+//             target.setCustomValidity(errorMess);
+//             setError(errorMess);
+//           });
+//         };
+      
+//         fileLoaderContainers.forEach(f => renderFileLoader(f));
+// })();
+
+const questionAccordions = document.querySelectorAll(".js-accordion__question");
+
+const questionOpenAccordion = (accordion) => {
+        let headerHeight = 0;
+        if (window.innerWidth > 1100){
+        headerHeight = $('.section__header').outerHeight();
+        }
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.add("accordion__active");
+        var accordionActiveHeaight = $(".js-accordion__question.accordion__active .accordion__content").height();
+        if(typeof(accordionActiveHeaight) === "undefined") {
+            accordionActiveHeaight = 0;
+        }
+        content.style.maxHeight = content.scrollHeight + "px";
+        $('html, body').stop().animate({ scrollTop:$(accordion).offset().top - accordionActiveHeaight - headerHeight - 35}, 300);
+        // sidebar.updateSticky();
+        // sidebar.destroy();
+        // console.log(headerHeight);
+        // console.log(accordionActiveHeaight);
+        setTimeout(() => {
+                sidebar.updateSticky();
+        }, "100");
+};
+
+const questionCloseAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.remove("accordion__active");
+        content.style.maxHeight = null;
+        setTimeout(() => {
+                sidebar.updateSticky();
+        }, "100");
+
+};
+
+questionAccordions.forEach((accordion) => {
+        const intro = accordion.querySelector(".accordion__intro");
+        const content = accordion.querySelector(".accordion__content");
+
+        intro.onclick = () => {
+                if (content.style.maxHeight) {
+                        questionCloseAccordion(accordion);
+                } else {
+                        questionOpenAccordion(accordion);
+                $(accordions).not($(accordion)).each(function(){
+                        questionCloseAccordion($(this)[0]);
+                });
+                        }
+                };
+});

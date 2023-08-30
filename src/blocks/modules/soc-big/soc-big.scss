@@ -103,6 +103,10 @@
 
 			}
 		}
+		&--catalog {
+			background: $red;
+			color: $white;
+		}
 		&__title {
 			color: #7F8589;
 			font-size: 14px;
@@ -192,6 +196,19 @@
 						}
 					}
 	
+				}
+			}
+			&--catalog {
+				background: $red;
+				color: $white;
+				.soc-big__item {
+					background: $greyLight;
+					&__title {
+						color: $white;
+					}
+					&__subtitle {
+						color:$white;
+					}
 				}
 			}
 			&:hover {

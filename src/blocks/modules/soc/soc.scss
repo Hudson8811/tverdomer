@@ -10,6 +10,7 @@
   z-index: 100;
   animation-name: fadeInRight;
 	animation-delay: 1.7s;
+  z-index: 800;
   &--desc {
     @include max(md) {
       display: none;

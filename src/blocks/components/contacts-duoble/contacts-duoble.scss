@@ -1,0 +1,123 @@
+.contacts-duoble {
+	position: relative;
+	display: flex;
+	width: 100%;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	z-index: 800;
+	@media (max-width: 1150px) {
+		align-items: center;
+	}
+	&__wrap {
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: stretch;
+		margin-bottom: 0px;
+		@media (max-width: 1150px) {
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 67px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__col {
+		width: 50%;
+		&:nth-child(2) {
+			margin-left: 15px;
+			@media (max-width: 1150px) {
+				margin-left: 0;
+				width: 100%;
+				max-width: 512px;
+			}
+
+		}
+		&:nth-child(1) {
+			margin-right: 15px;
+			@media (max-width: 1150px) {
+				margin-right: 0;
+				width: 100%;
+				max-width: 512px;
+				margin-bottom: 30px;
+			}
+			@include max(sm) {
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	&__item {
+		padding: 50px;
+		padding-bottom: 60px;
+		margin-bottom: 0;
+		height: 100%;
+		min-height: 647px;
+		overflow: hidden;
+		@media (max-width: 1150px) {
+			padding: 47px;
+		}
+		@include max(sm) {
+			padding: 20px;
+			min-height: auto;
+		}
+		&__title {
+			margin-bottom: 44px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__bg  {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: -10px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 450px;
+		z-index: 1;
+		@include max(sm) {
+			position: relative;
+			width: 100%;
+			bottom: -30px;
+		}
+		@include max(xs) {
+			// width: calc(100% + 48px);
+			// margin-left: -24px;
+		}
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right top;
+		}		
+	}
+	.soc-big.soc-big--gray {
+		flex-flow: column nowrap;
+		width: calc(100% + 0px);
+    margin-left: 0px;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: 0;
+		max-width: 418px;
+		margin-left: auto;
+		margin-right: auto;
+		.soc-big__item {
+			flex: none;
+			max-width: calc(100% - 0px);
+			margin-left: 0px;
+			width: 100%;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
