@@ -179,13 +179,16 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			padding: 30px;
-			padding-top: 43px;
 			background: #2e3236;
-			border-radius: 28px;
+			border-radius: 15px;
 			min-width: 203px;
 			flex-flow: column nowrap;
 			opacity: 0;
 			transition: all .3s;
+			min-width: 273px;
+			@include max(lg) {
+				min-width: auto;
+			}
 			&.active {
 				display: flex;
 				opacity: 1;
@@ -213,6 +216,9 @@
 				line-height: normal;
 				margin-bottom: 20px;
 				text-transform: none;
+				&:last-child {
+					margin-bottom: 0;
+				}
 				a{
 					position: relative;
 					display: flex;
@@ -268,6 +274,18 @@
 				margin-right: 50px;
 			}
 			&--desc {
+				svg {
+					margin-left: 9px;
+					transition: transform 0.3s;
+    			transform: rotate(0deg);
+				}
+				&:hover {
+					svg {
+						transition: transform 0.3s;
+						transform: rotate(180deg);
+					}
+				}
+
 				@media (max-width: 1350px) {
 					display: none;
 				}

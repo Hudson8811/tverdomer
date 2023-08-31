@@ -8266,7 +8266,8 @@ body {
   opacity: 1;
   will-change: transform, opacity;
   transform-style: preserve-3d;
-  z-index: 200;
+  z-index: 900;
+  cursor: pointer;
 }
 
 .button__circle-inner {
@@ -8887,36 +8888,19 @@ body {
   padding-right: 80px;
 }
 
-.scroll-down__icon {
-  display: block;
-  width: 14px;
-  height: 20px;
-  box-sizing: border-box;
-  border: 3px solid #191919;
-  border-radius: 7px;
-  position: relative;
-}
-
-.scroll-down__icon span {
-  border-radius: 50%;
-  background: #191919;
-  display: block;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 6px;
-  height: 6px;
-  animation: 1.3s infinite normal scrollDown;
-}
-
 .scroll-down__text {
   position: relative;
   display: inline-block;
-  margin-bottom: 14px;
-  width: 14px;
-  color: #191919;
-  font-size: 14px;
-  line-height: 1;
+  margin-bottom: 24px;
+  width: 24px;
+  color: #CBCECF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1%;
+  /* 17.55px */
+  letter-spacing: 2.47px;
+  text-transform: uppercase;
   transform: rotate(-90deg);
 }
 
@@ -8929,7 +8913,7 @@ body {
 }
 
 .scroll-down--white .scroll-down__text {
-  color: #7F8589;
+  color: #CBCECF;
 }
 
 @keyframes scrollDown {
@@ -9495,13 +9479,13 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 30px;
-  padding-top: 43px;
   background: #2e3236;
-  border-radius: 28px;
+  border-radius: 15px;
   min-width: 203px;
   flex-flow: column nowrap;
   opacity: 0;
   transition: all 0.3s;
+  min-width: 273px;
 }
 
 .header__menu__list.active {
@@ -9533,6 +9517,10 @@ body {
   line-height: normal;
   margin-bottom: 20px;
   text-transform: none;
+}
+
+.header__menu__list__item:last-child {
+  margin-bottom: 0;
 }
 
 .header__menu__list__item a {
@@ -9581,6 +9569,17 @@ body {
   border-bottom: none;
   color: #fff;
   transition: all 0.3s;
+}
+
+.header__other__fone--desc svg {
+  margin-left: 9px;
+  transition: transform 0.3s;
+  transform: rotate(0deg);
+}
+
+.header__other__fone--desc:hover svg {
+  transition: transform 0.3s;
+  transform: rotate(180deg);
 }
 
 .header__other__fone--mob {
@@ -11175,7 +11174,6 @@ body {
   width: 100%;
   animation-name: fadeInLeft;
   animation-delay: 1.3s;
-  z-index: 400;
 }
 
 .main__pagination .container {
@@ -11183,6 +11181,7 @@ body {
   width: 1920px;
   padding-left: 80px;
   padding-right: 80px;
+  z-index: 0;
 }
 
 .main__pagination__wrap {
@@ -11192,6 +11191,7 @@ body {
   justify-content: flex-start;
   flex-flow: column nowrap;
   height: auto;
+  z-index: 400;
 }
 
 .main__pagination__item {
@@ -12167,6 +12167,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  cursor: pointer;
 }
 
 .product-card .gallery-main .swiper-slide:before {
@@ -12247,6 +12248,7 @@ body {
   width: 160px;
   background: #FFFFFF;
   border-radius: 14px;
+  cursor: pointer;
 }
 
 .product-card .gallery-thumbs .swiper-slide:before {
@@ -19376,6 +19378,10 @@ body {
 
   .header__menu {
     width: 65%;
+  }
+
+  .header__menu__list {
+    min-width: auto;
   }
 
   .footer__lists--row {
