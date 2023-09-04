@@ -17248,12 +17248,13 @@ body {
 
 .product-card__col:nth-child(1) {
   width: 67.19%;
-  margin-right: 38px;
+  padding-right: 38px;
 }
 
 .product-card__col:nth-child(2) {
   display: block;
   width: 32.81%;
+  max-width: 32.81%;
 }
 
 .product-card__content {

@@ -44,7 +44,7 @@
     align-items: flex-start;
     &:nth-child(1) {
       width: 67.19%;
-      margin-right: 38px;
+      padding-right: 38px;
       @include max(lg) {
         width: 100%;
         margin-right: 0px;
@@ -54,6 +54,7 @@
     &:nth-child(2) {
       display: block;
       width: 32.81%;
+      max-width: 32.81%;
       @include max(lg) {
         width: 50%;
       }
