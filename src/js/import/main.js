@@ -440,8 +440,8 @@ const questionOpenAccordion = (accordion) => {
 	$('html, body').stop().animate({ scrollTop:$(accordion).offset().top - accordionActiveHeaight - headerHeight - 35}, 300);
 	// sidebar.updateSticky();
 	// sidebar.destroy();
-	// console.log(headerHeight);
-	// console.log(accordionActiveHeaight);
+	console.log(headerHeight);
+	console.log(accordionActiveHeaight);
 	setTimeout(() => {
 		sidebar.updateSticky();
 		setTimeout(() => {
