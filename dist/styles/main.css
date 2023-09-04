@@ -19758,11 +19758,12 @@ body {
 
   .product-card__col:nth-child(1) {
     width: 100%;
-    margin-right: 0px;
+    padding-right: 0px;
   }
 
   .product-card__col:nth-child(2) {
     width: 50%;
+    max-width: 50%;
   }
 
   .offices__map__section .container {
@@ -21109,6 +21110,7 @@ body {
 
   .product-card__col:nth-child(2) {
     width: 100%;
+    max-width: 100%;
   }
 
   .product-card .text-block table {

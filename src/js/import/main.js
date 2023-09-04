@@ -266,20 +266,22 @@ function closeOfficesCitySoloSection() {
 
 let productCardSection = document.querySelector(".product-card__section")
 if(productCardSection !== null) {
-	var sidebar = new StickySidebar('#sidebar', {
-		containerSelector: '#main-filter',
-		innerWrapperSelector: '.sidebar__inner',
-		topSpacing: 80,
-		// containerSelector: false,
-		resizeSensor: true,
-		bottomSpacing: 0,
-		minWidth: 0
-	    });
+	if (document.documentElement.clientWidth > 1279){
+		var sidebar = new StickySidebar('#sidebar', {
+			containerSelector: '#main-filter',
+			innerWrapperSelector: '.sidebar__inner',
+			topSpacing: 80,
+			// containerSelector: false,
+			resizeSensor: true,
+			bottomSpacing: 0,
+			minWidth: 0
+				});
+	}
+
 }
 
 
 $('.product-cart__filter__counter__prev').on('click', function () {
-	console.log("ghbdtn")
 	var $count = $(this).siblings('.product-cart__filter__counter__count');
 	var $input = $(this).siblings('input');
 	var count = parseInt($count.text(), 10);
@@ -439,10 +441,6 @@ const questionOpenAccordion = (accordion) => {
 	}
 	content.style.maxHeight = content.scrollHeight + "px";
 	$('html, body').stop().animate({ scrollTop:$(accordion).offset().top - accordionActiveHeaight - headerHeight - 35}, 300);
-	// sidebar.updateSticky();
-	// sidebar.destroy();
-	console.log(headerHeight);
-	console.log(accordionActiveHeaight);
 	setTimeout(() => {
 		sidebar.updateSticky();
 		$('html').scrollTop($('html').scrollTop()+1);

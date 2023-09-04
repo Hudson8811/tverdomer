@@ -47,7 +47,7 @@
       padding-right: 38px;
       @include max(lg) {
         width: 100%;
-        margin-right: 0px;
+        padding-right: 0px;
       }
 
     }
@@ -57,9 +57,11 @@
       max-width: 32.81%;
       @include max(lg) {
         width: 50%;
+        max-width: 50%;
       }
       @include max(md) {
         width: 100%;
+        max-width: 100%;
       }
     }
   }
