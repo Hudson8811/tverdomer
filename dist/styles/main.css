@@ -11287,14 +11287,15 @@ body {
 
 .main__pagination {
   position: fixed;
-  left: 20px;
+  left: 90px;
   top: 175px;
   display: flex;
   justify-content: flex-start;
   flex-flow: column nowrap;
-  width: 100%;
+  width: auto;
   animation-name: fadeInLeft;
   animation-delay: 1.3s;
+  z-index: 9000;
 }
 
 .main__pagination .container {
