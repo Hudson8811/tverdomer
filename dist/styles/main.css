@@ -9329,6 +9329,110 @@ body {
   padding-left: 40px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.file-loader__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.file-loader__item {
+  position: relative;
+  display: flex;
+  padding: 10px 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.file-loader__btn {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 64px;
+  color: #7F8589;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.file-loader__btn::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: attr(data-error-mess);
+  font-size: 12px;
+  color: #1B1F22;
+  background: none;
+}
+
+.file-loader__view {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-loader__size {
+  font-size: 12px;
+  line-height: 15px;
+  color: #8F9BA3;
+}
+
+.file-loader__remove {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.file-loader__remove::before,
+.file-loader__remove::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 2px;
+  background: red;
+}
+
+.file-loader__remove::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.file-loader__remove::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.unvisible {
+  visibility: hidden;
+  position: absolute;
+}
+
+.file-loader.feedback__field {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  flex-flow: column nowrap;
+}
+
 .section__header {
   position: fixed;
   top: 0;
@@ -9339,7 +9443,7 @@ body {
   width: 100%;
   padding: 0;
   background: #1B1F22;
-  z-index: 1000;
+  z-index: 9999;
   height: 73px;
   box-sizing: border-box;
   border-bottom: 1px solid #292B32;
@@ -10658,6 +10762,22 @@ body {
   height: 728px;
 }
 
+.main__slider-prev {
+  display: none;
+}
+
+.main__slider-prev::after {
+  content: url(../img/svg/button-prev.svg);
+}
+
+.main__slider-next {
+  display: none;
+}
+
+.main__slider-next::after {
+  content: url(../img/svg/button-next.svg);
+}
+
 .main__slider .main__slide {
   position: relative;
   height: 400px;
@@ -10766,6 +10886,7 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
+  top: 15px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -12149,7 +12270,7 @@ body {
 }
 
 .product-card .button__circle {
-  right: 5px;
+  right: 42px;
   top: 5px;
   z-index: 20;
 }
@@ -13822,7 +13943,7 @@ body {
 }
 
 .hardness-gallery .swiper-pagination-bullet {
-  background: #CBCECF;
+  background: #7F8589;
 }
 
 .hardness-gallery .swiper-pagination-bullet-active {
@@ -21797,6 +21918,13 @@ body {
     padding-left: 30px;
   }
 
+  .file-loader__btn {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 150%;
+  }
+
   .section__header .container {
     max-width: calc(100% - 32px);
   }
@@ -21905,6 +22033,14 @@ body {
   .soc.soc--gray .soc__item__picture {
     width: 45px;
     height: 45px;
+  }
+
+  .main__slider-prev {
+    display: flex;
+  }
+
+  .main__slider-next {
+    display: flex;
   }
 
   .main__slider {
@@ -22955,8 +23091,13 @@ body {
     padding-bottom: 0;
   }
 
+  .contacts-duoble__col:nth-child(1) .contacts-duoble__item {
+    padding-bottom: 0;
+  }
+
   .contacts-duoble__item {
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     min-height: auto;
   }
 
@@ -23324,6 +23465,22 @@ body {
 
   .fancybox-thumbs__list a {
     max-width: calc(100% - 10px);
+  }
+
+  .main__slider-prev {
+    left: -10px !important;
+  }
+
+  .main__slider-prev::after {
+    content: url(../img/svg/button-prev--mob.svg);
+  }
+
+  .main__slider-next {
+    right: -10px !important;
+  }
+
+  .main__slider-next::after {
+    content: url(../img/svg/button-next--mob.svg);
   }
 }
 

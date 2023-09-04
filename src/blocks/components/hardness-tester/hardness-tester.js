@@ -32,19 +32,16 @@ $('.js-hardness-gallery').each(function(){
     loop: true,
     speed: 800,
 		allowTouchMove: false,
-		autoplay: {
-			delay: 2000,
-		},
+		// autoplay: {
+		// 	delay: 2000,
+		// },
 		navigation: {
 				nextEl: slider.find('.swiper-button-next')[0],
 				prevEl: slider.find('.swiper-button-prev')[0]
 		},
-		// thumbs: {
-		// 		swiper: galleryThumbs
-		// },
 		pagination: {
 				el: slider.find('.swiper-pagination')[0],
-        clickable: false,
+        clickable: true,
 
 		},
 		breakpoints: {

@@ -13,3 +13,18 @@ $(document).ready(function () {
 			});
 	});
 });
+window.addEventListener('scroll', event => {
+  let navigationLinks = document.querySelectorAll('.main__pagination__item');
+  let fromTop = window.scrollY;
+  navigationLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
