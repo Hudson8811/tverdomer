@@ -31,7 +31,7 @@
   width: 100%;
   margin-bottom: 104px;
   @include max(lg) {
-    flex-flow: column nowrap;
+    flex-flow: column-reverse nowrap;
   }
   @include max(sm ) {
     margin-bottom: 47px;
@@ -56,12 +56,16 @@
       width: 32.81%;
       max-width: 32.81%;
       @include max(lg) {
-        width: 50%;
-        max-width: 50%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
       }
       @include max(md) {
         width: 100%;
         max-width: 100%;
+      }
+      @include max(sm) {
+        margin-bottom: 20px;
       }
     }
   }

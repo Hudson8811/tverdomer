@@ -1,16 +1,30 @@
 .soc {
 	position: fixed;
-	left:5px;
+	left: 50%;
 	top: 385px;
 	display: flex;
 	justify-content: flex-end;
 	flex-flow: column nowrap;
-	width: 100%; 
+	width: auto; 
   pointer-events: none; 
   z-index: 100;
   animation-name: fadeInRight;
 	animation-delay: 1.7s;
   z-index: 800;
+  margin-left: 835px;
+  @media (max-width: 1836px) {
+    margin-left: 0;
+    left: auto;
+    right: 30px;
+  }
+  @media (max-width: 1355px) {
+    margin-left: 0;
+    left: auto;
+    right: 10px;
+  }
+  @include max(lg) {
+		display: none;
+	}
   &--desc {
     @include max(md) {
       display: none;
@@ -22,6 +36,23 @@
     top: auto;
     margin-top: 236px;
     margin-left: 50px;
+    @media (max-width: 1836px) {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-left: 50px;
+      right: auto;
+    }
+    @media (max-width: 1355px) {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-left: 50px;
+      right: auto;
+    }
+    @include max(lg) {
+      display: flex;
+    }
     @include max(md) {
       margin-top: 18px;
       margin-bottom: 24px;

@@ -1,5 +1,20 @@
 .product-card {
   &__slider {
+    &__wrap {
+      position: relative;
+      width: 100%;
+      &--desc {
+        @include max(lg) {
+          display: none;
+        }
+      }
+      &--mob {
+        display: none;
+        @include max(lg) {
+          display: block;
+        }
+      }
+    }
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -22,7 +37,7 @@
     }
   }
   .button__circle {
-    right: 42px;
+    right: 0px;
     top: 5px;
     z-index: 20;
   }

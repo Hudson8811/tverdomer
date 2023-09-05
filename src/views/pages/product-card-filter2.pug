@@ -11,21 +11,14 @@ block content
 				.title__40 Ультразвуковой твердомер МЕТ-У1
 				.product-card#main-filter
 						.product-card__col
-							include ../../blocks/modules/product-card-slider/product-card-slider
+							.product-card__slider__wrap.product-card__slider__wrap--desc
+								include ../../blocks/modules/product-card-slider/product-card-slider
 							include ../../blocks/modules/product-card-question/product-card-question
 
 						.product-card__col
-							//- include ../../blocks/modules/product-cart-filter/product-cart-filter
-							//- два других фильтра, выводится только нужный
+							.product-card__slider__wrap.product-card__slider__wrap--mob
+								include ../../blocks/modules/product-card-slider/product-card-slider
 							include ../../blocks/modules/product-cart-filter-two/product-cart-filter-two
-							//- include ../../blocks/modules/product-cart-filter-tree/product-cart-filter-tree
-		//- .container
-		//- 	.product-card__section
-		//- 		.product-card
-		//- 				.product-card__col
-		//- 					include ../../blocks/modules/product-card-question/product-card-question
-		//- 				.product-card__col
-
 		.container.container--pr-none
 			.title__40 Другие модели
 			include ../../blocks/components/hardness-tester/hardness-tester
