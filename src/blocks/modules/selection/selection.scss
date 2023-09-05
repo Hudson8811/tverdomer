@@ -43,6 +43,7 @@
     }
     @include max(sm) {
       padding: 32px;
+      padding-bottom: 64px;
       margin-bottom: 25px;
     }
     &__title {
@@ -101,7 +102,9 @@
       right: 0;
       margin-left: auto;
       margin-right: auto;
-
+      @include max(sm) { 
+        bottom: 32px;
+      }
     }
   }
 }

@@ -657,13 +657,14 @@ body {
         text-transform: uppercase;
         margin-right: 0px;
         transition: all .3s;
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
         border: none;
         width: 100%;
         max-width: 251px;
         margin-left: auto;
         margin-right: auto;
         @include max(sm) {
+            min-height: 42px;
             max-width: 209px;
             font-size: 11px;
             line-height: 135%; /* 14.85px */
@@ -957,46 +958,23 @@ body {
 	user-select: none;
     &__wrap {
         position: relative;
-        width: 100%;
+        width: 30px;
         position: fixed;
-        left: 20px;
+        right: 50%;
+	    margin-right: 835px;
         bottom: 93px;
-        .container {
-            position: relative;
-            width: 1920px;
-            padding-left: 80px;
-            padding-right: 80px;
-            @include max(xl) {
-              padding-left: 0;
-                padding-right: 0;
-                max-width: calc(100% - 40px * 2);
-                padding-left: 0px;
-                padding-right: 0px;
-                left: 0;
-            }
-                @include max(lg) {
-                    //1024
-                    width: 1168px;
-                    max-width: calc(100% - 32px * 2);
-                    padding-left: 0px;
-                    padding-right: 0px;
-                }
-            
-                @include max(md) {
-                    max-width: calc(100% - 32px * 2);
-                }
-            
-                @include max(sm) {
-                    max-width: calc(100% - 16px * 2);
-                }
+        @media (max-width: 1836px) {
+            margin-left: 0;
+            left: vw(90);
           }
+        @include max(xl) {
+            left: 30px;
+        }
+        @include max(lg) {
+            display: none;
+        }
     }
-    @include max(xl) {
-		left: 0;
-	}
-	@include max(lg) {
-		display: none;
-	}
+
 
 	// &__icon{
     //     display: block;
