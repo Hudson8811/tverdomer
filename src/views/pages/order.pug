@@ -1,0 +1,52 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Order Page";
+
+block content
+	.section.section__white.section--breadcrumbs
+		include ../../blocks/modules/breadcrumbs/breadcrumbs
+		.container
+			.order__section
+				.order__title.title__40 Оформление заказа №423432
+				.order 
+					.order__col
+						.order__list
+							.order__list__top
+								.order__list__title.text__18  Товары в корзине
+								.order__list__buttons
+									.order__list__clear.text__16 Очистить
+							.order__item
+								.order__item__picture
+									img(src="img/index/hardness-gallery__slide--1.png", alt="")
+								.order__item__describe
+									.order__item__title.text__16 Ультразвуковой твердомер МЕТ-У1
+									.order__item__counter
+										.order__item__counter__prev
+												<svg width="17" height="4" viewBox="0 0 17 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect x="1.31772" y="1.29832" width="14.6432" height="1.41503" rx="0.707517" fill="#7F8589" stroke="#7F8589" stroke-width="0.7"/>
+												</svg>									
+										.order__item__counter__count 155
+										.order__item__counter__next
+											<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="1.58481" y="8.29832" width="14.6432" height="1.41503" rx="0.707517" fill="#7F8589" stroke="#7F8589" stroke-width="0.7"/>
+											<rect x="8.19883" y="16.3274" width="14.6432" height="1.41503" rx="0.707517" transform="rotate(-90 8.19883 16.3274)" fill="#7F8589" stroke="#7F8589" stroke-width="0.7"/>
+											</svg>
+										.order__item__counter__text.text__15 1 600 000 руб./шт
+									.order__item__cost.text__18 150 000 руб
+									.order__item__close 
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.7278 2.44104L13.581 0.294312L8.01098 5.86437L2.44092 0.294312L0.294189 2.44104L5.86425 8.0111L0.294189 13.5812L2.44092 15.7279L8.01098 10.1578L13.581 15.7279L15.7278 13.5812L10.1577 8.0111L15.7278 2.44104Z" fill="white"/>
+										</svg>
+					.order__col
+						.order__order
+							.order__order__total
+								.order__order__title Итого:
+								.order__order__total__wrap
+									.order__order__total__cost 150 000 руб
+									.order__order__total__text Включая НДС: 0 ₽
+							.btn.btn--black к оформлению
+		.container.container--pr-none
+			.title__40 Вам может быть интересно
+			include ../../blocks/components/hardness-tester/hardness-tester
+
