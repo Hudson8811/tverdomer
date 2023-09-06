@@ -79,31 +79,31 @@
     background: $greyLight;
     border-radius: 28px;
   }
-  // .text-block {
+  .text-block {
 
-  //   table {
-  //     @include max(md) {
-  //       width: 100%; 
-  //       display: block;
-  //       overflow-x: auto;
-  //       white-space: nowrap;
-  //       padding-bottom: 18px;
-  //       &::-webkit-scrollbar {
-  //         height: 3px;
-  //         border-radius: 10px;
-  //       }
+    table {
+      @include max(md) {
+        width: 100%; 
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 18px;
+        &::-webkit-scrollbar {
+          height: 3px;
+          border-radius: 10px;
+        }
         
-  //       &::-webkit-scrollbar-thumb {
-  //         border-radius: 15px;
-  //         width: 63px;
-  //         background-color:  #E3E3E3;
-  //       }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 15px;
+          width: 63px;
+          background-color:  #E3E3E3;
+        }
         
-  //       &::-webkit-scrollbar-track {
-  //         border-radius: 10px;
-  //         background-color: $greyLight;
-  //       }
-  //     }
-  //   }
-  // }
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          background-color: $greyLight;
+        }
+      }
+    }
+  }
 }

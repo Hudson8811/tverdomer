@@ -1,0 +1,72 @@
+.registrations-complete{
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+	border-radius: 20px;
+	background: $greyLight;
+	padding: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 530px;
+	@include max(sm) {
+		padding: 30px;
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		margin-bottom: 20px;
+		&__title {
+			color:  #454545;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 135%;
+			margin-bottom: 8px;	
+		}
+		&--value {
+			color: $mainDark;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 135%;
+		}
+	}
+	&__buttons {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		margin-top: 16px;
+		width: 100%;
+		@include max(sm) {
+			margin-top: 0;
+		}
+	}
+	&__btn {
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 550;
+		line-height: 135%; /* 16.2px */
+		text-transform: uppercase;
+		height: 45px;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+    @include max(sm) {
+			height: 42px;
+			margin-top: 8px;
+		}
+    @include max(xs) {
+			height: 42px;
+			font-size: 11px;
+		}
+	}
+}

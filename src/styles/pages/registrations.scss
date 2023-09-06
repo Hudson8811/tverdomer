@@ -1,0 +1,115 @@
+.registrations {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+	border-radius: 20px;
+	background: $greyLight;
+	padding: 60px 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 530px;
+	@include max(sm) {
+		padding: 30px;
+	}
+	&__title {
+		margin-bottom: 26px;
+		width: 100%;
+		text-align: center;
+	}
+	&__btn {
+		margin-top: 16px;
+		height: 64px;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 550;
+		line-height: 135%; /* 21.6px */
+		text-transform: uppercase;
+    @include max(md) {
+
+			font-size: 16px;
+		}
+    @include max(sm) {
+			height: 42px;
+			margin-top: 8px;
+		}
+    @include max(xs) {
+			height: 42px;
+			font-size: 11px;
+		}
+	}
+	&__input-block {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 16px;
+		&--pass {
+
+		}
+	}
+	&__input {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 16px;
+	}
+	&__field {
+		min-height: 64px;
+		padding: 0 34px;
+		border-radius: 15px;
+		background: var(--white, #FFF);
+		display: flex;
+		border: none;
+		width: 100%;
+		outline: none;
+		color: $greyBlack !important;
+		&::placeholder {
+			color: $greyBlack;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 150%;
+			@include max(sm) {
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 550;
+					line-height: 150%;
+			}
+		}
+		&--pass {
+			padding-right: 75px;
+		}
+		&--icon {
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			right: 25px;
+			top: calc(50% - 12px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include max(sm) {
+				width: 14px;
+			}
+			svg {
+				position:relative; 
+				width: 100%;
+				object-fit: contain;
+				object-position: center center;
+			
+			}
+		}
+		@include max(sm) {
+			min-height: 48px;
+			padding: 0 24px;
+			margin-bottom: 0px;
+			font-size: 12px;
+		}
+	}
+}

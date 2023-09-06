@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.section.section__white.section--breadcrumbs
+		include ../../blocks/modules/breadcrumbs/breadcrumbs
+		.container
+			.registrations-complete
+				.registrations-complete__item
+					.registrations-complete__item--title ИНН Организации
+					.registrations-complete__item--value 4543545345434
+				.registrations-complete__item
+					.registrations-complete__item--title ФИО ответственного лица
+					.registrations-complete__item--value Панов Анатолий Яковлевич
+				.registrations-complete__item
+					.registrations-complete__item--title Почта ответственного лица
+					.registrations-complete__item--value panoff783442@rambler.ru
+				.registrations-complete__item
+					.registrations-complete__item--title Тепефон ответственного лица
+					.registrations-complete__item--value +7 906 892 82 82
+				.registrations-complete__buttons
+					.btn.btn--black.registrations-complete__btn Подтвердить
+					.btn.btn--black.registrations-complete__btn Подтвердить и отправить 1с
+					.btn.btn--black.registrations-complete__btn отклонить
