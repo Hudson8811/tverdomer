@@ -503,7 +503,7 @@ questionAccordions.forEach((accordion) => {
 $(window).on('load', () => {
 	function initSelectsLikeAnketaPage() {
 		$('.js-example-form:not(.select2-hidden-accessible').select2({
-			theme: "custom-theme",
+			theme: "calendar",
 			language: 'ru',
 			width: '100%',
 			minimumResultsForSearch: Infinity,
@@ -596,7 +596,7 @@ $(window).on('load', () => {
 							container.find('.js-example-form').each(function (index) {
 								var select = $(this);
 								select.select2({
-									theme: "custom-theme",
+									theme: "calendar",
 									language: 'ru',
 									width: '100%',
 									minimumResultsForSearch: Infinity,
