@@ -1,7 +1,7 @@
 .soc {
 	position: fixed;
 	left: 50%;
-	top: 385px;
+	top: vh(385);
 	display: flex;
 	justify-content: flex-end;
 	flex-flow: column nowrap;
