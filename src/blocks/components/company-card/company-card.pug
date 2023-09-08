@@ -1,40 +1,41 @@
-.company-card
-	.company-card__block
-		.company-card__title.text__20 ООО «ВЫМПЕЛ»
-		.company-card__user.text__16 Егоров Андрей
-	.company-card__block
-		.company-card__sale
-			.company-card__sale__row
-				.company-card__sale__title.text__16 Скидки
-			.company-card__sale__row
-				.company-card__sale__name.text__16 Твердомеры
-				.company-card__sale__value.text__16 15%
-			.company-card__sale__row
-				.company-card__sale__name.text__16 Меры твердости
-				.company-card__sale__value.text__16 18%
-	.company-card__block
-		a(href="#").company-card__link.text__16 Текущие заказы
-		a(href="#").company-card__link.text__16 История заказов
-		a(href="#").company-card__link.text__16 Сменить пароль
-	.company-card__block
-		.company-card__report
-			.company-card__report__title.text__16 Акт сверки
-			.company-card__report__date
-				label.label__start
-					b
-					span.span__start 
-						<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-						<path d="M4.71875 0.59375H7.46875V4.71875H4.71875V0.59375Z" fill="#1B1F22"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M14 6.09375H3L3 2.65625H0.25V16.4062H16.75V2.65625H14V6.09375ZM14 8.84375H3V13.6562H14V8.84375Z" fill="#1B1F22"/>
-						<path d="M9.53125 4.71875H12.2812V0.59375H9.53125V4.71875Z" fill="#1B1F22"/>
-						</svg>
-					input#date-picker(type="text" placeholder="Выбрать период")
-			.btn.btn--black запросить акт сверки
-	.company-card__bottom
-		.company-card__bottom__row
-			.btn.company-card__btn--exit 
-				!="Выйти"
-				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-				<path d="M0 0L1.43051e-06 18H6V15H3L3 3L6 3V0H0Z" fill="#1B1F22"/>
-				<path d="M10.5754 5.81801L12.6967 3.69669L18 9L12.6967 14.3033L10.5754 12.182L12.2574 10.5L6 10.5V7.50001L12.2574 7.50001L10.5754 5.81801Z" fill="#1B1F22"/>
-				</svg>
+.company-card__section
+	.company-card
+		.company-card__block
+			.company-card__title.text__20 ООО «ВЫМПЕЛ»
+			.company-card__user.text__16 Егоров Андрей
+		.company-card__block
+			.company-card__sale
+				.company-card__sale__row
+					.company-card__sale__title.text__16 Скидки
+				.company-card__sale__row
+					.company-card__sale__name.text__16 Твердомеры
+					.company-card__sale__value.text__16 15%
+				.company-card__sale__row
+					.company-card__sale__name.text__16 Меры твердости
+					.company-card__sale__value.text__16 18%
+		.company-card__block
+			a(href="#").company-card__link.text__16 Текущие заказы
+			a(href="#").company-card__link.text__16 История заказов
+			a(href="#").company-card__link.text__16 Сменить пароль
+		.company-card__block
+			.company-card__report
+				.company-card__report__title.text__16 Акт сверки
+				.company-card__report__date
+					label.label__start
+						b
+						span.span__start 
+							<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+							<path d="M4.71875 0.59375H7.46875V4.71875H4.71875V0.59375Z" fill="#1B1F22"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M14 6.09375H3L3 2.65625H0.25V16.4062H16.75V2.65625H14V6.09375ZM14 8.84375H3V13.6562H14V8.84375Z" fill="#1B1F22"/>
+							<path d="M9.53125 4.71875H12.2812V0.59375H9.53125V4.71875Z" fill="#1B1F22"/>
+							</svg>
+						input#date-picker(type="text" placeholder="Выбрать период")
+				.btn.btn--black запросить акт сверки
+		.company-card__bottom
+			.company-card__bottom__row
+				.btn.company-card__btn--exit 
+					!="Выйти"
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+					<path d="M0 0L1.43051e-06 18H6V15H3L3 3L6 3V0H0Z" fill="#1B1F22"/>
+					<path d="M10.5754 5.81801L12.6967 3.69669L18 9L12.6967 14.3033L10.5754 12.182L12.2574 10.5L6 10.5V7.50001L12.2574 7.50001L10.5754 5.81801Z" fill="#1B1F22"/>
+					</svg>

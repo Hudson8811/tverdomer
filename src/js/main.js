@@ -9,9 +9,8 @@
 @@include("./libs/resizeSensor.js")
 @@include("./libs/sticky-sidebar.js")
 @@include("./libs/jquery.mask.min.js")
-@@include("./libs/flatpickr-ru-locale.js")
 @@include("./libs/flatpickr.min.js")
-
+@@include("./libs/flatpickr-ru-locale.js")
 //my files
 @@include("./import/maps.js")
 @@include("./import/main.js")

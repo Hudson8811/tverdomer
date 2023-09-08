@@ -6,7 +6,7 @@
 	flex-flow: column nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	width: 100%;
+	width: 310px;
 	background: $greyLight;
 	border-radius: 10px;
 	padding: 30px;
@@ -14,6 +14,41 @@
 	@include max(sm) {
 		padding: 20px;
 		padding-bottom: 30px;
+		width: 310px;
+		display: none;
+	}
+	&.active {
+		display: flex;
+	}
+	&__section {
+		position: relative;
+		width: auto;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		@include max(sm) {
+			position: fixed;
+			top:55px;
+			right: 0;
+			width: 0;
+			height: 0;
+			z-index: 9999;
+			background: $white;
+			padding: 52px 40px;
+			visibility: hidden;
+			transition: all .3s;
+			overflow: auto;
+		}
+		@include max(xs) {
+			padding: 52px 20px;
+			
+		}
+		&.active {
+			width: 100vw;
+			height: calc(100vh - 55px);
+			visibility: inherit;
+			transition: all .3s;
+		}
 	}
 	&__block {
 		position: relative;
@@ -518,15 +553,12 @@ span.flatpickr-weekday {
 	opacity: 0;
 	pointer-events: none;
 }
-
-
 .flatpickr-custom-selects {
 	display: flex;
 	justify-content: space-between;
 
 
 }
-
 .flatpickr-custom-select {
 
 	.select2-container .select2-dropdown .select2-results__options {
@@ -568,14 +600,9 @@ span.flatpickr-weekday {
 
 	}
 }
-
 .flatpickr-month {
 	display: none;
 }
-
-
-
-
 .form-page {
 	position: relative;
 	display: flex;

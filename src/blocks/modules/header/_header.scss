@@ -499,6 +499,9 @@
 			align-items: center;
 			margin-right: 35px;
 			transition: all .3s;
+			@include max(mdHeader) {
+				margin-right: 25px;
+			}
 			&:hover {
 				color: $white;
 				transition: all .3s;
@@ -523,7 +526,8 @@
 			line-height: 150%;
 			&--desc {
 				@include max(mdHeader) {
-					display: none;
+					// display: none;
+					margin-right: 25px;
 				}
 			}
 			&:hover {
