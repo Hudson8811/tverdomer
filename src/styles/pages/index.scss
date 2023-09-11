@@ -88,9 +88,20 @@
     @include max(sm) {
       left: auto;
       right: 0;
-      bottom: 0;
       font-size: vw2(12);
       padding-bottom: vw2(5);
+      bottom: vw2(-36);
+    }
+    &--desc {
+      @include max(sm) {
+        display: none;
+      }
+    }
+    &--mob {
+      display: none;
+      @include max(sm) {
+        display: flex;
+      }
     }
   }
 }

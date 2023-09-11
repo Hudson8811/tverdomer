@@ -5,14 +5,14 @@ block variables
 	- const title = "Project title"
 
 block content
-	.main__header(id="index1") 
+	.main__header(id="main1") 
 		.container
 			.main__header__title.animate__animated 
 				!="Точность без компромисcов"
 			include ../blocks/modules/main-slider/main-slider
 			.main__header__registry.animate__animated
 				img(src="img/svg/reestr.svg" alt="")
-			a(href="#").btn.main__header__button.animate__animated купить
+			a(href="#").btn.main__header__button.main__header__button--desc.animate__animated купить
 			.button__circle.animate__animated(href="https://youtu.be/ebClY2tcCL4?si=39oJ3fYYG1frMhJ6" data-fancybox="video"  data-caption="Большое нзвание для фото 1")
 				.button__circle-inner
 					img.button__circle-outside(src="img/index/button__circle-outside.png" alt="")
@@ -37,34 +37,34 @@ block content
 	include ../blocks/modules/soc/soc
 	.main__pagination.animate__animated
 		.main__pagination__wrap
-			a(href="#index1").main__pagination__item.active
+			a(href="#main1").main__pagination__item.active
 				!="01"
-			a(href="#index2").main__pagination__item
+			a(href="#main2").main__pagination__item
 				!="02"
-			a(href="#index3").main__pagination__item
+			a(href="#main3").main__pagination__item
 				!="03"
-			a(href="#index4").main__pagination__item
+			a(href="#main4").main__pagination__item
 				!="04"
-			a(href="#index5").main__pagination__item
+			a(href="#main5").main__pagination__item
 				!="05"
 
-	.section.section__black(id="index2")
+	.section.section__black(id="main2")
 		.container
 			include ../blocks/components/hardness/hardness
 			include ../blocks/components/ultrasonic/ultrasonic
 			include ../blocks/components/measure/measure
 			include ../blocks/components/warranty/warranty
-	.section.section__white.section--pr-none.products__section(id="index3")
+	.section.section__white.section--pr-none.products__section(id="main3")
 			include ../blocks/modules/products/products
 
-	.section.section__black(id="index4")
+	.section.section__black(id="main4")
 		.container
 			include ../blocks/components/arguments/arguments	
 			include ../blocks/modules/soc-big/soc-big
 		.container.container--pr-none
 			include ../blocks/components/fabrication/fabrication
 
-	.section.section__white.section--pr-none.infocenter__section(id="index5")
+	.section.section__white.section--pr-none.infocenter__section(id="main5")
 		.container
 			//- .title__40 Наша продукция
 			include ../blocks/components/infocenter/infocenter

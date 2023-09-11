@@ -538,6 +538,61 @@ body {
           background: $greyBlack;
         }
     }
+    &--gray{
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9px;
+        background: $greyLight;
+        color: $greyBlack !important;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 550;
+        line-height: 135%;
+        min-height: 45px;
+        padding-left: 25px;
+        padding-right: 25px;
+        max-width: 100%;
+        width: 100%;
+        text-transform: uppercase;
+        transition: all .3s;
+        padding-bottom: 0;
+        &::after {
+          display: none;
+        }
+        &::before {
+            display: none;
+        }
+        @include max(md) {
+            padding-bottom: 0;
+        }
+        @include max(sm) {
+            color: $red;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 550;
+            line-height: 135%; /* 14.85px */
+            text-transform: uppercase;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        svg,img {
+            margin-right: 10px;
+            path {
+                @include max(sm) {
+                    fill: $red;
+                }
+            }
+
+        }
+        &:hover {
+          transition: all .3s;
+          background: $greyBlack;
+        }
+    }
 
     &--filter {
         position: absolute;
