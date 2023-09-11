@@ -70,6 +70,9 @@
         padding-right: 0;
         margin-bottom: 0px;
       }
+      // @include max(sm){
+      //  max-width: 576px;
+      // }
       @include max(xs) {
         margin-bottom: 0px;
       }
@@ -92,16 +95,24 @@
     align-items: flex-start;
     border: 1px solid #E3E3E3;
     border-bottom: none;
+    @include max(sm){
+      border-bottom: 1px solid #E3E3E3;
+      border-radius: 5px 5px 5px 5px;
+      border: none;
+    }
     &:first-child {
       border-radius: 5px 5px 0 0;
+      @include max(sm){
+        border-radius: 5px 5px 5px 5px;
+      }
     }
     &:last-child {
       border-bottom: 1px solid #E3E3E3;
       border-radius: 0 0 5px 5px;
-    }
-
-    @include max(xs) {
-      border: none;
+      @include max(sm){
+        border-bottom: none;
+        border-radius: 5px 5px 5px 5px;
+      }
     }
 
     &__buttons {
@@ -162,7 +173,11 @@
       &__repeat {
         padding-left: 26px;
         padding-right: 26px;
+        @include max(xs) {
+          min-height: 42px;
+        }
       }
+
     }
   }
   &__order {
@@ -215,6 +230,7 @@
         font-weight: 550;
         line-height: 135%;
         margin-bottom: 5px;
+
       }
       &__text {
         color: $greyBlack;
@@ -239,10 +255,9 @@
     @include max(md) {
       align-items: flex-start;
     }
-    @include max(xs) {
-      padding-bottom: 30px;
-      margin-bottom: 0px;
-      padding-left: 0;
+    @include max(sm) {
+      padding: 30px;
+      padding-bottom: 0;
     }
     &:last-child {
       border-bottom: none;
@@ -265,6 +280,7 @@
       @include max(xs) {
         width: 110px;
         height: 110px;
+        margin-right: 16px;
       }
       img,picture {
         position: absolute;
@@ -285,10 +301,26 @@
       border-radius: 10px;
       border: 1px solid #E3E3E3;
       margin-bottom: 18px;
-
+      @include max(sm) {
+        align-items: flex-start;
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid #E3E3E3;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+      &:last-child {
+        @include max(sm) {
+          border-bottom: none;
+          margin-bottom: 0px;
+        }
+      }
       &__top {
         padding-bottom: 19px;
         border: none;
+        @include max(sm) {
+          display: none;
+        }
         .history__item__picture {
           background: transparent;
           height: auto;
@@ -309,34 +341,80 @@
       justify-content: flex-start;
       align-items: center;
       width: calc(100% - 120px);
+      @include max(sm) {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
       &__col {
         position: relative;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
-        
+        align-items: flex-start;
+        flex-flow: column nowrap;
         color: $mainDark;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
         line-height: 135%; /* 24.3px */
         letter-spacing: 0.54px;
+        @include max(sm) {
+          margin-bottom: 8px;
+        }
+        &:nth-child(3) {
+          @include max(sm) {
+            margin-bottom: 2px;
+          }
+        }
+        &:nth-child(4) {
+          @include max(sm) {
+            margin-bottom: 2px;
+          }
+        }
+        &:last-child {
+          @include max(sm) {
+            margin-bottom: 0px;
+          }
+        }
+        span {
+          display: none;
+          @include max(sm) {
+            display: block;
+          }
+        }
         &:nth-child(1) {
           width: 30.22%;
+          @include max(sm) {
+            width: 100%;
+          }
         }
         &:nth-child(2) {
           width: 20.23%;
+          @include max(sm) {
+            width: 100%;
+          }
         }
         &:nth-child(3) {
           width: 16.91%;
+          @include max(sm) {
+            width: 100%;
+          }
         }
         &:nth-child(4) {
           width: 15.51%;
+          @include max(sm) {
+            width: 100%;
+          }
         }
         &:nth-child(5) {
           width: 16.91%;
+          @include max(sm) {
+            width: 100%;
+          }
         }
       }
+
+
     }
     &__name {
       font-size: 16px;
@@ -344,6 +422,13 @@
       font-weight: 700;
       line-height: 150%; 
       max-width: 160px;
+      @include max(sm) {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        max-width: 175px;
+      }
     }
     &__bottom {
       position: relative;
@@ -355,6 +440,11 @@
       padding-bottom: 30px;
       padding-left: 33px;
       padding-right: 33px;
+      @include max(sm) {
+        flex-flow: column nowrap;
+        padding: 34px 30px;
+        padding-bottom: 0;
+      }
       &__col {
         position: relative;
         display: flex;
@@ -363,9 +453,16 @@
         align-items: flex-start;
         &:nth-child(1) {
           width: 50%;
+          @include max(sm) {
+            width: 100%;
+            margin-bottom: 24px;
+          }
         }
         &:nth-child(2) {
           width: 50%;
+          @include max(sm) {
+            width: 100%;
+          }
         }
       }
     }
@@ -377,6 +474,10 @@
       width: 100%;
       max-width: 402px;
       flex-flow: column nowrap;
+      @include max(xs) {
+        width: 100%;
+        max-width: 100%;
+      }
       &__row {
         position: relative;
         display: flex;
@@ -384,19 +485,44 @@
         align-items: center;
         width: 100%;
         margin-bottom: 17px;
+        @include max(sm) {
+          margin-bottom: 14px;
+        }
         &.total {
           margin-top: 13px;
+          @include max(sm) {
+            margin-top: 0px;
+            margin-bottom: 0;
+          }
           .history__item__tabel__title {
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
-            line-height: 135%
+            line-height: 135%;
+            @include max(xs) {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 135%;
+            }
           }
           .history__item__tabel__value {
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
-            line-height: 135%            
+            line-height: 135%;
+            @include max(xs) {
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 135%;
+            }         
+          }
+        }
+        &:nth-child(3) {
+          @include max(sm) {
+            padding-bottom: 14px;
+            border-bottom: 1px solid #E3E3E3;
           }
         }
       }
@@ -429,10 +555,17 @@
       width: 100%;
       flex-flow: column nowrap;
       max-width: 320px;
+      @include max(xs) {
+        width: 100%;
+        max-width: 100%;
+      }
       .btn {
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: 11px;
+        @include max(xs) {
+          min-height: 42px;
+        }
       }
       &__row {
         position: relative;
@@ -453,6 +586,54 @@
       }
 
     }
+    &__cost {
+      @include max(sm) {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%; /* 21.6px */
+        letter-spacing: 0.48px;
+      }
+      &--no-sale {
+        color: $greyBlack;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%; /* 18.9px */
+        letter-spacing: 0.42px;
+        text-decoration: line-through;
+        @include max(sm) {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 135%; /* 18.9px */
+          letter-spacing: 0.42px;
+          text-decoration: line-through;
+        }
+      }
+    }
+    &__text {
+      @include max(sm) {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $mainDark;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%;       
+      }
+      span {
+        color: $greyBlack;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 135%;
+        margin-right: 8px;
+      } 
+    }
   }
   .accordion {
 		width: 100%;
@@ -460,6 +641,9 @@
 		position: relative;
 		margin-bottom: 0px;
 		display: block;
+    @include max (sm) {
+      margin-bottom: 34px;
+    }
     &:first-child {
       border-top: 1px solid #E3E3E3;
     }
@@ -479,12 +663,19 @@
       // border: 1px solid #E3E3E3;
       border-bottom: 1px solid transparent;
       border-top: none;
+      @include max(md){
+        padding-bottom: 92px;
+        padding-top: 30px;
+      }
+      @include max(sm){
+        padding-right: 60px;
+        flex-flow: row wrap;
+        padding-bottom: 72px;
+        border: 1px solid #E3E3E3;
+        border-radius: 5px;
+      }
       @include max(xs) {
-        border: none;
-        border-radius: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        min-height: 62px;
+        padding-left: 30px;
       }
 			&:last-child {
 				margin-bottom: 0;
@@ -543,6 +734,41 @@
 
 				}
 			}
+      &__col {
+        @include max(sm){
+          width: 50%;
+          min-width: 50%;
+          margin-bottom: 21px;
+        }
+        &:nth-child(5) {
+          @include max(md){
+            position: absolute;
+            bottom: 30px;
+            left: 33px;
+            margin-bottom: 0;
+            
+          }
+          @include max(sm){
+            width: auto;
+            min-width: auto;
+          }
+          @include max(xs){
+           left: 30px;
+          }
+        }
+        &:nth-child(6) {
+          @include max(sm){
+            position: absolute;
+            right: 20px;
+            bottom: 96px;
+            margin-bottom: 0;
+          }
+          @include max(sm){
+            width: auto;
+            min-width: auto;
+          }
+        }
+      }
 		} 
 	
 		&__content {
@@ -586,6 +812,17 @@
 				margin-bottom: 0;
         padding-bottom: 0;
         border-bottom: 1px solid #E3E3E3;
+      @include max(md){
+        padding-bottom: 92px;
+        padding-top: 30px;
+      }
+      @include max(sm){
+        padding-right: 60px;
+        padding-bottom: 72px;
+      }
+      @include max(xs) {
+        padding-left: 30px;
+      }
         .accordion__intro__img {
           animation-name: rotationOpenMenuSidebar;
           animation-duration: .2s;
