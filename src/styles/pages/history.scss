@@ -13,9 +13,9 @@
     }
   }
   &__title {
-    @include max(sm) {
-      margin-bottom: 56px;
-    }
+    // @include max(sm) {
+    //   margin-bottom: 56px;
+    // }
   }
   .company-card  {
     @include max(lg) {
@@ -114,7 +114,22 @@
         border-radius: 5px 5px 5px 5px;
       }
     }
-
+    &__top {
+      .accordion__intro__col {
+        &:nth-child(2n){
+          @include max(xs) {
+            max-width: 104px;
+            min-width: 104px;
+          }
+        }
+        &:nth-child(6){
+          @include max(xs) {
+            max-width: auto;
+            min-width: auto;
+          }
+        }
+      }
+    }
     &__buttons {
       position: relative;
       display: flex;
@@ -173,8 +188,10 @@
       &__repeat {
         padding-left: 26px;
         padding-right: 26px;
+        border-radius: 5px;
         @include max(xs) {
           min-height: 42px;
+          max-width: 100%;
         }
       }
 
@@ -358,17 +375,36 @@
         font-weight: 700;
         line-height: 135%; /* 24.3px */
         letter-spacing: 0.54px;
+        padding-left: 5px;
+        padding-right: 5px;
         @include max(sm) {
           margin-bottom: 8px;
         }
+        &:nth-child(1) {
+          @include max(sm) {
+            order: 1;
+            margin-bottom: 10px;
+          }
+        }
+        &:nth-child(2) {
+          @include max(sm) {
+            order: 2;
+            margin-bottom: 13px;
+          }
+        }
         &:nth-child(3) {
           @include max(sm) {
-            margin-bottom: 2px;
+            order: 5;
           }
         }
         &:nth-child(4) {
           @include max(sm) {
-            margin-bottom: 2px;
+            order: 3;
+          }
+        }
+        &:nth-child(5) {
+          @include max(sm) {
+            order: 4;
           }
         }
         &:last-child {
@@ -563,6 +599,7 @@
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: 11px;
+        border-radius: 5px;
         @include max(xs) {
           min-height: 42px;
         }
@@ -670,7 +707,7 @@
       @include max(sm){
         padding-right: 60px;
         flex-flow: row wrap;
-        padding-bottom: 72px;
+        padding-bottom: 76px;
         border: 1px solid #E3E3E3;
         border-radius: 5px;
       }
@@ -738,7 +775,7 @@
         @include max(sm){
           width: 50%;
           min-width: 50%;
-          margin-bottom: 21px;
+          margin-bottom: 15px;
         }
         &:nth-child(5) {
           @include max(md){
@@ -753,6 +790,7 @@
             min-width: auto;
           }
           @include max(xs){
+            width: calc(100% - 92px);
            left: 30px;
           }
         }
@@ -818,7 +856,7 @@
       }
       @include max(sm){
         padding-right: 60px;
-        padding-bottom: 72px;
+        padding-bottom: 76px;
       }
       @include max(xs) {
         padding-left: 30px;
