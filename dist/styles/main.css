@@ -22755,6 +22755,9 @@ span.flatpickr-weekday:last-child {
   }
 
   .comparison__tabel__col__icon-p {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     margin-bottom: 16px;
   }
@@ -25607,6 +25610,10 @@ span.flatpickr-weekday:last-child {
     order: 3;
   }
 
+  .comparison__section {
+    padding-top: 12px;
+  }
+
   .comparison__section .container {
     max-width: calc(100% - 0px);
     padding-left: 16px;
@@ -26686,7 +26693,6 @@ span.flatpickr-weekday:last-child {
   }
 
   .comparison__section {
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 

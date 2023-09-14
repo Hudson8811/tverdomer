@@ -22,8 +22,10 @@
     background-color: $grey;
   }
   &__section {
+    @include max(sm) {
+      padding-top: 12px;
+    }
     @include max(xs) {
-      padding-top: 40px;
       padding-bottom: 40px;
     }
     .container {
@@ -135,6 +137,9 @@
       &__icon-p {
         display: none;
         @include max(mdHeader) {
+          position: absolute;
+          top: 0;
+          left: 0;
           display: block;
           margin-bottom: 16px;
         }
