@@ -11,8 +11,30 @@
     @include max(sm) {
       margin-bottom: 56px;
     }
+    .container {
+      @include max(xl) {
+        //1024
+        width: 1400px;
+        max-width: calc(100% - 80px * 2);
+      }
+      @include max(lg) {
+        //1024
+        width: 1168px;
+        max-width: calc(100% - 32px * 2);
+      }
+    
+      @include max(md) {
+        max-width: calc(100% - 32px * 2);
+      }
+    
+      @include max(sm) {
+        max-width: calc(100% - 16px * 2);
+      }
+    }
   }
+
   &__title {
+    margin-bottom: 40px;
     // @include max(sm) {
     //   margin-bottom: 56px;
     // }
@@ -176,19 +198,24 @@
       min-height: 30px;
       background: #1D67D6;
       border-radius: 5px;
-      padding-left: 23px;
-      padding-right: 23px;
+      padding-left: 10px;
+      padding-right: 10px;
       color: $white;
       font-size: 12px;
       font-style: normal;
       font-weight: 550;
       line-height: 135%; /* 16.2px */
+      max-width: 79px;
+      width: 79px;
     }
     &__btn {
       &__repeat {
-        padding-left: 26px;
-        padding-right: 26px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-radius: 5px;
+        max-width: 170px;
+        margin-left: 0;
+        margin-right: 0;
         @include max(xs) {
           min-height: 42px;
           max-width: 100%;
@@ -276,6 +303,10 @@
       padding: 30px;
       padding-bottom: 0;
     }
+    @include max(xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &:last-child {
       border-bottom: none;
       @include max(xs) {
@@ -333,7 +364,7 @@
         }
       }
       &__top {
-        padding-bottom: 19px;
+        padding-bottom: 0px;
         border: none;
         @include max(sm) {
           display: none;
@@ -473,7 +504,7 @@
       justify-content: flex-start;
       border-top: 1px solid #E3E3E3;
       padding-top: 41px;
-      padding-bottom: 30px;
+      padding-bottom: 10px;
       padding-left: 33px;
       padding-right: 33px;
       @include max(sm) {
@@ -481,14 +512,24 @@
         padding: 34px 30px;
         padding-bottom: 0;
       }
+      @include max(xs) {
+        padding-left: 0;
+        padding-right: 0;
+      }
       &__col {
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include max(sm) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
         &:nth-child(1) {
-          width: 50%;
+          width: calc(50% - 20px);
           @include max(sm) {
             width: 100%;
             margin-bottom: 24px;
@@ -510,7 +551,7 @@
       width: 100%;
       max-width: 402px;
       flex-flow: column nowrap;
-      @include max(xs) {
+      @include max(sm) {
         width: 100%;
         max-width: 100%;
       }
@@ -591,7 +632,7 @@
       width: 100%;
       flex-flow: column nowrap;
       max-width: 320px;
-      @include max(xs) {
+      @include max(sm) {
         width: 100%;
         max-width: 100%;
       }
@@ -772,6 +813,38 @@
 				}
 			}
       &__col {
+        padding-left: 10px;
+        padding-right: 10px;
+        @include max(md) {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        &:nth-child(1) {
+          width: 20.28%;
+        }
+        &:nth-child(2) {
+          width: 13.52%;
+        }
+        &:nth-child(3) {
+          width: 20.03%;
+        }
+        &:nth-child(4) {
+          width: 17.28%;
+
+        }
+        &:nth-child(5) {
+          width: 28.89%;
+          display: flex;
+          justify-content: flex-end;
+          @include max(md) {
+            justify-content: flex-start;
+          }
+        }
+        &:nth-child(6) {
+          width: 5.48%;
+          display: flex;
+          justify-content: flex-end;
+        }
         @include max(sm){
           width: 50%;
           min-width: 50%;

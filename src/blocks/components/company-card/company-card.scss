@@ -58,15 +58,15 @@
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		border-bottom: 1px solid #CBCECF;
-		padding-bottom: 24px;
-		margin-bottom: 24px;
+		padding-bottom: 21px;
+		margin-bottom: 15px;
 		@include max(sm) {
 			padding-bottom: 22px;
 			margin-bottom: 22px;
 		}
 	}
 	&__title {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		font-weight: 700;
 	}
 	&__user {
@@ -86,7 +86,8 @@
 		}
 		&__title {
 			color: $red !important;
-			font-weight: 700;		
+			font-weight: 700;	
+			margin-bottom: 5px;	
 		}
 		&__name {
 			color: $red !important;
@@ -101,6 +102,10 @@
 		font-weight: 400;
 		text-decoration: none;
 		transition: all .3s;
+		margin-bottom: 6px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
 		&:hover {
 			transition: all .3s;
 			color: $greyBlack !important;
@@ -159,6 +164,7 @@
 		}
 	}
 	&__btn--exit {
+		margin-top: 10px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -463,9 +469,9 @@ span.flatpickr-weekday {
 .flatpickr-day.selected,
 .flatpickr-day.startRange,
 .flatpickr-day.endRange,
-.flatpickr-day.selected.inRange,
-.flatpickr-day.startRange.inRange,
-.flatpickr-day.endRange.inRange,
+// .flatpickr-day.selected.inRange,
+// .flatpickr-day.startRange.inRange,
+// .flatpickr-day.endRange.inRange,
 .flatpickr-day.selected:focus,
 .flatpickr-day.startRange:focus,
 .flatpickr-day.endRange:focus,
@@ -495,12 +501,12 @@ span.flatpickr-weekday {
 	}
 }
 
-.flatpickr-day.inRange,
-.flatpickr-day.prevMonthDay.inRange,
-.flatpickr-day.nextMonthDay.inRange,
-.flatpickr-day.today.inRange,
-.flatpickr-day.prevMonthDay.today.inRange,
-.flatpickr-day.nextMonthDay.today.inRange,
+// .flatpickr-day.inRange,
+// .flatpickr-day.prevMonthDay.inRange,
+// .flatpickr-day.nextMonthDay.inRange,
+// .flatpickr-day.today.inRange,
+// .flatpickr-day.prevMonthDay.today.inRange,
+// .flatpickr-day.nextMonthDay.today.inRange,
 .flatpickr-day:hover,
 .flatpickr-day.prevMonthDay:hover,
 .flatpickr-day.nextMonthDay:hover,
@@ -513,7 +519,9 @@ span.flatpickr-weekday {
 	color: #fff !important;
 	border-color: #fff;
 }
-
+.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+	box-shadow: none;
+}
 .flatpickr-input {
 	min-height: 45px;
 	padding-left: 22px;

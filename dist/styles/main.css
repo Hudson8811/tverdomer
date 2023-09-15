@@ -9411,6 +9411,12 @@ body {
   padding-bottom: 0;
 }
 
+.btn--black.disabled {
+  cursor: not-allowed !important;
+  background: #F5F5F5 !important;
+  color: #7F8589 !important;
+}
+
 .btn--black::after {
   display: none;
 }
@@ -17270,12 +17276,12 @@ body {
   align-items: flex-start;
   flex-flow: column nowrap;
   border-bottom: 1px solid #CBCECF;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-bottom: 21px;
+  margin-bottom: 15px;
 }
 
 .company-card__title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: 700;
 }
 
@@ -17301,6 +17307,7 @@ body {
 .company-card__sale__title {
   color: #FF3E41 !important;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .company-card__sale__name {
@@ -17317,6 +17324,11 @@ body {
   font-weight: 400;
   text-decoration: none;
   transition: all 0.3s;
+  margin-bottom: 6px;
+}
+
+.company-card__link:last-child {
+  margin-bottom: 0px;
 }
 
 .company-card__link:hover {
@@ -17381,6 +17393,7 @@ body {
 }
 
 .company-card__btn--exit {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17654,9 +17667,6 @@ span.flatpickr-weekday:last-child {
 .flatpickr-day.selected,
 .flatpickr-day.startRange,
 .flatpickr-day.endRange,
-.flatpickr-day.selected.inRange,
-.flatpickr-day.startRange.inRange,
-.flatpickr-day.endRange.inRange,
 .flatpickr-day.selected:focus,
 .flatpickr-day.startRange:focus,
 .flatpickr-day.endRange:focus,
@@ -17680,9 +17690,6 @@ span.flatpickr-weekday:last-child {
 .flatpickr-day.selected:nth-child(7n),
 .flatpickr-day.startRange:nth-child(7n),
 .flatpickr-day.endRange:nth-child(7n),
-.flatpickr-day.selected.inRange:nth-child(7n),
-.flatpickr-day.startRange.inRange:nth-child(7n),
-.flatpickr-day.endRange.inRange:nth-child(7n),
 .flatpickr-day.selected:focus:nth-child(7n),
 .flatpickr-day.startRange:focus:nth-child(7n),
 .flatpickr-day.endRange:focus:nth-child(7n),
@@ -17701,9 +17708,6 @@ span.flatpickr-weekday:last-child {
 .flatpickr-day.selected::before,
 .flatpickr-day.startRange::before,
 .flatpickr-day.endRange::before,
-.flatpickr-day.selected.inRange::before,
-.flatpickr-day.startRange.inRange::before,
-.flatpickr-day.endRange.inRange::before,
 .flatpickr-day.selected:focus::before,
 .flatpickr-day.startRange:focus::before,
 .flatpickr-day.endRange:focus::before,
@@ -17719,12 +17723,6 @@ span.flatpickr-weekday:last-child {
   opacity: 1;
 }
 
-.flatpickr-day.inRange,
-.flatpickr-day.prevMonthDay.inRange,
-.flatpickr-day.nextMonthDay.inRange,
-.flatpickr-day.today.inRange,
-.flatpickr-day.prevMonthDay.today.inRange,
-.flatpickr-day.nextMonthDay.today.inRange,
 .flatpickr-day:hover,
 .flatpickr-day.prevMonthDay:hover,
 .flatpickr-day.nextMonthDay:hover,
@@ -17736,6 +17734,12 @@ span.flatpickr-weekday:last-child {
   background: #FF3E41;
   color: #fff !important;
   border-color: #fff;
+}
+
+.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)),
+.flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
+.flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
+  box-shadow: none;
 }
 
 .flatpickr-input {
@@ -20912,6 +20916,10 @@ span.flatpickr-weekday:last-child {
   margin-bottom: 90px;
 }
 
+.history__title {
+  margin-bottom: 40px;
+}
+
 .history .company-card.active {
   display: flex;
 }
@@ -21007,20 +21015,25 @@ span.flatpickr-weekday:last-child {
   min-height: 30px;
   background: #1D67D6;
   border-radius: 5px;
-  padding-left: 23px;
-  padding-right: 23px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #fff;
   font-size: 12px;
   font-style: normal;
   font-weight: 550;
   line-height: 135%;
   /* 16.2px */
+  max-width: 79px;
+  width: 79px;
 }
 
 .history__list__btn__repeat {
-  padding-left: 26px;
-  padding-right: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
+  max-width: 170px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .history__order {
@@ -21135,7 +21148,7 @@ span.flatpickr-weekday:last-child {
 }
 
 .history__item__row__top {
-  padding-bottom: 19px;
+  padding-bottom: 0px;
   border: none;
 }
 
@@ -21217,7 +21230,7 @@ span.flatpickr-weekday:last-child {
   justify-content: flex-start;
   border-top: 1px solid #E3E3E3;
   padding-top: 41px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   padding-left: 33px;
   padding-right: 33px;
 }
@@ -21228,10 +21241,12 @@ span.flatpickr-weekday:last-child {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .history__item__bottom__col:nth-child(1) {
-  width: 50%;
+  width: calc(50% - 20px);
 }
 
 .history__item__bottom__col:nth-child(2) {
@@ -21426,6 +21441,39 @@ span.flatpickr-weekday:last-child {
   font-weight: 800;
   text-shadow: none;
   background: #fff;
+}
+
+.history .accordion__intro__col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.history .accordion__intro__col:nth-child(1) {
+  width: 20.28%;
+}
+
+.history .accordion__intro__col:nth-child(2) {
+  width: 13.52%;
+}
+
+.history .accordion__intro__col:nth-child(3) {
+  width: 20.03%;
+}
+
+.history .accordion__intro__col:nth-child(4) {
+  width: 17.28%;
+}
+
+.history .accordion__intro__col:nth-child(5) {
+  width: 28.89%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.history .accordion__intro__col:nth-child(6) {
+  width: 5.48%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .history .accordion__content {
@@ -21711,6 +21759,11 @@ span.flatpickr-weekday:last-child {
   .offices__map__section .container {
     width: 1920px;
     max-width: calc(100% - 0px);
+  }
+
+  .history__section .container {
+    width: 1400px;
+    max-width: calc(100% - 160px);
   }
 }
 
@@ -22292,6 +22345,11 @@ span.flatpickr-weekday:last-child {
   .offices__map__section .container {
     width: 100%;
     max-width: calc(100% - 0px);
+  }
+
+  .history__section .container {
+    width: 1168px;
+    max-width: calc(100% - 64px);
   }
 
   .history .company-card {
@@ -23762,6 +23820,10 @@ span.flatpickr-weekday:last-child {
     font-size: 16px;
   }
 
+  .history__section .container {
+    max-width: calc(100% - 64px);
+  }
+
   .history__item {
     align-items: flex-start;
   }
@@ -23769,6 +23831,15 @@ span.flatpickr-weekday:last-child {
   .history .accordion__intro {
     padding-bottom: 92px;
     padding-top: 30px;
+  }
+
+  .history .accordion__intro__col {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .history .accordion__intro__col:nth-child(5) {
+    justify-content: flex-start;
   }
 
   .history .accordion__intro__col:nth-child(5) {
@@ -26141,6 +26212,10 @@ span.flatpickr-weekday:last-child {
     margin-bottom: 56px;
   }
 
+  .history__section .container {
+    max-width: calc(100% - 32px);
+  }
+
   .history__list {
     border-bottom: 1px solid #E3E3E3;
     border-radius: 5px 5px 5px 5px;
@@ -26270,6 +26345,11 @@ span.flatpickr-weekday:last-child {
     padding-bottom: 0;
   }
 
+  .history__item__bottom__col {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .history__item__bottom__col:nth-child(1) {
     width: 100%;
     margin-bottom: 24px;
@@ -26277,6 +26357,11 @@ span.flatpickr-weekday:last-child {
 
   .history__item__bottom__col:nth-child(2) {
     width: 100%;
+  }
+
+  .history__item__tabel {
+    width: 100%;
+    max-width: 100%;
   }
 
   .history__item__tabel__row {
@@ -26299,6 +26384,11 @@ span.flatpickr-weekday:last-child {
 
   .history__item__tabel__value {
     font-size: 14px;
+  }
+
+  .history__item__buttons {
+    width: 100%;
+    max-width: 100%;
   }
 
   .history__item__cost {
@@ -26830,6 +26920,11 @@ span.flatpickr-weekday:last-child {
     max-width: 100%;
   }
 
+  .history__item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .history__item:last-child {
     margin-bottom: 0;
   }
@@ -26840,9 +26935,9 @@ span.flatpickr-weekday:last-child {
     margin-right: 16px;
   }
 
-  .history__item__tabel {
-    width: 100%;
-    max-width: 100%;
+  .history__item__bottom {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .history__item__tabel__row.total .history__item__tabel__title {
@@ -26857,11 +26952,6 @@ span.flatpickr-weekday:last-child {
     font-style: normal;
     font-weight: 700;
     line-height: 135%;
-  }
-
-  .history__item__buttons {
-    width: 100%;
-    max-width: 100%;
   }
 
   .history__item__buttons .btn {

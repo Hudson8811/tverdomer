@@ -4855,6 +4855,7 @@ if(companyCard != null) {
 					dateFormat: 'Y-m-d',
 					minDate: '01.01.1900',
 					static: true,
+					mode: "range",
 					locale: 'ru',
 					disableMobile: true,
 					onOpen: [

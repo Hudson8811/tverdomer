@@ -505,6 +505,13 @@ body {
         text-transform: uppercase;
         transition: all .3s;
         padding-bottom: 0;
+        &.disabled {
+            cursor: not-allowed !important;
+            background: $greyLight !important;
+            color: $greyBlack !important;
+            // pointer-events: none !important;
+            
+        }
         &::after {
           display: none;
         }
