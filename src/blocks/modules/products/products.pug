@@ -3,14 +3,13 @@
   .products__top
     .container
       .products__tabs
-        .products__tab.text__18.active(data-tab="1") Твердомеры
-        .products__tab.text__18(data-tab="2") Меры твердости
+        .products__tab.text__18.active Твердомеры
+        .products__tab.text__18 Меры твердости
       .catalog__button.catalog__button--desc.text__18
         img(src="img/svg/catalog__button.svg", alt="")
         !="В каталог"
   .container.container--pr-none
     .products__tab-content 
-      .products-pane.tab-pane(data-tab-content="1").active 
+      .products-pane.tab-pane
         include ../../../blocks/components/hardness-tester/hardness-tester
-      .products-pane.tab-pane(data-tab-content="2") 
-        include ../../../blocks/components/hardness-tester/hardness-tester
+
