@@ -1,7 +1,6 @@
-var hardnessTesters;
 $('.js-infocenter').each(function(){
-	var slider=$(this)
-	var hardnessTesters = new Swiper(slider[0], {
+	let slider=$(this)
+    let hardnessTesters = new Swiper(slider[0], {
 		spaceBetween: 12,
 		slidesPerView: "auto",
     loop: false,
@@ -41,34 +40,49 @@ $('.js-fabrication').each(function(){
 
 
 
-var hardnessTesters;
-$('.js-hardness-testers').each(function(){
-	var slider=$(this)
-	var hardnessTesters = new Swiper(slider[0], {
-		spaceBetween: 12,
-		slidesPerView: "auto",
-    loop: false,
-    speed: 800,
-    allowTouchMove: true,
-		navigation: {
-				nextEl: ".hardness-tester-next",
-				prevEl: ".hardness-tester-prev"
-		},
-		breakpoints: {
-		// when window width is >= 480px
-		992: {
-			spaceBetween: 30,
-			allowTouchMove: false,
-		},
-		}
-	});
-})
+function initTabsSlider(){
+    $('.js-hardness-testers:not(.swiper-initialized)').each(function(){
+        let slider=$(this)
+        let hardnessTesters = new Swiper(slider[0], {
+            spaceBetween: 12,
+            slidesPerView: "auto",
+            loop: false,
+            speed: 800,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: ".hardness-tester-next",
+                prevEl: ".hardness-tester-prev"
+            },
+            breakpoints: {
+                // when window width is >= 480px
+                992: {
+                    spaceBetween: 30,
+                    allowTouchMove: false,
+                },
+            }
+        });
+    })
+}
+
+function destroyTabsSlider(){
+    $('.js-hardness-testers.swiper-initialized').each(function () {
+        let slider = $(this);
+        let swiperInstance = slider[0].swiper;
+        if (swiperInstance) {
+            swiperInstance.destroy(true, true);
+        }
+    });
+}
 
 
-var hardnessGallery;
+$(document).ready(function() {
+    initTabsSlider();
+});
+
+
 $('.js-hardness-gallery').each(function(){
-	var slider=$(this)
-	var hardnessGallery = new Swiper(slider[0], {
+    let slider=$(this)
+	let hardnessGallery = new Swiper(slider[0], {
 		spaceBetween: 0,
     centeredSlides: true,
 		slidesPerView: 1,

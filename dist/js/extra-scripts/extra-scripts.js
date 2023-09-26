@@ -17,7 +17,7 @@
 	})
 
 
-var Swiper = new Swiper(".new__slider .swiper", {
+let SwiperSlider = new Swiper(".new__slider .swiper", {
 	slidesPerView: 1.2,
 	watchOverflow: true,
 	navigation: {
