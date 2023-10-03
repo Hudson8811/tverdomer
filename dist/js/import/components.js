@@ -1,3 +1,45 @@
+$('.js-infocenter').each(function(){
+	let slider=$(this)
+    let hardnessTesters = new Swiper(slider[0], {
+		spaceBetween: 12,
+		slidesPerView: "auto",
+    loop: false,
+    speed: 800,
+		navigation: {
+				nextEl: ".infocenter-next",
+				prevEl: ".infocenter-prev"
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			992: {
+				spaceBetween: 30,
+			},
+			}
+	});
+})
+var fabrication;
+$('.js-fabrication').each(function(){
+	var slider=$(this)
+	var fabrication = new Swiper(slider[0], {
+		spaceBetween: 17,
+		slidesPerView: "auto",
+    loop: false,
+    speed: 800,
+		navigation: {
+				nextEl: ".fabrication-next",
+				prevEl: ".fabrication-prev"
+		},
+		breakpoints: {
+			// when window width is >= 480px
+			992: {
+				spaceBetween: 30,
+			},
+			}
+	});
+})
+
+
+
 function initTabsSlider(){
     $('.js-hardness-testers:not(.swiper-initialized)').each(function(){
         let slider=$(this)
@@ -68,4 +110,29 @@ function initPreviewSliders(){
 $(document).ready(function() {
     initTabsSlider();
     initPreviewSliders();
+});
+function initPreviewSliders2(){
+    $('.js-card-gallery').each(function(){
+        var slider=$(this)
+        let cardGallery = new Swiper(slider[0], {
+            spaceBetween: 0,
+            centeredSlides: true,
+            slidesPerView: 1,
+            loop: false,
+            speed: 800,
+            navigation: {
+                nextEl: slider.find('.swiper-button-next')[0],
+                prevEl: slider.find('.swiper-button-prev')[0]
+            },
+            pagination: {
+                el: slider.find('.swiper-pagination')[0],
+                clickable: true,
+
+            }
+        });
+    })
+}
+
+$(document).ready(function() {
+    initPreviewSliders2();
 });

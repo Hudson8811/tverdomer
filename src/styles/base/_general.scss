@@ -1110,10 +1110,7 @@ body {
 }
 
 .tab-pane {
-    display: none;
-    &.active {
-        display: flex;
-    }
+	display: flex;
 }
 .catalog__button {
     position: relative;

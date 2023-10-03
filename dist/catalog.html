@@ -43,9 +43,10 @@
           </div><a class="header__menu__item" href="#">проверка подлинности</a><a class="header__menu__item" href="#">контакты</a>
         </div>
         <div class="header__other">
-          <div class="header__other__fone header__other__fone--desc header__menu__item"><a href="tel:+88002227526"> 8 (800) 222-75-26<svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
-<path d="M1.41417 7.05719e-05L-4.57764e-05 1.41428L7.07102 8.48535L14.1421 1.41428L12.7279 7.05719e-05L7.07102 5.65692L1.41417 7.05719e-05Z" fill="#F5F5F5"/>
-</svg></a>
+          <div class="header__other__fone header__other__fone--desc header__menu__item">
+            <div class="header__other__top"><a href="tel:+88002227526">8 (800) 222-75-26</a><svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none"><path d="M1.41417 7.05719e-05L-4.57764e-05 1.41428L7.07102 8.48535L14.1421 1.41428L12.7279 7.05719e-05L7.07102 5.65692L1.41417 7.05719e-05Z" fill="#F5F5F5"/>
+</svg>
+            </div>
             <ul class="header__menu__list">
               <li class="header__menu__list__item"><a href="tel:+88002227526">8 (800) 222-75-26</a></li>
               <li class="header__menu__list__item"> <a href="tel:+88002227526">8 (800) 222-75-26</a></li>
@@ -393,13 +394,14 @@
             </div>
           </div>
           <div class="container">
-            <div class="filters"> 
-              <div class="filters__btn">
-                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="filters">
+              <div class="filters__btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.23224 8L0.866119 13.3661L2.63389 15.1339L8 9.76777L13.3661 15.1339L15.1339 13.3661L9.76777 8L15.1339 2.63389L13.3661 0.866119L8 6.23224L2.63389 0.866119L0.866119 2.63389L6.23224 8Z" fill="#1B1F22"/>
 </svg>
               </div>
-              <div class="filter">Роквелл</div>
+              <label class="filter">
+                <input type="checkbox"><span>Роквелл</span>
+              </label>
               <div class="filter">Супер-Роквелл</div>
               <div class="filter">Бринелль</div>
               <div class="filter">Виккерс</div>
@@ -650,6 +652,24 @@
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
+    <!-- libs-->
+    <script src="js/libs/jquery-3.7.0.min.js"></script>
+    <script src="js/libs/jquery.fancybox.min.js"></script>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/libs/stroll.min.js"></script>
+    <script src="js/libs/select2.min.js"></script>
+    <script src="js/libs/tippy/popper.min.js"></script>
+    <script src="js/libs/tippy/tippy-bundle.umd.js"></script>
+    <script src="js/libs/resizeSensor.js"></script>
+    <script src="js/libs/sticky-sidebar.js"></script>
+    <script src="js/libs/jquery.mask.min.js"></script>
+    <script src="js/libs/flatpickr.min.js"></script>
+    <script src="js/libs/flatpickr-ru-locale.js"></script>
+    <!-- my files-->
+    <script src="js/import/maps.js"></script>
+    <script src="js/import/main.js"></script>
+    <script src="js/import/components.js"></script>
+    <script src="js/import/modules.js"></script>
+    <script src="js/extra-scripts/extra-scripts.js"></script>
   </body>
 </html>

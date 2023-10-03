@@ -1,7 +1,6 @@
-var hardnessTesters;
 $('.js-infocenter').each(function(){
-	var slider=$(this)
-	var hardnessTesters = new Swiper(slider[0], {
+	let slider=$(this)
+    let hardnessTesters = new Swiper(slider[0], {
 		spaceBetween: 12,
 		slidesPerView: "auto",
     loop: false,
