@@ -7,7 +7,7 @@ $star-off-color: #CBCECF;
 
 .rating {
 	width: ($star-size * $stars) + ($star-spacing * ($stars - 1));
-	height: $star-size;
+	height: 22px;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
@@ -20,8 +20,8 @@ $star-off-color: #CBCECF;
 	label {
 		float: right;
 		position: relative;
-		width: $star-size;
-		height: $star-size;
+		width: 38px;
+		height: 22px;
 		cursor: pointer;
 		
 		&:not(:first-of-type) {
@@ -30,7 +30,7 @@ $star-off-color: #CBCECF;
 		
 		&:before {
 			content: url(../img/svg/star--gray.svg);
-			font-size: $star-size + 2px;
+			font-size: 0px;
 			color: $star-off-color;
 			line-height: 1;
 		}
@@ -50,7 +50,7 @@ $star-off-color: #CBCECF;
     position: absolute;
     display: block;
     left: 0;
-    top: 13px;
+    top: -2px;
     width: 30px;
     height: 100%;
   }
