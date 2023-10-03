@@ -5091,6 +5091,13 @@ $('.js-card-gallery').each(function(){
 		// }
 	});
 })
+function modalSelectedProducts() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: "#selected-products",
+    type: "inline",
+  });
+}
 
 
 var mainSlider;

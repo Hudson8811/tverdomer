@@ -17890,6 +17890,67 @@ span.flatpickr-weekday:last-child {
   width: 100%;
 }
 
+.selected-products {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 482px;
+  padding: 40px;
+  border-radius: 28px;
+}
+
+.selected-products__btn {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.selected-products .fancybox-button.fancybox-close-small {
+  top: 6px;
+  right: 6px;
+}
+
+.selected-products .fancybox-button.fancybox-close-small svg {
+  fill: #1B1F22;
+}
+
+.selected-products .fancybox-button.fancybox-close-small svg path {
+  fill: #1B1F22;
+}
+
+.selected-products__title {
+  position: relative;
+  width: 100%;
+  max-width: 402px;
+  display: block;
+  color: #1B1F22;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+  margin-bottom: 32px;
+}
+
+.selected-products__buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.selected-products__buttons .btn {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 135%;
+  /* 16.2px */
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 190px;
+}
+
 .cart {
   position: relative;
   display: flex;

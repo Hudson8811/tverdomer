@@ -1,0 +1,52 @@
+.selected-products {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: 482px;
+	padding: 40px;
+	border-radius: 28px;
+	&__btn {
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 100px;
+	}
+	.fancybox-button.fancybox-close-small {
+		top: 6px;
+		right: 6px;
+		svg {
+			fill: #1B1F22;
+			path {
+				fill: #1B1F22;
+			}
+		}
+	}
+	&__title {
+		position: relative;
+		width: 100%;
+		max-width: 402px;
+		display: block;
+		color: $mainDark;
+		text-align: center;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 135%;
+		margin-bottom: 32px;
+	}
+	&__buttons {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		.btn {
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 550;
+			line-height: 135%; /* 16.2px */
+			text-transform: uppercase;
+			width: 100%;
+			max-width: 190px;	
+		}
+	}
+}
