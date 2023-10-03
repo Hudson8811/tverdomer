@@ -3,3 +3,4 @@
 @@include("../../blocks/components/hardness-tester/hardness-tester.js")
 @@include("../../blocks/components/cards/cards.js")
 @@include("../../blocks/components/selected-products/selected-products.js")
+@@include("../../blocks/components/review-rating/review-rating.js")

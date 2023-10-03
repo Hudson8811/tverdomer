@@ -17970,6 +17970,77 @@ span.flatpickr-weekday:last-child {
   max-width: 190px;
 }
 
+.rating {
+  width: 208px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.rating label {
+  float: right;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.rating label:not(:first-of-type) {
+  padding-right: 2px;
+}
+
+.rating label:before {
+  content: url(../img/svg/star--gray.svg);
+  font-size: 42px;
+  color: #CBCECF;
+  line-height: 1;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating input:checked ~ label:before,
+.rating:not(:checked) > label:hover:before,
+.rating:not(:checked) > label:hover ~ label:before {
+  content: url(../img/svg/star--ellow.svg);
+}
+
+.rating__total {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 13px;
+  width: 30px;
+  height: 100%;
+}
+
+.rating input:checked[value="1"] ~ .rating__total::after {
+  content: "1.0";
+}
+
+.rating input:checked[value="2"] ~ .rating__total::after {
+  content: "2.0";
+}
+
+.rating input:checked[value="3"] ~ .rating__total::after {
+  content: "3.0";
+}
+
+.rating input:checked[value="4"] ~ .rating__total::after {
+  content: "4.0";
+}
+
+.rating input:checked[value="5"] ~ .rating__total::after {
+  content: "5.0";
+}
+
 .cart {
   position: relative;
   display: flex;
