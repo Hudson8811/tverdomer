@@ -1,7 +1,7 @@
-a.btn.btn--redFull(href="javascript:;" onclick="modalSelectedProducts(); return false;" class="fancybox selected-products__btn") тестовая выбранные товары
-
+a.btn.btn--redFull(href="javascript:;" onclick="OpenModalSelectedProducts(); return false;" class="fancybox selected-products__btn") тестовая ОТКРЫТЬ выбранные товары
 #selected-products(class="selected-products modal-fancy modal-reg-login" style="display:none")
 	.selected-products__title Выбранные товары не добавлены в корзину
 	.selected-products__buttons
 		.btn.btn--black.selected-products__button Добавить
 		.btn.btn--border.selected-products__button ОК
+	a.btn.btn--redFull(href="javascript:;" onclick="CloseModalSelectedProducts(); return false;" class="fancybox selected-products__btn") тестовая ЗАКРЫТЬ выбранные товары

@@ -136,3 +136,17 @@ function initPreviewSliders2(){
 $(document).ready(function() {
     initPreviewSliders2();
 });
+function OpenModalSelectedProducts() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: "#selected-products",
+    type: "inline",
+  });
+}
+function CloseModalSelectedProducts() {
+  event.preventDefault();
+  $.fancybox.close({
+    src: "#selected-products",
+    type: "inline",
+  });
+}
