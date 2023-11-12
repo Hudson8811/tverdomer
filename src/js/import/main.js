@@ -185,6 +185,7 @@ $('.js-example-responsive--form').select2({
 	width: '100%',
 	minimumResultsForSearch: Infinity,
 	dropdownAutoWidth: true,
+    dropdownCssClass: 'hide-disabled'
 });
 let btnCity = document.querySelectorAll(".btn__city")
 let cities = document.querySelector(".offices__cities")
