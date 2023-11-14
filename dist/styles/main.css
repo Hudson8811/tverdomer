@@ -9029,6 +9029,55 @@ span.flatpickr-weekday {
   }
 }
 
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr ExtraBold"), local("HelveticaNeueCyr-ExtraBold"), url("../fonts/HelveticaNeueCyr-ExtraBold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr Bold"), local("HelveticaNeueCyr-Bold"), url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr SemiBold"), local("HelveticaNeueCyr-SemiBold"), url("../fonts/HelveticaNeueCyr-SemiBold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr Medium"), local("HelveticaNeueCyr-Medium"), url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr Roman"), local("HelveticaNeueCyr-Roman"), url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr Light"), local("HelveticaNeueCyr-Light"), url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr ExtraLight"), local("HelveticaNeueCyr-ExtraLight"), url("../fonts/HelveticaNeueCyr-ExtraLight.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-display: swap;
+}
+
 h1,
 h2,
 h3,
@@ -19230,10 +19279,12 @@ span.flatpickr-weekday:last-child {
 .reviews-page .feedback__item {
   flex: 0 1 50%;
   padding: 0 15px;
+  width: 50%;
 }
 
 .reviews-page .feedback__item--fullwidth {
   flex: 1 1 100%;
+  width: 100%;
 }
 
 .reviews-page .feedback__input {
@@ -20922,6 +20973,119 @@ span.flatpickr-weekday:last-child {
   width: 100%;
   object-fit: contain;
   object-position: center center;
+}
+
+.registrations-table__btn {
+  width: auto;
+  min-width: 100px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+
+.registrations-table-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 15px;
+  background: #F5F5F5;
+  padding: 10px 10px 10px 20px;
+  position: relative;
+}
+
+.registrations-table-row:hover {
+  z-index: 10;
+}
+
+.registrations-table-row--head {
+  background: none;
+  font-weight: 600;
+}
+
+.registrations-table-row--head .registrations-table-row__col--inn {
+  margin-top: 0;
+}
+
+.registrations-table-row__col--inn {
+  min-width: 190px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.registrations-table-row__col--btns {
+  margin-left: -10px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.registrations-table-row + .registrations-table-row {
+  margin-top: 5px;
+}
+
+.rshow-more {
+  margin: 0 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #1B1F22;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rshow-more::before {
+  content: "?";
+}
+
+.registrations-table__show-more {
+  position: relative;
+  margin-left: 10px;
+}
+
+.registrations-table__show-more::after {
+  content: "";
+  display: block;
+  position: absolute;
+  /*left: -20px;
+  top: 12px;
+  width: 64px;
+  height: 32px;*/
+  left: -10px;
+  top: -10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.registrations-table__show-more:hover ~ .registrations-table__item-more-info {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.registrations-table__item-more-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 15;
+  pointer-events: none;
+  border-radius: 15px;
+  background: #F5F5F5;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid #fff;
+  transition-duration: 0.2s;
+  width: 350px;
+  max-width: 100%;
+}
+
+.registrations-table__item-more-info:hover {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .registrations-complete {
@@ -24018,6 +24182,26 @@ span.flatpickr-weekday:last-child {
   }
 }
 
+@media screen and (max-width: 975px) {
+  .registrations-table-row {
+    display: block;
+  }
+
+  .registrations-table-row__col--inn {
+    display: block;
+    display: inline-flex;
+  }
+
+  .registrations-table-row__col--btns {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .registrations-table-row__col--btns * {
+    flex-grow: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .select2-container.select2-container--custom-theme--form {
     height: 48px;
@@ -24215,6 +24399,7 @@ span.flatpickr-weekday:last-child {
 
   .reviews-page .feedback__item {
     flex: 0 1 100%;
+    width: 100%;
   }
 
   .header-reviews-page__left-desk {
