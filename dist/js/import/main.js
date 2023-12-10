@@ -265,21 +265,25 @@ function closeOfficesCitySoloSection() {
 	officesCitySoloSection.classList.add("animate__fadeOutLeft");
 }
 
-let productCardSection = document.querySelector(".product-card__section")
-if(productCardSection !== null) {
-	if (document.documentElement.clientWidth > 1279){
-		var sidebar = new StickySidebar('#sidebar', {
-			containerSelector: '#main-filter',
-			innerWrapperSelector: '.sidebar__inner',
-			topSpacing: 80,
-			// containerSelector: false,
-			resizeSensor: true,
-			bottomSpacing: 0,
-			minWidth: 0
-				});
-	}
 
-}
+
+$(window).on('load',function (){
+    let productCardSection = document.querySelector(".product-card__section")
+    if(productCardSection !== null) {
+        if (document.documentElement.clientWidth > 1279){
+            var sidebar = new StickySidebar('#sidebar', {
+                containerSelector: '#main-filter',
+                innerWrapperSelector: '.sidebar__inner',
+                topSpacing: 80,
+                containerSelector: false,
+                resizeSensor: true,
+                bottomSpacing: 0,
+                minWidth: 0
+            });
+        }
+
+    }
+});
 
 
 $('.product-cart__filter__counter__prev').on('click', function () {

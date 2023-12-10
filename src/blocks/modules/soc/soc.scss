@@ -34,7 +34,7 @@
     position: relative;
     left: auto;
     top: auto;
-    margin-top: 236px;
+    //margin-top: 236px;
     margin-left: 50px;
     @media (max-width: 1836px) {
       position: relative;
@@ -246,9 +246,9 @@
 	.sidebar__inner {
 		position: relative;
 		width: 100%;
-    height: 100%;
+   		// height: 100%;
 		transform: translate(0, 0); /* For browsers don't support translate3d. */
-    transform: translate3d(0, 0, 0);
-    will-change: position, transform;	
+		transform: translate3d(0, 0, 0);
+		will-change: position, transform;
 	}
 }
