@@ -3,19 +3,24 @@
     .security.block__overlay
       .security__title.title__40 Высокая степень защиты корпуса
       .security__subtitle.text__16 Влагозащищенность: IP65 Температура: от -20°C до + 60°C Ударопрочность: IK06
-      .security__bg 
+      .security__bg
         img(src="img/index/security__bg.png", srcset="img/index/security__bg--2x.png 2x" alt="")
   .warranty__col
     .warranty__item.warranty__item--one.block__overlay
       .warranty__bg
-        picture 
+        picture
           source(media="(max-width: 767px)", srcset="img/index/warranty__bg--1--mob.png")
           img(src="img/index/warranty__bg--1.png", srcset="img/index/warranty__bg--1--2x.png 2x" alt="")
+
+
       .warranty__text.text__20
         !="Удобная передача и обработка данных на компьютере через высокоскоростной USB порт и специальное программное обеспечение."
     .warranty__item.warranty__item--two.block__overlay
-      .warranty__bg
-        picture 
+      //.warranty__bg
+        picture
           source(media="(max-width: 767px)", srcset="img/index/warranty__bg--2--mob.png")
           img(src="img/index/warranty__bg--2.png", srcset="img/index/warranty__bg--2--2x.png 2x" alt="")
+      .warranty__bg.warranty-dur-text
+        .warranty-dur-text__big 3
+        .warranty-dur-text__small года <br> гарантии
       .warranty__btn.btn подробнее

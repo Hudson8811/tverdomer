@@ -338,13 +338,13 @@
               <div class="security block__overlay">
                 <div class="security__title title__40">Высокая степень защиты корпуса</div>
                 <div class="security__subtitle text__16">Влагозащищенность: IP65 Температура: от -20°C до + 60°C Ударопрочность: IK06</div>
-                <div class="security__bg"> <img src="img/index/security__bg.png" srcset="img/index/security__bg--2x.png 2x" alt=""></div>
+                <div class="security__bg"><img src="img/index/security__bg.png" srcset="img/index/security__bg--2x.png 2x" alt=""></div>
               </div>
             </div>
             <div class="warranty__col">
               <div class="warranty__item warranty__item--one block__overlay">
                 <div class="warranty__bg">
-                  <picture> 
+                  <picture>
                     <source media="(max-width: 767px)" srcset="img/index/warranty__bg--1--mob.png"><img src="img/index/warranty__bg--1.png" srcset="img/index/warranty__bg--1--2x.png 2x" alt="">
                   </picture>
                 </div>
@@ -352,10 +352,14 @@
                 </div>
               </div>
               <div class="warranty__item warranty__item--two block__overlay">
-                <div class="warranty__bg">
-                  <picture> 
-                    <source media="(max-width: 767px)" srcset="img/index/warranty__bg--2--mob.png"><img src="img/index/warranty__bg--2.png" srcset="img/index/warranty__bg--2--2x.png 2x" alt="">
-                  </picture>
+                <!--.warranty__bg
+                picture
+                  source(media="(max-width: 767px)", srcset="img/index/warranty__bg--2--mob.png")
+                  img(src="img/index/warranty__bg--2.png", srcset="img/index/warranty__bg--2--2x.png 2x" alt="")
+                -->
+                <div class="warranty__bg warranty-dur-text">
+                  <div class="warranty-dur-text__big">3</div>
+                  <div class="warranty-dur-text__small">года <br> гарантии</div>
                 </div>
                 <div class="warranty__btn btn">подробнее</div>
               </div>
@@ -558,22 +562,26 @@
             <div class="arguments__wrap">
               <div class="arguments__col">
                 <div class="arguments__item arguments__item--awards block__overlay">
-                  <div class="arguments__item__year">
-                    <picture> 
-                      <source media="(max-width: 992px)" srcset="img/index/arguments__item__year--mob.png"><img src="img/index/arguments__item__year.png" srcset="img/index/arguments__item__year--2x.png 2x" alt="">
-                    </picture>
+                  <!--.arguments__item__year
+                  picture
+                    source(media="(max-width: 992px)", srcset="img/index/arguments__item__year--mob.png")
+                    img(src="img/index/arguments__item__year.png", srcset="img/index/arguments__item__year--2x.png 2x" alt="")
+                  -->
+                  <div class="arguments__item__year arguments-years-in">
+                    <div class="arguments-years-in__big">24</div>
+                    <div class="arguments-years-in__small">года<br>на рынке</div>
                   </div>
                   <div class="arguments__item__text text__15">Центр «МЕТ» - разработчик высокоточных портативных твердомеров и мер твердости. Портативные твердомеры МЕТ позволяют осуществлять достоверный контроль твердости изделий из металла. Меры твердости МЕТ – средства измерения, позволяющие осуществлять поверку и калибровку твердомеров.
                   </div>
-                  <div class="arguments__item__buttons"> 
+                  <div class="arguments__item__buttons">
                     <div class="arguments__item__buttons__row">
                       <div class="btn btn--border-white arguments__item__button--double"><img src="img/svg/award.svg" alt="">Сертификаты
                       </div>
-                      <div class="btn btn--border-white arguments__item__button--double"> <img src="img/svg/star.svg" alt="">Награды
+                      <div class="btn btn--border-white arguments__item__button--double"><img src="img/svg/star.svg" alt="">Награды
                       </div>
                     </div>
                     <div class="arguments__item__buttons__row">
-                      <div class="arguments__item__button btn btn--border-white"> <img src="img/svg/comment.svg" alt="">Отзывы
+                      <div class="arguments__item__button btn btn--border-white"><img src="img/svg/comment.svg" alt="">Отзывы
                       </div>
                     </div>
                   </div>

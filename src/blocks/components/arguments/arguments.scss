@@ -203,3 +203,47 @@
 	}
 
 }
+
+
+
+
+.arguments-years-in{
+	color: #FFF;
+	display: flex;
+	align-items: flex-end;
+	padding-top: 0;
+    margin-top: 0;
+
+	@include max(sm) {
+		margin-bottom: 27px !important;
+	}
+
+	&__big{
+		leading-trim: both;
+		text-edge: cap;
+		font-size: 192px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 134px;
+		@include max(sm) {
+			font-size: 100px;
+			line-height: 70px;
+		}
+
+	}
+	&__small{
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 135%;
+		margin-left: 16px;
+		margin-bottom: -11px;
+		@include max(sm) {
+			font-size: 20px;
+			line-height: 135%;
+			margin-left: 12px;
+			margin-bottom: -7px;
+		}
+	}
+
+}

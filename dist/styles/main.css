@@ -14583,7 +14583,10 @@ body {
 }
 
 .warranty__item--two .warranty__bg {
-  margin-top: -50px;
+  /*margin-top: -50px;
+  @include max(md) {
+  	margin-top: 0px;
+  }*/
 }
 
 .warranty__item--two .warranty__bg img {
@@ -14591,6 +14594,31 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: right bottom;
+}
+
+.warranty-dur-text {
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  margin-top: 15px;
+}
+
+.warranty-dur-text__big {
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.warranty-dur-text__small {
+  margin-left: 14px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  /* 50px */
+  text-transform: uppercase;
 }
 
 .security {
@@ -14756,6 +14784,32 @@ body {
 
 .arguments__item__button--double:last-child {
   margin-left: 5px;
+}
+
+.arguments-years-in {
+  color: #FFF;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.arguments-years-in__big {
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 192px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 134px;
+}
+
+.arguments-years-in__small {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%;
+  margin-left: 16px;
+  margin-bottom: -11px;
 }
 
 .hardness-tester {
@@ -23629,10 +23683,6 @@ span.flatpickr-weekday:last-child {
     top: 20px;
   }
 
-  .warranty__item--two .warranty__bg {
-    margin-top: 0px;
-  }
-
   .security {
     padding: 32px 24px;
     padding-bottom: 0;
@@ -25467,6 +25517,16 @@ span.flatpickr-weekday:last-child {
     object-position: center bottom;
   }
 
+  .warranty-dur-text__big {
+    font-size: 100px;
+    line-height: 74px;
+  }
+
+  .warranty-dur-text__small {
+    font-size: 24px;
+    line-height: 125%;
+  }
+
   .security__title {
     width: 100%;
     max-width: 310px;
@@ -25476,6 +25536,22 @@ span.flatpickr-weekday:last-child {
   .security__subtitle {
     width: 100%;
     max-width: 200px;
+  }
+
+  .arguments-years-in {
+    margin-bottom: 27px !important;
+  }
+
+  .arguments-years-in__big {
+    font-size: 100px;
+    line-height: 70px;
+  }
+
+  .arguments-years-in__small {
+    font-size: 20px;
+    line-height: 135%;
+    margin-left: 12px;
+    margin-bottom: -7px;
   }
 
   .cards {
