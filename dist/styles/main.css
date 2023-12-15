@@ -16754,6 +16754,30 @@ body {
   margin-bottom: 5px;
 }
 
+.calibrate-err {
+  display: flex;
+  align-items: flex-end;
+  color: #FF3E41;
+}
+
+.calibrate-err--gray {
+  color: #898989;
+}
+
+.calibrate-err__val {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.calibrate-err__dimension {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 43px;
+}
+
 .equipment {
   position: relative;
   width: 100%;
@@ -26034,6 +26058,16 @@ span.flatpickr-weekday:last-child {
 
   .calibrate__error__metod__item span {
     display: none;
+  }
+
+  .calibrate-err__val {
+    font-size: 43px;
+  }
+
+  .calibrate-err__dimension {
+    font-size: 12px;
+    line-height: 25px;
+    margin-left: 1px;
   }
 
   .equipment {
