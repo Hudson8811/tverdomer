@@ -128,13 +128,13 @@
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
-			
+
 		}
 		@include max(mdHeader) {
 			flex-flow: row nowrap;
 			justify-content: space-between;
 			align-items: flex-start;
-			
+
 		}
     @include max(sm) {
       flex-flow: column nowrap;
@@ -151,7 +151,7 @@
 			margin-bottom: 30px;
 			@include max(md) {
 				margin-bottom: 16px;
-				
+
 			}
 		}
 		&:nth-child(1) {
@@ -161,7 +161,7 @@
       }
 			@include max(md) {
 				margin-bottom: 23px;
-				
+
 			}
       @include max(sm) {
         max-width: 100%;
@@ -171,7 +171,7 @@
 			max-width: 300px;
 			@include max(sm) {
 				max-width: 180px;
-				
+
 			}
       @include max(sm) {
         max-width: 100%;
@@ -208,7 +208,7 @@
       @include max(mdHeader) {
         object-position: left center;
       }
-		}		
+		}
 	}
   &__tabel {
     position: relative;
@@ -231,7 +231,7 @@
       @include max(sm) {
         font-size: 16px;
         margin-bottom: 25px;
-        max-width: 245px;          
+        max-width: 245px;
       }
     }
     &__row {
@@ -272,7 +272,7 @@
       }
       @include max(sm) {
         font-size: 12px;
-      } 
+      }
       span {
         color: $red;
         text-align: right;
@@ -286,8 +286,8 @@
         }
         @include max(sm) {
           font-size: 14px;
-        }      
-      }  
+        }
+      }
     }
     &__desc {
       position: relative;
@@ -309,13 +309,13 @@
         line-height: 135%;
         padding-left: 37px;
         @include max(sm) {
-          font-size: 11px;           
+          font-size: 11px;
         }
       }
       &__star {
         position: absolute;
         left: 0;
-        top:0; 
+        top:0;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -329,12 +329,12 @@
           margin-right: 4px;
           @include max(sm) {
             font-size: 14px;
-          }      
-        }  
+          }
+        }
       }
     }
   }
-  .hint__sonic-sensor {
+ /* .hint__sonic-sensor {
     &:nth-child(1) {
       top: 0;
       left: 240px;
@@ -383,5 +383,5 @@
         left: 8%;
       }
     }
-  }
+  }*/
 }

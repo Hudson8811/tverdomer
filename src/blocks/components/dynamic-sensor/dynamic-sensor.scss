@@ -135,7 +135,7 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: right top;
-		}		
+		}
 	}
   &__col {
     position: relative;
@@ -157,7 +157,7 @@
       bottom: -10px;
     }
   }
-  .hint__dynamic-sensor {
+  /*.hint__dynamic-sensor {
     &:nth-child(1) {
       top: 130px;
       right: 185px;
@@ -219,5 +219,5 @@
         right: 9%;
       }
     }
-  }
+  }*/
 }
