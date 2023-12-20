@@ -25217,7 +25217,7 @@ span.flatpickr-weekday:last-child {
 
   .main__slider .main__slide {
     height: auto !important;
-    max-height: auto !important;
+    max-height: unset !important;
   }
 
   .main__slider .main__slide__picture {

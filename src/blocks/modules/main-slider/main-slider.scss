@@ -78,8 +78,9 @@
 
 		@include max(sm) {
 			height: auto !important;
-			max-height: auto !important;
+			max-height: unset !important;
 		}
+
 
 		transition: all 1.5s;
 		z-index: 5;
