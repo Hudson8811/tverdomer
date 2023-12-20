@@ -11772,7 +11772,9 @@ body {
 
 .main__slider .main__slide {
   position: relative;
-  height: 400px;
+  height: 800px;
+  max-height: 400px;
+  transition: max-height 1.5s ease-out !important;
   transition: all 1.5s;
   z-index: 5;
 }
@@ -11784,6 +11786,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
+  transition: all 1.5s;
 }
 
 .main__slider .main__slide__picture img {
@@ -12007,7 +12010,6 @@ body {
 }
 
 .main__slider .main__slide--left {
-  height: 400px;
   transition: all 1.5s;
 }
 
@@ -12036,7 +12038,7 @@ body {
 
 .main__slider .swiper-slide-active {
   z-index: 10;
-  height: 728px;
+  max-height: 728px;
 }
 
 .main__slider .swiper-slide-active .main__slide__desc {
@@ -22107,7 +22109,8 @@ span.flatpickr-weekday:last-child {
   }
 
   .main__slider .main__slide {
-    height: 20.8333333333vw;
+    height: 41.6666666667vw;
+    max-height: 20.8333333333vw;
   }
 
   .main__slider .main__slide__desc__title {
@@ -22143,7 +22146,7 @@ span.flatpickr-weekday:last-child {
   }
 
   .main__slider .swiper-slide-active {
-    height: 37.9166666667vw;
+    max-height: 37.9166666667vw;
   }
 
   .main__slider .swiper-slide-active .main__slide__desc .main__slide__desc__title {
@@ -25213,7 +25216,8 @@ span.flatpickr-weekday:last-child {
   }
 
   .main__slider .main__slide {
-    height: auto;
+    height: auto !important;
+    max-height: auto !important;
   }
 
   .main__slider .main__slide__picture {
