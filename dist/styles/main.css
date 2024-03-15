@@ -13089,6 +13089,10 @@ body {
   margin-bottom: 50px;
   overflow: hidden;
   border-spacing: 0;
+  border: none;
+  /*td+td+td {
+    border-right: none;
+  }*/
 }
 
 .text-block table:last-child {
@@ -13111,25 +13115,25 @@ body {
   border-right: 1px solid #E3E3E3;
 }
 
+.text-block table th p,
+.text-block table td p {
+  font: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
 .text-block table th {
   background: #F5F5F5;
   border-bottom: 1px solid #E3E3E3;
   border-right: 1px solid #E3E3E3;
-  border-top: 1px solid #E3E3E3;
   color: #1B1F22;
   font-size: 15px;
   font-style: normal;
   text-align: left;
-  font-weight: 550;
   line-height: normal;
-}
-
-.text-block table th:first-child {
-  border-radius: 15px 0 0 0px;
-}
-
-.text-block table th:last-child {
-  border-radius: 0 15px 0 0px;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .text-block table th + th + th {
@@ -13147,15 +13151,28 @@ body {
   border-left: 1px solid #E3E3E3;
 }
 
-.text-block table td + td + td {
-  border-right: none;
+.text-block table tr:first-child > th,
+.text-block table tr:first-child > td {
+  border-top: 1px solid #E3E3E3;
 }
 
-.text-block table tr:last-child td:first-child {
+.text-block table tr:first-child > th:first-child,
+.text-block table tr:first-child > td:first-child {
+  border-radius: 15px 0 0 0px;
+}
+
+.text-block table tr:first-child > th:last-child,
+.text-block table tr:first-child > td:last-child {
+  border-radius: 0 15px 0 0px;
+}
+
+.text-block table tr:last-child > th:first-child,
+.text-block table tr:last-child > td:first-child {
   border-radius: 0 0 0 15px;
 }
 
-.text-block table tr:last-child td:last-child {
+.text-block table tr:last-child > th:last-child,
+.text-block table tr:last-child > td:last-child {
   border-radius: 0 0 15px 0px;
 }
 
@@ -27093,7 +27110,7 @@ span.flatpickr-weekday:last-child {
   .text-block table th {
     font-size: 11px;
     font-style: normal;
-    font-weight: 550;
+    font-weight: 500;
     line-height: normal;
   }
 
