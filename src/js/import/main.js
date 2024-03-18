@@ -29,7 +29,7 @@ jQuery(function () {
 			duration: 750
 		})
 		.init();
-	new Skroll()
+	new Skroll({mobile:true})
 		.add(".portable__picture", {
 			animation: "fadeInRight",
 			delay: 500,
