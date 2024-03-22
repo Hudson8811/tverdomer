@@ -72,6 +72,10 @@ jQuery(function () {
 		})
 		.init();
 
+
+		$('.text-block table').each(function(){
+			$(this).wrap('<div class=\'text-block__table-wrap\'></div>');
+		});
 });
 
 // tippy('.label--tooltips', {
@@ -650,6 +654,9 @@ if(companyCard != null) {
 		});
 
 	});
+
+
+
 }
 
 
